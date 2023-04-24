@@ -33,6 +33,9 @@ head_stimuli
 ## ----prep_data3, include = FALSE, eval = FALSE--------------------------------
 #  dat <- prep_data(self, stimuli, allow_miss = 0)
 
+## ----fitfbam, eval = FALSE----------------------------------------------------
+#  fit_fbam <- fbam(self, stimuli)
+
 ## ---- include = TRUE, eval = FALSE, fig.align = "center", fig.asp = .4, fig.width = 8, out.width = "100%"----
 #  plot_stimuli(fit_hbam)
 
