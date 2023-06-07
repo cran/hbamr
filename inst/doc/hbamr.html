@@ -374,8 +374,8 @@ versions of the AM model included in this package outperform other
 versions both in terms of yielding meaningful posterior distributions
 for all respondent positions and in terms of recovering true respondent
 positions in simulations <span class="citation">(Bølstad 2023)</span>.
-The package mainly uses the NUTS algorithm in <strong>rstan</strong> – a
-Markov chain Monte Carlo (MCMC) algorithm – to fit these models.
+The package mainly fits these models via the NUTS algorithm in
+<strong>rstan</strong> – a Markov chain Monte Carlo (MCMC) algorithm.
 However, it also offers a simplified model that can be fit using
 optimization to analyze large data sets quickly.</p>
 <p>This vignette provides an overview of how to use the key functions in
@@ -514,7 +514,7 @@ supplied as the argument <code>pref</code>. The rationalization part of
 the model is simplified relative to the original ISR model: The
 direction in which respondents move disfavored stimuli is estimated as a
 common expectation for each possible self-placement on the scale.</p>
-<p><strong>HBAM_R_MINI</strong> combines the features of the HBAM_R
+<p><strong>HBAM_R-MINI</strong> combines the features of the HBAM_R
 model with the light-weight features of the HBAM_MINI model to achieve
 faster sampling compared to HBAM_R.</p>
 <p><strong>FBAM_MINI</strong> is a version of the HBAM_MINI model with
@@ -577,9 +577,9 @@ all be overridden in the <code>hbam()</code> call.</p>
 <div id="fitting-via-optimization" class="section level2">
 <h2>Fitting via Optimization</h2>
 <p>For very large data sets, optimization can be a useful and much
-faster alternative to MCMC. An important drawback is that this only
-provides point estimates (unless we resort to something like Laplace’s
-method, which is not implemented here).</p>
+faster alternative to MCMC. However, the optimization feature provided
+in this package only provides maximum a posteriori (MAP) point
+estimates.</p>
 <p>The <code>fbam()</code> function fits the FBAM_MINI model using
 <code>rstan::optimizing()</code>. The <code>fbam()</code> function works
 just like the <code>hbam()</code> function, except the arguments for
@@ -751,15 +751,18 @@ have had their self-placement flipped back.</p>
 <p>The package also contains a wrapper for <code>rstan::summary()</code>
 called <code>get_est()</code>. This function takes the arguments
 <code>object</code> – a <code>stanfit</code> object produced by
-<code>hbam()</code> – and <code>par</code> – the name of the
-parameter(s) to be summarized. The function returns a tibble, which by
-default contains the posterior mean, the 95% credible interval, the
-posterior median, the estimated number of effective draws, and the split
-R-hat. One can obtain other posterior quantiles by using the argument
-<code>probs</code>. To get a 50% credible interval (and no median), one
-would add the argument <code>probs = c(0.25, 0.75)</code>. To include
-the Monte Carlo standard error and the posterior standard deviation, use
-the argument <code>simplify = FALSE</code>.</p>
+<code>hbam()</code> or a list produced by <code>fbam()</code> – and
+<code>par</code> – the name of the parameter(s) to be summarized. The
+function returns a tibble, which by default contains the posterior mean,
+the 95% credible interval, the posterior median, the estimated number of
+effective draws, and the split R-hat. One can obtain other posterior
+quantiles by using the argument <code>probs</code>. To get a 50%
+credible interval (and no median), one would add the argument
+<code>probs = c(0.25, 0.75)</code>. To include the Monte Carlo standard
+error and the posterior standard deviation, use the argument
+<code>simplify = FALSE</code>. (When applied to outputs from
+<code>fbam()</code>, <code>get_est()</code> only returns point
+estimates.)</p>
 <p>The posterior draws for the stimulus positions can be summarized as
 follows:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_est</span>(fit_hbam, <span class="st">&quot;theta&quot;</span>)</span></code></pre></div>
@@ -896,6 +899,30 @@ the fact that the HBAM_MINI model places the less well known candidate
 John B. Anderson further to the left than the HBAM model does. This
 illustrates that there are some subtle differences that users should be
 aware of, even if these models tend to produce very similar results.</p>
+</div>
+<div id="limits-to-exact-replication" class="section level2">
+<h2>Limits to Exact Replication</h2>
+<p>The functions in this package accept a seed argument for all
+operations that involve a random number generator. Supplying a seed is
+sufficient to get the exact same results in repeated runs on the same
+system, but it does not ensure exact replication across systems or
+software versions. The <a href="https://mc-stan.org/docs/reference-manual/reproducibility.html">Stan
+Reference Manual</a> explains why:</p>
+<blockquote>
+<p>Floating point operations on modern computers are notoriously
+difficult to replicate because the fundamental arithmetic operations,
+right down to the IEEE 754 encoding level, are not fully specified. The
+primary problem is that the precision of operations varies across
+different hardware platforms and software implementations.</p>
+<p>Stan is designed to allow full reproducibility. However, this is only
+possible up to the external constraints imposed by floating point
+arithmetic.</p>
+</blockquote>
+<p>In short, running the functions in this package on different systems
+will likely yield slightly different results. It should be noted,
+however, that the differences across systems will be minimal and
+substantively negligible as long as the user obtains a sufficient number
+of posterior draws.</p>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2 class="unnumbered">References</h2>
