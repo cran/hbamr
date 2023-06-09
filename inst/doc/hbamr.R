@@ -103,11 +103,11 @@ knitr::include_graphics("p_trace_theta.svg")
 load("elpds.rda")
 
 ## ----run_cv_new, eval = FALSE-------------------------------------------------
-#  elpd_hbam <- hbam_cv(self, stimuli, model = "HBAM", allow_miss = 0)
-#  elpd_hbam_2 <- hbam_cv(self, stimuli, model = "HBAM_2", allow_miss = 0)
-#  elpd_hbam_NE <- hbam_cv(self, stimuli, model = "HBAM_NE", allow_miss = 0)
-#  elpd_hbam_0 <- hbam_cv(self, stimuli, model = "HBAM_0", allow_miss = 0)
-#  elpd_bam <- hbam_cv(self, stimuli, model = "BAM", allow_miss = 0)
+#  elpd_hbam <- hbam_cv(self, stimuli, model = "HBAM")
+#  elpd_hbam_2 <- hbam_cv(self, stimuli, model = "HBAM_2")
+#  elpd_hbam_NE <- hbam_cv(self, stimuli, model = "HBAM_NE")
+#  elpd_hbam_0 <- hbam_cv(self, stimuli, model = "HBAM_0")
+#  elpd_bam <- hbam_cv(self, stimuli, model = "BAM")
 
 ## ----elpd_ill, eval = FALSE, include = TRUE-----------------------------------
 #  elpds <- rbind(elpd_bam, elpd_hbam, elpd_hbam0, elpd_hbam_ne, elpd_hbam_2)
@@ -118,8 +118,8 @@ elpds <- rbind(elpd_bam, elpd_hbam, elpd_hbam0, elpd_hbam_ne, elpd_hbam_2)
 elpds[order(elpds$ELPD), ]
 
 ## ---- eval = FALSE------------------------------------------------------------
-#  elpd_hbam_HM <- hbam_cv(self, stimuli, model = "HBAM_HM", allow_miss = 0)
-#  elpd_hbam_MINI <- hbam_cv(self, stimuli, model = "HBAM_MINI", allow_miss = 0)
+#  elpd_hbam_HM <- hbam_cv(self, stimuli, model = "HBAM_HM")
+#  elpd_hbam_MINI <- hbam_cv(self, stimuli, model = "HBAM_MINI")
 #  rbind(elpd_hbam_hm, elpd_hbam_mini)
 
 ## ---- echo = FALSE------------------------------------------------------------

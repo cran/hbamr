@@ -373,8 +373,8 @@ a common scale using ideological survey data <span class="citation">(Aldrich and
 versions of the AM model included in this package outperform other
 versions both in terms of yielding meaningful posterior distributions
 for all respondent positions and in terms of recovering true respondent
-positions in simulations <span class="citation">(Bølstad 2023)</span>.
-The package mainly fits these models via the NUTS algorithm in
+positions in simulations. The default model is described in an <a href="https://doi.org/10.1017/pan.2023.18">open access article</a> <span class="citation">(Bølstad 2023)</span>.</p>
+<p>The package mainly fits models via the NUTS algorithm in
 <strong>rstan</strong> – a Markov chain Monte Carlo (MCMC) algorithm.
 However, it also offers a simplified model that can be fit using
 optimization to analyze large data sets quickly.</p>
@@ -514,7 +514,7 @@ supplied as the argument <code>pref</code>. The rationalization part of
 the model is simplified relative to the original ISR model: The
 direction in which respondents move disfavored stimuli is estimated as a
 common expectation for each possible self-placement on the scale.</p>
-<p><strong>HBAM_R-MINI</strong> combines the features of the HBAM_R
+<p><strong>HBAM_R_MINI</strong> combines the features of the HBAM_R
 model with the light-weight features of the HBAM_MINI model to achieve
 faster sampling compared to HBAM_R.</p>
 <p><strong>FBAM_MINI</strong> is a version of the HBAM_MINI model with
@@ -821,12 +821,11 @@ One example of the available tools is <code>traceplot()</code>:</p>
 out-of-sample prediction accuracy. More specifically, we can estimate
 their expected log pointwise predictive density for a new data set
 (ELPD). It is most straightforward to do so for the stimuli placements,
-and this is informative because these form the key basis for estimating
-most individual level parameters. A similar analysis for the
-self-placement data is generally not possible, as the models require
-these placements to estimate the corresponding latent respondent
-positions. This section therefore focuses on estimating the ELPD for
-stimulus placements.</p>
+and this is informative because these form the basis for estimating most
+individual level parameters. A similar analysis for the self-placement
+data is generally not possible, as the models require these placements
+to estimate the corresponding latent respondent positions. This section
+therefore focuses on estimating the ELPD for stimulus placements.</p>
 <p>The <strong>rstan</strong> and <strong>loo</strong> packages contain
 functions for estimating ELPDs by performing approximate leave-one-out
 (LOO) cross-validation using Pareto smoothed importance sampling (PSIS).
@@ -839,23 +838,29 @@ model.</p>
 functions to perform <em>K</em>-fold cross-validation. The function
 <code>hbam_cv()</code> is similar to <code>hbam()</code> and takes the
 same arguments, but will perform a <em>K</em>-fold cross-validation for
-the chosen model. The key choice here is to set <em>K</em> (the number
-of folds to use), and the default in this package is 10. The function is
-parallelized so that users can specify a higher number of cores than
-chains and run chains for different folds simultaneously. To preserve
-memory, the function extracts the summaries of the log-likelihoods for
-the held-out data and drops the stanfit objects once this is done. The
-memory requirements of the function is therefore similar to running a
-single analysis with one chain per core. The function that splits the
-data into <em>K</em> folds uses a default seed to produce the same folds
-each time, unless a different seed is specified.</p>
+the chosen model. In contrast to <code>hbam()</code>, the default for
+<code>hbam_cv()</code> is to not allow respondents to have any missing
+values (<code>allow_miss = 0</code>). The reason is that the
+cross-validation essentially creates missing values by excluding some
+data from each run.</p>
+<p>A key choice when performing cross-validation is to set <em>K</em>
+(the number of folds to use), and the default in this package is 10. The
+function is parallelized so that users can specify a higher number of
+cores than chains and run chains for different folds simultaneously. To
+preserve memory, the function extracts the summaries of the
+log-likelihoods for the held-out data and drops the stanfit objects once
+this is done. The memory requirements of the function is therefore
+similar to running a single analysis with one chain per core. The
+function that splits the data into <em>K</em> folds uses a default seed
+to produce the same folds each time, unless a different seed is
+specified.</p>
 <p>To perform 10-fold cross-validation for a selection of models, we
 could run:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>elpd_hbam <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM&quot;</span>, <span class="at">allow_miss =</span> <span class="dv">0</span>)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>elpd_hbam_2 <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_2&quot;</span>, <span class="at">allow_miss =</span> <span class="dv">0</span>)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>elpd_hbam_NE <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_NE&quot;</span>, <span class="at">allow_miss =</span> <span class="dv">0</span>)</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>elpd_hbam_0 <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_0&quot;</span>, <span class="at">allow_miss =</span> <span class="dv">0</span>)</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>elpd_bam <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;BAM&quot;</span>, <span class="at">allow_miss =</span> <span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>elpd_hbam <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM&quot;</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>elpd_hbam_2 <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_2&quot;</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>elpd_hbam_NE <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_NE&quot;</span>)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>elpd_hbam_0 <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_0&quot;</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>elpd_bam <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;BAM&quot;</span>)</span></code></pre></div>
 <p>Rather than returning stanfit objects, the function returns a data
 frame containing the estimated ELPD and its standard error. To compare
 results across models, we could run:</p>
@@ -878,8 +883,8 @@ that HBAM_2 might perform better or worse than the other models on a
 different data set.</p>
 <p>We could also perform cross-validation for the models that do not
 account for heteroskedastic errors:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>elpd_hbam_HM <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_HM&quot;</span>, <span class="at">allow_miss =</span> <span class="dv">0</span>)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>elpd_hbam_MINI <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_MINI&quot;</span>, <span class="at">allow_miss =</span> <span class="dv">0</span>)</span>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>elpd_hbam_HM <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_HM&quot;</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>elpd_hbam_MINI <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_MINI&quot;</span>)</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(elpd_hbam_hm, elpd_hbam_mini)</span></code></pre></div>
 <pre><code>##              ELPD   SE
 ## HBAM_HM   -5885.3 47.1
@@ -940,7 +945,7 @@ Analysis</em> 28(3): 340–355.
 </div>
 <div id="ref-boelstad:2023" class="csl-entry">
 Bølstad, Jørgen. 2023. <span>“<span>Hierarchical Bayesian
-Aldrich-McKelvey Scaling</span>.”</span> <em>Political Analysis</em>.
+Aldrich-McKelvey Scaling</span>.”</span> <em>Political Analysis</em>. <a href="https://doi.org/10.1017/pan.2023.18">https://doi.org/10.1017/pan.2023.18</a>.
 </div>
 <div id="ref-hare:2015" class="csl-entry">
 Hare, Christopher et al. 2015. <span>“<span class="nocase">Using

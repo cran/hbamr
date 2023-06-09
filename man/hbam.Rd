@@ -94,12 +94,11 @@ Some of these models can also be used in situations where self-placements are no
 \donttest{
 # Loading and re-coding ANES 1980 data:
 data(LC1980)
-dat <- LC1980
-dat[dat == 0 | dat == 8 | dat == 9] <- NA
+LC1980[LC1980 == 0 | LC1980 == 8 | LC1980 == 9] <- NA
 
 # Making a small subset of the data for illustration:
-self <- dat[1:100, 1]
-stimuli <- dat[1:100, -1]
+self <- LC1980[1:100, 1]
+stimuli <- LC1980[1:100, -1]
 
 # Fitting the HBAM_MINI model, obtaining 1000 draws:
 fit_hbam_mini <- hbam(self, stimuli, model = "HBAM_MINI",
@@ -116,8 +115,8 @@ theta_est <- get_est(fit_hbam_mini, par = "theta")
 }
 \references{
 \itemize{
-\item Bølstad, Jørgen (forthcoming). Hierarchical Bayesian Aldrich-McKelvey Scaling. \if{html}{\out{<i>}}Political Analysis\if{html}{\out{</i>}}.
-\item Bølstad, Jørgen (2020). Capturing Rationalization Bias and Differential Item Functioning: A Unified Bayesian Scaling Approach. \if{html}{\out{<i>}}Political Analysis\if{html}{\out{</i>}} 28(3): 340–355.
-\item Hare, Christopher et al. (2015). Using Bayesian Aldrich-McKelvey Scaling to Study Citizens' Ideological Preferences and Perceptions. \if{html}{\out{<i>}}American Journal of Political Science\if{html}{\out{</i>}} 59(3): 759–774.
+\item Bølstad, Jørgen (2023). Hierarchical Bayesian Aldrich-McKelvey Scaling. \emph{Political Analysis}. \doi{10.1017/pan.2023.18}.
+\item Bølstad, Jørgen (2020). Capturing Rationalization Bias and Differential Item Functioning: A Unified Bayesian Scaling Approach. \emph{Political Analysis} 28(3): 340–355.
+\item Hare, Christopher et al. (2015). Using Bayesian Aldrich-McKelvey Scaling to Study Citizens' Ideological Preferences and Perceptions. \emph{American Journal of Political Science} 59(3): 759–774.
 }
 }
