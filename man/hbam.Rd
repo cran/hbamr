@@ -12,15 +12,19 @@ hbam(
   req_valid = NA,
   req_unique = 2,
   prefs = NULL,
-  prep_data = TRUE,
+  group_id = NULL,
   data = NULL,
+  pars = "logit_lambda",
+  include = FALSE,
   chains = 4,
   cores = parallel::detectCores(logical = FALSE),
   warmup = 1000,
-  iter = 4000,
-  thin = 3,
-  control = list(adapt_delta = 0.6),
+  iter = 2000,
   seed = sample.int(.Machine$integer.max, 1),
+  sigma_alpha = NULL,
+  sigma_beta = 0.35,
+  sigma_mu_alpha = NULL,
+  sigma_mu_beta = 0.3,
   ...
 )
 }
@@ -29,7 +33,7 @@ hbam(
 
 \item{stimuli}{An N × J matrix of numerical stimulus placements, where J is the number of stimuli. Any missing data must be coded as NA. This argument will not be used if the data have been prepared in advance via the \code{prep_data} function.}
 
-\item{model}{Character: Name of the model to be used. One of: \code{"HBAM"}, \code{"HBAM_2"}, \code{"HBAM_NE"}, \code{"HBAM_HM"}, \code{"HBAM_MINI"}, \code{"HBAM_0"}, \code{"HBAM_R"}, \code{"HBAM_R_MINI"}, \code{"FBAM_MINI"}, or \code{"BAM"}. Defaults to \code{"HBAM"}.}
+\item{model}{Character: Name of the model to be used. Defaults to HBAM. The available models are described under Details.}
 
 \item{allow_miss}{Integer specifying how many missing stimulus positions to be accepted for an individual still to be included in the analysis. This argument will not be used if the data have been prepared in advance via the \code{prep_data} function. Defaults to 2.}
 
@@ -37,11 +41,15 @@ hbam(
 
 \item{req_unique}{Integer specifying how may unique positions on the ideological scale each respondent is required to have used when placing the stimuli in order to be included in the analysis. The default is \code{req_unique = 2}. This argument will not be used if the data have been prepared in advance via the \code{prep_data} function.}
 
-\item{prefs}{An N × J matrix of numerical stimulus ratings or preference scores. These data are only required by the \code{"HBAM_R"} and \code{"HBAM_R_MINI"} models and will be ignored when fitting other models.}
+\item{prefs}{An N × J matrix of numerical stimulus ratings or preference scores. These data are only required by the HBAM_R and HBAM_R_MINI models and will be ignored when fitting other models.}
 
-\item{prep_data}{Logical: Should the data be prepared before fitting the model? (Or have the data been prepared in advance via the \code{prep_data} function? If so, set \code{prep_data = FALSE}.)}
+\item{group_id}{Integer vector of length N identifying which group each respondent belongs to. The supplied vector should range from 1 to the total number of groups in the data, and all integers between these numbers should be represented in the supplied data. These data are only required by models with "MULTI" in their name and will be ignored when fitting other models.}
 
-\item{data}{List of data that have been prepared in advance via the \code{prep_data} function. Only applicable when \code{prep_data = TRUE}.}
+\item{data}{List of data that have been prepared in advance via the \code{prep_data} function. Not required if the arguments \code{self} and \code{stimuli} are provided.}
+
+\item{pars}{A vector of character strings specifying parameters of interest. If \code{include = TRUE}, only samples for parameters named in pars are stored in the fitted results. Conversely, if \code{include = FALSE}, samples for all parameters except those named in pars are stored in the fitted results. The default is "\code{logit_lambda}" for HBAM models and "\code{kappa}" for FBAM models, which in combination with \code{include = FALSE}, selects all but these parameters.}
+
+\item{include}{Logical scalar defaulting to \code{FALSE} indicating whether to include or exclude the parameters given by the pars argument. If \code{FALSE}, only entire multidimensional parameters can be excluded, rather than particular elements of them.}
 
 \item{chains}{A positive integer specifying the number of Markov chains. Defaults to 4.}
 
@@ -51,11 +59,15 @@ hbam(
 
 \item{iter}{A positive integer specifying the number of iterations for each chain (including warmup).}
 
-\item{thin}{A positive integer specifying the period for saving samples.}
-
-\item{control}{A named list of parameters to control the sampler's behavior. See the details in the documentation for the control argument in the \code{stan} function in the \code{rstan} package.}
-
 \item{seed}{A positive integer specifying an optional seed for reproducibility. If this argument is not supplied, a random seed will be generated and the function will produce slightly different results on each run.}
+
+\item{sigma_alpha}{A positive numeric value specifying the standard deviation of the prior on the shift parameters in the FBAM_MINI model, or the standard deviation of the parameters' deviation from the group-means in FBAM_MULTI models. (This argument will be ignored by HBAM models.) Defaults to B / 4, where B measures the length of the survey scale as the number of possible placements on one side of the center.}
+
+\item{sigma_beta}{A positive numeric value specifying the standard deviation of the prior on the logged stretch parameters in the FBAM_MINI model, or the standard deviation of the logged parameters' deviation from the group-means in FBAM_MULTI models. (This argument will be ignored by HBAM models.) Defaults to .35.}
+
+\item{sigma_mu_alpha}{A positive numeric value specifying the standard deviation of the prior on the group-means of the shift parameters in MULTI-type models. Defaults to B / 5.}
+
+\item{sigma_mu_beta}{A positive numeric value specifying the standard deviation of the prior on the group-means of the logged stretch parameters in MULTI-type models. Defaults to .3.}
 
 \item{...}{Arguments passed to \code{rstan::sampling}.}
 }
@@ -63,32 +75,40 @@ hbam(
 An object of S4 class \code{stanfit}.
 }
 \description{
-Fit a Hierarchical Bayesian Aldrich-McKelvey model using automatically tuned Hamiltonian Monte Carlo (NUTS) sampling via \code{rstan}.
+Fit a Hierarchical Bayesian Aldrich-McKelvey model using automatically tuned Hamiltonian Monte Carlo sampling (NUTS) via \code{rstan}.
 }
 \details{
-This package provides several alternative models, which can be specified using the names below. Users who are unsure which model to use are adviced to use the default HBAM model. If speed or sampling diagnostics are an issue, HBAM_MINI may provide a useful alternative.
+This package provides several alternative models that can be selected using the names below. Users who are unsure which model to use are advised to use the default HBAM model. If speed or sampling diagnostics are an issue, HBAM_MINI may provide a useful alternative.
 
-\strong{HBAM} is the default model, which allows for scale flipping and employs hierarchical priors on all individual level parameters. It also models heteroskedastic errors that vary by both individual and stimuli. This model was introduced by Bølstad (2023).
+\strong{HBAM} is the default model, which allows for scale flipping and employs hierarchical priors on the shift and stretch parameters. It also models heteroskedastic errors that vary by both individual and stimuli. Compared to the model in Bølstad (2023), this version has been slightly revised to provide faster sampling. A key difference from the original model is that the respondent positions are not treated as parameters, but rather calculated as a function of the self-placements and the individual-level parameters. This makes the model considerably faster, while yielding very similar results.
 
-\strong{HBAM_2} uses different hyperpriors for the shifting parameters of respondents with different self-placements. In particular, the model estimates a separate mean hyperparameter for each self-placement. This model avoids shrinking the shifting parameters toward a common population mean, and may therefore fit better than HBAM if there are clear differences in average shifting across the scale of self-placements. However, this model also tends to run slower than the standard model.
+\strong{HBAM_MULTI} is a version that models differences between groups defined by the user. It requires an integer vector identifying the groups to be supplied as the argument \code{group_id}. The model gives each group separate hyperparameters for the locations of the prior distributions for the shift and stretch parameters. Rather than shrinking the estimates toward the mode for the whole dataset, this model shrinks the estimates toward the mode for the group. The vectors of hyperparameters are called \code{mu_alpha} and \code{mu_beta} and are constructed to have means of 0. The scales of the priors on these hyperparameters can be set by the user via the arguments \code{sigma_mu_alpha} and \code{sigma_mu_beta}. The default values are B / 5 and .3, respectively. (Here, B measures the length of the survey scale as the number of possible placements on one side of the center.) One potential use for this model is to supply self-placements (appropriately transformed) as \code{group_id}, and thus give each self-placement group its own prior distribution for the shift and stretch parameters.
 
-\strong{HBAM_NE} models the self-placements as if they contain no error. The latent respondent positions are not treated as parameters, but rather calculated as function of the self-placements and other individual level parameters. The respondents positions are not given a prior, which means the model relies on the likelihood function and the prior on beta to yield meaningful results for these positions. By assuming no error in the self-placements, the model may underestimate the uncertainty in estimated respondents positions, while otherwise yielding very similar results to the standard HBAM model. In contrast to the standard model, the estimated respondent positions from this model will not exhibit any shrinkage, which for some purposes may be desirable, as the results may better represent the true distances between respondents and stimuli. This model also runs somewhat faster than the standard HBAM model.
+\strong{HBAM_NF} (formerly HBAM_0) is a version of the HBAM model that does not allow for scale flipping. This may be useful if there are truly zero cases of scale flipping in the data. Such scenarios can be created artificially, but may also arise in real data. For example, expert surveys appear unlikely to contain many instances of scale flipping. For data that contain zero cases of flipping, models that allow for flipping contain superfluous parameters that lead to inefficient sampling. Models that do not allow for flipping will sample faster and typically yield slightly more accurate estimates. Such models are therefore preferable when no flipping is present.
 
-\strong{HBAM_HM} assumes the prediction errors in the stimuli placements to be homoskedastic. This simplified model should normally produce very similar results to the HBAM model, and it runs somewhat faster.
+\strong{HBAM_MULTI_NF} is a version of the HBAM_MULTI model that does not allow for scale flipping.
 
-\strong{HBAM_MINI} combines the characteristics of HBAM_NE and HBAM_HM: It models the self-placements as if they contain no error and assumes the prediction errors in the stimuli placements to be homoskedastic. This is the simplest model provided in this package that still retains all key features of the HBAM model. It is also the fastest HBAM variant in this package -- sampling about twice as fast as the standard HBAM model for the dataset analyzed here (while yielding very similar point estimates). For large datasets, this model may provide a reasonable compromise between model complexity and estimation speed.
+\strong{HBAM_MINI} is a version of the HBAM model that assumes the prediction errors in the stimuli placements to be homoskedastic. This model tends to sample faster faster than the standard HBAM model while yielding very similar point estimates. For large datasets, this model may provide a reasonable compromise between model complexity and estimation speed.
 
-\strong{HBAM_0} does not allow for scale flipping. This may be useful if there are truly zero cases of scale flipping in the data. Such scenarios can be created artificially, but may also arise in real data. For example, expert surveys appear unlikely to contain many instances of scale flipping.
+\strong{FBAM_MINI} is a version of the HBAM_MINI model with fixed hyperparameters to allow fitting via optimization rather than MCMC -- which can be useful for large data sets. This model allows the user to specify the scales of the priors for the shift and (logged) stretch parameters via the arguments \code{sigma_alpha} and \code{sigma_beta}. The default values are B / 4 and .35, respectively. These defaults are intended to be realistic and weakly informative. As with the other models, the default values of the scale-dependent priors are automatically adjusted to the length of the survey scale. Users who want to control the degree of shrinkage of the individual-level parameters may find it useful to fit this model (or other FBAM models) via either MCMC or optimization.
 
-\strong{HBAM_R} incorporates the rationalization component of the ISR model by Bølstad (2020). This model requires additional data to be supplied to the \code{prep_data()} function: An N × J matrix of stimuli ratings from the respondents, supplied as the argument \code{pref}. The rationalization part of the model is simplified relative to the original ISR model: The direction in which respondents move disfavored stimuli is estimated as a common expectation for each possible self-placement on the scale.
+\strong{FBAM_MULTI} is a version of the FBAM_MINI model that shares the group-modeling features of the HBAM_MULTI model. It allows the user to set the scales of the priors for the shift and stretch parameters via the arguments \code{sigma_alpha} and \code{sigma_beta}, and set the scales of the priors on \code{mu_alpha} and \code{mu_beta} via the arguments \code{sigma_mu_alpha} and \code{sigma_mu_beta}.
 
-\strong{HBAM_R_MINI} combines the features of the HBAM_R model with the light-weight features of the HBAM_MINI model to achieve faster sampling compared to HBAM_R.
+\strong{FBAM_MULTI_NF} is a version of the FBAM_MULTI model that does not allow for scale flipping.
 
-\strong{FBAM_MINI} is a version of the HBAM_MINI model with fixed hyperparameters to allow fitting via optimization rather than MCMC -- which can be useful for large data sets. The hyperparameters have been set to realistic values based on analyses of ANES data. As with the other models, scale-dependent priors are automatically adjusted to the length of the survey scale.
+\strong{HBAM_R_MINI} is a version of the HBAM_MINI model that incorporates the rationalization component of the ISR model by Bølstad (2020). This model requires additional data to be supplied as the argument \code{pref}: An N × J matrix of stimuli ratings from the respondents. The rationalization part of the model is simplified relative to the original ISR model: The direction in which respondents move disfavored stimuli is estimated as a common expectation for each possible self-placement on the scale.
 
-\strong{BAM} is an unpooled model, similar to the JAGS version introduced by Hare et al. (2015). This model is mainly provided to offer a baseline for model comparisons. While it is simple and fast, this model tends to overfit the data and produce invalid posterior distributions for some respondent positions (Bølstad 2023).
+\strong{BAM} is an unpooled model with wide uniform priors on the shift and stretch parameters. It is similar to the JAGS version introduced by Hare et al. (2015). This model is mainly provided to offer a baseline for model comparisons. While it is simple and fast, this model tends to overfit the data and produce invalid posterior distributions for some respondent positions (see Bølstad 2023).
 
-Some of these models can also be used in situations where self-placements are not available and the only goal is to estimate stimulus positions. This can be achieved by supplying a vector of zeros (or random data) instead of real self-placements: \code{self = rep(0, nrow(stimuli))}. The HBAM_NE and HBAM_MINI models are then the relevant alternatives, as the other HBAM variants will include superfluous parameters (and will not sample properly with zero variance in the supplied self-placement data).
+\strong{HBAM_MAX} treats the latent respondent positions as parameters -- in contrast to all other models in this package. The advantage of doing so is that the uncertainty of the respondent positions may be estimated more accurately. A key disadvantage is the model takes longer to fit. Another potential disadvantage is that the hierarchical prior on the respondent positions shrinks them toward their common mean, which may be undesirable if the distances between respondents and stimuli are of interest.
+
+\strong{HBAM_2} is deprecated and replaced by the more general HBAM_MULTI model.
+
+These models can also be used in situations where self-placements are not available and the only goal is to estimate stimulus positions. This can be achieved by supplying a vector of zeros (or random data) instead of real self-placements: \code{self = rep(0, nrow(stimuli))}.
+
+See the \code{hbamr} vignette for a table summarizing the key characteristics of the available models.
+
+To see the code for any of the models, use the \code{show_code()} function.
 }
 \examples{
 \donttest{
@@ -102,15 +122,20 @@ stimuli <- LC1980[1:100, -1]
 
 # Fitting the HBAM_MINI model, obtaining 1000 draws:
 fit_hbam_mini <- hbam(self, stimuli, model = "HBAM_MINI",
-                 warmup = 500, iter = 1000, chains = 2, thin = 1)
+                   warmup = 500, iter = 1000, chains = 2)
 
 # Preparing the data before fitting, requiring complete responses:
 dat <- prep_data(self, stimuli, allow_miss = 0)
-fit_hbam_mini <- hbam(data = dat, prep_data = FALSE, model = "HBAM_MINI",
-                 warmup = 500, iter = 1000, chains = 2, thin = 1)
+fit_hbam_mini <- hbam(data = dat, model = "HBAM_MINI",
+                   warmup = 500, iter = 1000, chains = 2)
 
 # Obtaining posterior summaries for the latent stimulus positions:
 theta_est <- get_est(fit_hbam_mini, par = "theta")
+
+# Fitting the FBAM_MULTI_NF model with self-placements as group_id:
+  # Note: This works because the self-placements in this case are positive integers.
+fit_fbam_multi_NF <- hbam(self, stimuli, group_id = self, model = "FBAM_MULTI_NF",
+                       warmup = 500, iter = 1000, chains = 2)
 }
 }
 \references{

@@ -2,17 +2,22 @@
 % Please edit documentation in R/fbam.R
 \name{fbam}
 \alias{fbam}
-\title{Fit the FBAM_MINI model using optimization}
+\title{Fit an FBAM model using optimization}
 \usage{
 fbam(
   self = NULL,
   stimuli = NULL,
+  model = "FBAM_MINI",
   allow_miss = 2,
   req_valid = NA,
   req_unique = 2,
-  prep_data = TRUE,
+  group_id = NULL,
   data = NULL,
   seed = sample.int(.Machine$integer.max, 1),
+  sigma_alpha = NULL,
+  sigma_beta = 0.35,
+  sigma_mu_alpha = NULL,
+  sigma_mu_beta = 0.3,
   ...
 )
 }
@@ -21,17 +26,27 @@ fbam(
 
 \item{stimuli}{An N × J matrix of numerical stimulus placements, where J is the number of stimuli. Any missing data must be coded as NA. This argument will not be used if the data have been prepared in advance via the \code{prep_data} function.}
 
+\item{model}{Character: Name of the model to be used. Defaults to FBAM_MINI. The available options are the three models with "FBAM" in their name. See the documentation for the \code{hbam()} function for descriptions of the models.}
+
 \item{allow_miss}{Integer specifying how many missing stimulus positions to be accepted for an individual still to be included in the analysis. This argument will not be used if the data have been prepared in advance via the \code{prep_data} function. Defaults to 2.}
 
 \item{req_valid}{Integer specifying how many valid observations to require for a respondent to be included in the analysis. The default is \code{req_valid = J - allow_miss}, but if specified, \code{req_valid} takes precedence. This argument will not be used if the data have been prepared in advance via the \code{prep_data} function.}
 
 \item{req_unique}{Integer specifying how may unique positions on the ideological scale each respondent is required to have used when placing the stimuli in order to be included in the analysis. The default is \code{req_unique = 2}. This argument will not be used if the data have been prepared in advance via the \code{prep_data} function.}
 
-\item{prep_data}{Logical: Should the data be prepared before fitting the model? (Or have the data been prepared in advance via the \code{prep_data} function? If so, set \code{prep_data = FALSE}.)}
+\item{group_id}{Integer vector of length N identifying which group each respondent belongs to. The supplied vector should range from 1 to the total number of groups in the data, and all integers between these numbers should be represented in the supplied data. These data are only required by models with "MULTI" in their name and will be ignored when fitting other models.}
 
-\item{data}{List of data that have been prepared in advance via the \code{prep_data} function. Only applicable when \code{prep_data = TRUE}.}
+\item{data}{List of data that have been prepared in advance via the \code{prep_data} function. Not required if the arguments \code{self} and \code{stimuli} are provided.}
 
 \item{seed}{A positive integer specifying an optional seed for reproducibility. If this argument is not supplied, a random seed will be generated and the function will produce slightly different results on each run.}
+
+\item{sigma_alpha}{A positive numeric value specifying the standard deviation of the prior on the shift parameters in the FBAM_MINI model, or the standard deviation of the parameters' deviation from the group-means in FBAM_MULTI models. (This argument will be ignored by HBAM models.) Defaults to B / 4, where B measures the length of the survey scale as the number of possible placements on one side of the center.}
+
+\item{sigma_beta}{A positive numeric value specifying the standard deviation of the prior on the logged stretch parameters in the FBAM_MINI model, or the standard deviation of the logged parameters' deviation from the group-means in FBAM_MULTI models. (This argument will be ignored by HBAM models.) Defaults to .35.}
+
+\item{sigma_mu_alpha}{A positive numeric value specifying the standard deviation of the prior on the group-means of the shift parameters in MULTI-type models. Defaults to B / 5.}
+
+\item{sigma_mu_beta}{A positive numeric value specifying the standard deviation of the prior on the group-means of the logged stretch parameters in MULTI-type models. Defaults to .3.}
 
 \item{...}{Arguments passed to \code{rstan::optimizing}.}
 }

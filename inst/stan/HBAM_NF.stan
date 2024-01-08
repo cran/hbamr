@@ -9,7 +9,7 @@ data {
   int<lower = 1, upper = J> R;            // right pole
   array[N_obs] int<lower = -B, upper = B> Y; // reported stimuli positions
   vector<lower = -B, upper = B>[N] V;     // reported self-placements
-  int<lower = 0, upper = 1> CV;           // indicator of cross-validation
+  int<lower=0, upper=1> CV;               // indicator of cross-validation
   array[N_obs] int<lower = 0, upper = 1> holdout; // holdout for cross-validation
 }
 
@@ -19,8 +19,8 @@ transformed data {
 }
 
 parameters {
-  matrix[N, 2] alpha_raw;                 // shift parameter, split, raw
-  matrix[N, 2] beta_raw;                  // stretch parameter, split, raw
+  vector[N] alpha_raw;                    // shift parameter, raw
+  vector[N] beta_raw;                     // stretch parameter, raw
   ordered[2] theta_lr;                    // left and right pole
   array[J] real theta_raw;                // remaining stimuli
   real<lower = 0> sigma_alpha;            // sd of alpha
@@ -29,52 +29,39 @@ parameters {
   real<lower = 0> tau;                    // scale of errors
   vector<lower = 0>[N] eta;               // mean ind. error variance x J^2
   simplex[J] rho;                         // stimuli-shares of variance
-  vector[N] logit_lambda;                 // raw mixing proportion, flipping
-  real<lower = 0> psi;                    // mean of prior on logit of lambda
 }
 
 transformed parameters {
+  vector[N] alpha;                        // shift parameter
+  vector[N] beta;                         // stretch parameter
+  vector[N] chi;                          // latent respondent positions
   array[J] real theta;                    // latent stimuli position
-  matrix[N, 2] alpha0;                    // shift parameter, split
-  matrix[N, 2] beta0;                     // stretch parameter, split
-  matrix[N, 2] chi0;                      // latent respondent positions, split
   vector[N_obs] log_lik;                  // pointwise log-likelihood for Y
-  vector<lower = 0, upper = 1>[N] lambda = inv_logit(psi + logit_lambda * 3); // prob. of non-flipping
   real<lower = 0> eta_scale = tau * J;
   theta = theta_raw;
   theta[L] = theta_lr[1];                 // safeguard to ensure identification
   theta[R] = theta_lr[2];
-  alpha0[, 1] = alpha_raw[, 1] * sigma_alpha; // non-centered specifications
-  alpha0[, 2] = alpha_raw[, 2] * sigma_alpha;
-  beta0[, 1] = exp(beta_raw[, 1] * sigma_beta);
-  beta0[, 2] = -exp(beta_raw[, 2] * sigma_beta);
-  chi0[, 1] = ((V - alpha0[, 1]) ./ beta0[, 1]);
-  chi0[, 2] = ((V - alpha0[, 2]) ./ beta0[, 2]);
+  alpha = alpha_raw * sigma_alpha;        // non-centered specifications
+  beta = exp(beta_raw * sigma_beta);
+  chi = ((V - alpha) ./ beta);
 
   for (n in 1:N_obs) {
-    log_lik[n] = log_mix( lambda[ii[n]],
-      normal_lpdf(Y[n] | alpha0[ii[n], 1] + beta0[ii[n], 1] * theta[jj[n]],
-        sqrt(eta[ii[n]]) * rho[jj[n]]),
-      normal_lpdf(Y[n] | alpha0[ii[n], 2] + beta0[ii[n], 2] * theta[jj[n]],
-        sqrt(eta[ii[n]]) * rho[jj[n]]) );
+    log_lik[n] = normal_lpdf(Y[n] | alpha[ii[n]] + beta[ii[n]] * theta[jj[n]],
+      sqrt(eta[ii[n]]) * rho[jj[n]]);
   }
 }
 
 model {
   theta_raw ~ normal(0, B);
   theta_lr ~ normal(0, B);
-  alpha_raw[, 1] ~ normal(0, 1);
-  alpha_raw[, 2] ~ normal(0, 1);
+  alpha_raw ~ normal(0, 1);
   sigma_alpha ~ gamma(2, sigma_alpha_prior_rate);
-  beta_raw[, 1] ~ normal(0, 1);
-  beta_raw[, 2] ~ normal(0, 1);
+  beta_raw ~ normal(0, 1);
   sigma_beta ~ gamma(3, 10);
   eta ~ scaled_inv_chi_square(nu, eta_scale);
   nu ~ gamma(25, 2.5);
   tau ~ gamma(2, tau_prior_rate);
   rho ~ dirichlet(rep_vector(5, J));
-  logit_lambda ~ normal(0, 1);
-  psi ~ lognormal(1.4, .5);
 
   if(CV == 0)
     target += sum(log_lik);
@@ -83,11 +70,4 @@ model {
       if(holdout[n] == 0)
         target += log_lik[n];
     }
-}
-
-generated quantities {
-  vector[N] kappa = to_vector(bernoulli_rng(lambda));
-  vector[N] chi = (kappa .* chi0[, 1]) + ((1 - kappa) .* chi0[, 2]);
-  vector[N] alpha = (kappa .* alpha0[, 1]) + ((1 - kappa) .* alpha0[, 2]);
-  vector[N] beta = (kappa .* beta0[, 1]) + ((1 - kappa) .* beta0[, 2]);
 }

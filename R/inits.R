@@ -8,15 +8,19 @@ inits_HBAM <- function(chain_id = 1, dat) {
     alpha_raw = matrix(rnorm(2 * dat$N, 0, .5), ncol = 2),
     sigma_beta = runif(1, .1, .2),
     beta_raw = matrix(rnorm(dat$N * 2, 0, .2), ncol = 2),
-    delta = runif(1, 2.1, 2.5),
     lambda = runif(dat$N, .7, .95),
-    psi = runif(1, .875, .925),
     nu = 3 + rinvchisq(1, 100, 7),
     tau = rinvchisq(1, 500, (dat$B / 3)),
     eta = rinvchisq(dat$N, 100, dat$J^2 * (dat$B / 3)^2),
     rho = c(rdirichlet(1, rep(50, dat$J))),
-    # For HBAM_2:
-    mu_alpha_raw = rnorm(2 * dat$B, 0, 0.1),
+    logit_lambda = rnorm(dat$N, 0, .2),
+    psi = exp(rnorm(1, 1.4, .1)),
+    # For HBAM_ORIG:
+    delta = runif(1, 2.05, 2.1),
+    psi_old = runif(1, .875, .925),
+    # For HBAM_MULTI:
+    mu_alpha_raw = rdirichlet(1, rep(500, dat$G)),
+    mu_beta_raw = rdirichlet(1, rep(500, dat$G)),
     # For HBAM_R:
     gammma = runif(dat$N, 0, .3),
     gam_a = runif(1, 2, 3),
@@ -25,7 +29,7 @@ inits_HBAM <- function(chain_id = 1, dat) {
   )
 }
 
-inits_HBAM_0 <- function(chain_id = 1, dat) {
+inits_HBAM_NF <- function(chain_id = 1, dat) {
   list (
     theta_raw = dat$mean_spos + rnorm(dat$J, 0, (dat$B / 5) * 0.25),
     theta_lr = dat$mean_spos[c(dat$L, dat$R)] + c(runif(1, -dat$B / 10, 0), runif(1, 0, dat$B / 10)),
@@ -38,7 +42,10 @@ inits_HBAM_0 <- function(chain_id = 1, dat) {
     nu = 3 + rinvchisq(1, 100, 7),
     tau = rinvchisq(1, 500, (dat$B / 3)),
     eta = rinvchisq(dat$N, 100, dat$J^2 * (dat$B / 3)^2),
-    rho = c(rdirichlet(1, rep(50, dat$J)))
+    rho = c(rdirichlet(1, rep(50, dat$J))),
+    # For HBAM_MULTI:
+    mu_alpha_raw = rdirichlet(1, rep(500, dat$G)),
+    mu_beta_raw = rdirichlet(1, rep(500, dat$G))
   )
 }
 
@@ -57,14 +64,19 @@ inits_BAM <- function(chain_id = 1, dat) {
 # Collecting all inits-functions:
 inits <- list(
   HBAM = inits_HBAM,
-  HBAM_2 = inits_HBAM,
-  HBAM_NE = inits_HBAM,
-  HBAM_HM = inits_HBAM,
+  #HBAM_ORIG = inits_HBAM,
+  HBAM_MAX = inits_HBAM,
+  # HBAM_2 = inits_HBAM,
+  # HBAM_HM = inits_HBAM,
   HBAM_MINI = inits_HBAM,
-  HBAM_R = inits_HBAM,
+  HBAM_MULTI = inits_HBAM,
+  # HBAM_R = inits_HBAM,
   HBAM_R_MINI = inits_HBAM,
   FBAM_MINI = inits_HBAM,
-  HBAM_0 = inits_HBAM_0,
+  FBAM_MULTI = inits_HBAM,
+  HBAM_NF = inits_HBAM_NF,
+  HBAM_MULTI_NF = inits_HBAM_NF,
+  FBAM_MULTI_NF = inits_HBAM_NF,
   BAM = inits_BAM)
 
 rinvchisq <- function(n, df, scale = 1/df) {

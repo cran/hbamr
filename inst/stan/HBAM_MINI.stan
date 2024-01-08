@@ -9,8 +9,8 @@ data {
   int<lower = 1, upper = J> R;            // right pole
   array[N_obs] int<lower = -B, upper = B> Y; // reported stimuli positions
   vector<lower = -B, upper = B>[N] V;     // reported self-placements
-  int<lower=0, upper=1> CV;               // indicator of cross-validation
-  array[N_obs] int<lower=0, upper=1> holdout; // holdout for cross-validation
+  int<lower = 0, upper = 1> CV;           // indicator of cross-validation
+  array[N_obs] int<lower = 0, upper = 1> holdout; // holdout for cross-validation
 }
 
 transformed data {
@@ -26,19 +26,17 @@ parameters {
   real<lower = 0> sigma_alpha;            // sd of alpha
   real<lower = 0, upper = 2> sigma_beta;  // sd of log(beta)
   real<lower = 0> tau;                    // sd of errors
-  vector<lower = 0, upper = 1>[N] lambda; // mixing proportion, flipping
-  real<lower = .5, upper = 1> psi;        // mean of prior on lambda
-  real<lower = 2, upper = 100> delta;     // concentration of prior on lambda
+  vector[N] logit_lambda;                 // raw mixing proportion, flipping
+  real<lower = 0> psi;                    // mean of prior on logit of lambda
 }
 
 transformed parameters {
-  real<lower=0> alpha_lambda = delta * psi; // reparameterization
-  real<lower=0> beta_lambda = delta * (1 - psi);
   array[J] real theta;                    // latent stimuli position
   matrix[N, 2] alpha0;                    // shift parameter, split
   matrix[N, 2] beta0;                     // stretch parameter, split
   matrix[N, 2] chi0;                      // latent respondent positions, split
   vector[N_obs] log_lik;                  // pointwise log-likelihood for Y
+  vector<lower = 0, upper = 1>[N] lambda = inv_logit(psi + logit_lambda * 3); // prob. of non-flipping
   theta = theta_raw;
   theta[L] = theta_lr[1];                 // safeguard to ensure identification
   theta[R] = theta_lr[2];
@@ -66,9 +64,8 @@ model {
   beta_raw[, 2] ~ normal(0, 1);
   sigma_beta ~ gamma(3, 10);
   tau ~ gamma(2, tau_prior_rate);
-  lambda ~ beta(alpha_lambda, beta_lambda);
-  psi ~ beta(8.5, 1.5);
-  delta - 2 ~ gamma(2, .1);
+  logit_lambda ~ normal(0, 1);
+  psi ~ lognormal(1.4, .5);
 
   if(CV == 0)
     target += sum(log_lik);

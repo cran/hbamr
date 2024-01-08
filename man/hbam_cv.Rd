@@ -2,7 +2,7 @@
 % Please edit documentation in R/hbam_cv.R
 \name{hbam_cv}
 \alias{hbam_cv}
-\title{Perform K-fold cross-validation for an HBAM-type model}
+\title{Perform K-fold cross-validation}
 \usage{
 hbam_cv(
   self = NULL,
@@ -12,16 +12,21 @@ hbam_cv(
   req_valid = NA,
   req_unique = 2,
   prefs = NULL,
+  group_id = NULL,
   prep_data = TRUE,
   data = NULL,
   K = 10,
   chains = 2,
   cores = parallel::detectCores(logical = FALSE),
   warmup = 1000,
-  iter = 4000,
+  iter = 3000,
   thin = 1,
-  control = list(adapt_delta = 0.6),
-  seed = 1
+  seed = 1,
+  sigma_alpha = NULL,
+  sigma_beta = 0.35,
+  sigma_mu_alpha = NULL,
+  sigma_mu_beta = 0.3,
+  ...
 )
 }
 \arguments{
@@ -29,7 +34,7 @@ hbam_cv(
 
 \item{stimuli}{An N × J matrix of numerical stimulus placements, where J is the number of stimuli. Any missing data must be coded as NA. This argument will not be used if the data have been prepared in advance via the \code{prep_data} function.}
 
-\item{model}{Character: Name of the model to be used. Defaults to \code{"HBAM"}.}
+\item{model}{Character: Name of the model to be used. Defaults to HBAM.}
 
 \item{allow_miss}{Integer specifying how many missing stimulus positions to be accepted for an individual still to be included in the analysis. This argument will not be used if the data have been prepared in advance via the \code{prep_data} function. Defaults to 0.}
 
@@ -37,7 +42,9 @@ hbam_cv(
 
 \item{req_unique}{Integer specifying how may unique positions on the ideological scale each respondent is required to have used when placing the stimuli in order to be included in the analysis. The default is \code{req_unique = 2}. This argument will not be used if the data have been prepared in advance via the \code{prep_data} function.}
 
-\item{prefs}{An N × J matrix of numerical stimulus ratings or preference scores. These data are only required by the \code{"HBAM_R"} and \code{"HBAM_R_MINI"} models and will be ignored when fitting other models.}
+\item{prefs}{An N × J matrix of numerical stimulus ratings or preference scores. These data are only required by the HBAM_R and HBAM_R_MINI models and will be ignored when fitting other models.}
+
+\item{group_id}{Integer vector of length N identifying which group each respondent belongs to. The supplied vector should range from 1 to the total number of groups in the data, and all integers between these numbers should be represented in the supplied data. These data are only required by models with "MULTI" in their name and will be ignored when fitting other models.}
 
 \item{prep_data}{Logical: Should the data be prepared before fitting the model? (Or have the data been prepared in advance by first running the \code{prep_data} and \code{prep_data_cv} functions)? If so, set \code{prep_data = FALSE}.) Defaults to \code{prep_data = TRUE}.}
 
@@ -55,15 +62,23 @@ hbam_cv(
 
 \item{thin}{A positive integer specifying the period for saving samples.}
 
-\item{control}{A named list of parameters to control the sampler's behavior. See the details in the documentation for the control argument in the \code{stan} function in the \code{rstan} package.}
-
 \item{seed}{An integer passed on to \code{set.seed} before creating the folds to increase reproducibility and comparability. Defaults to 1 and only applies to fold-creation when the argument \code{prep_data} is \code{TRUE}. The supplied \code{seed} argument is also used to generate seeds for the sampling algorithm.}
+
+\item{sigma_alpha}{A positive numeric value specifying the standard deviation of the prior on the shift parameters in the FBAM_MINI model, or the standard deviation of the parameters' deviation from the group-means in FBAM_MULTI models. (This argument will be ignored by HBAM models.) Defaults to B / 4, where B measures the length of the survey scale as the number of possible placements on one side of the center.}
+
+\item{sigma_beta}{A positive numeric value specifying the standard deviation of the prior on the logged stretch parameters in the FBAM_MINI model, or the standard deviation of the logged parameters' deviation from the group-means in FBAM_MULTI models. (This argument will be ignored by HBAM models.) Defaults to .35.}
+
+\item{sigma_mu_alpha}{A positive numeric value specifying the standard deviation of the prior on the group-means of the shift parameters in MULTI-type models. Defaults to B / 5.}
+
+\item{sigma_mu_beta}{A positive numeric value specifying the standard deviation of the prior on the group-means of the logged stretch parameters in MULTI-type models. Defaults to .3.}
+
+\item{...}{Arguments passed to \code{rstan::sampling}.}
 }
 \value{
 A data frame containing the estimated ELPD and its standard error.
 }
 \description{
-This function performs a K-fold cross-validation for an HBAM-type model in order to estimate the expected log pointwise predictive density for a new dataset (ELPD).
+This function performs a K-fold cross-validation for an HBAM or FBAM model in order to estimate the expected log pointwise predictive density for a new dataset (ELPD).
 }
 \examples{
 \donttest{

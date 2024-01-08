@@ -2,12 +2,12 @@
 
 #include <Rcpp.h>
 using namespace Rcpp ;
-#include "stanExports_HBAM_NE.h"
+#include "stanExports_HBAM_MULTI.h"
 
-RCPP_MODULE(stan_fit4HBAM_NE_mod) {
+RCPP_MODULE(stan_fit4HBAM_MULTI_mod) {
 
 
-    class_<rstan::stan_fit<stan_model, boost::random::ecuyer1988> >("rstantools_model_HBAM_NE")
+    class_<rstan::stan_fit<stan_model, boost::random::ecuyer1988> >("rstantools_model_HBAM_MULTI")
 
     .constructor<SEXP,SEXP,SEXP>()
 

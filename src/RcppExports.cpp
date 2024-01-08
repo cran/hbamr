@@ -14,25 +14,27 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 RcppExport SEXP _rcpp_module_boot_stan_fit4BAM_mod();
 RcppExport SEXP _rcpp_module_boot_stan_fit4FBAM_MINI_mod();
+RcppExport SEXP _rcpp_module_boot_stan_fit4FBAM_MULTI_mod();
+RcppExport SEXP _rcpp_module_boot_stan_fit4FBAM_MULTI_NF_mod();
 RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_mod();
-RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_0_mod();
-RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_2_mod();
-RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_HM_mod();
+RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_MAX_mod();
 RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_MINI_mod();
-RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_NE_mod();
-RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_R_mod();
+RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_MULTI_mod();
+RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_MULTI_NF_mod();
+RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_NF_mod();
 RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_R_MINI_mod();
 
 static const R_CallMethodDef CallEntries[] = {
     {"_rcpp_module_boot_stan_fit4BAM_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4BAM_mod, 0},
     {"_rcpp_module_boot_stan_fit4FBAM_MINI_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4FBAM_MINI_mod, 0},
+    {"_rcpp_module_boot_stan_fit4FBAM_MULTI_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4FBAM_MULTI_mod, 0},
+    {"_rcpp_module_boot_stan_fit4FBAM_MULTI_NF_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4FBAM_MULTI_NF_mod, 0},
     {"_rcpp_module_boot_stan_fit4HBAM_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_mod, 0},
-    {"_rcpp_module_boot_stan_fit4HBAM_0_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_0_mod, 0},
-    {"_rcpp_module_boot_stan_fit4HBAM_2_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_2_mod, 0},
-    {"_rcpp_module_boot_stan_fit4HBAM_HM_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_HM_mod, 0},
+    {"_rcpp_module_boot_stan_fit4HBAM_MAX_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_MAX_mod, 0},
     {"_rcpp_module_boot_stan_fit4HBAM_MINI_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_MINI_mod, 0},
-    {"_rcpp_module_boot_stan_fit4HBAM_NE_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_NE_mod, 0},
-    {"_rcpp_module_boot_stan_fit4HBAM_R_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_R_mod, 0},
+    {"_rcpp_module_boot_stan_fit4HBAM_MULTI_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_MULTI_mod, 0},
+    {"_rcpp_module_boot_stan_fit4HBAM_MULTI_NF_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_MULTI_NF_mod, 0},
+    {"_rcpp_module_boot_stan_fit4HBAM_NF_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_NF_mod, 0},
     {"_rcpp_module_boot_stan_fit4HBAM_R_MINI_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_R_MINI_mod, 0},
     {NULL, NULL, 0}
 };
