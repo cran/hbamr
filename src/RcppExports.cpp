@@ -17,7 +17,6 @@ RcppExport SEXP _rcpp_module_boot_stan_fit4FBAM_MINI_mod();
 RcppExport SEXP _rcpp_module_boot_stan_fit4FBAM_MULTI_mod();
 RcppExport SEXP _rcpp_module_boot_stan_fit4FBAM_MULTI_NF_mod();
 RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_mod();
-RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_MAX_mod();
 RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_MINI_mod();
 RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_MULTI_mod();
 RcppExport SEXP _rcpp_module_boot_stan_fit4HBAM_MULTI_NF_mod();
@@ -30,7 +29,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"_rcpp_module_boot_stan_fit4FBAM_MULTI_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4FBAM_MULTI_mod, 0},
     {"_rcpp_module_boot_stan_fit4FBAM_MULTI_NF_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4FBAM_MULTI_NF_mod, 0},
     {"_rcpp_module_boot_stan_fit4HBAM_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_mod, 0},
-    {"_rcpp_module_boot_stan_fit4HBAM_MAX_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_MAX_mod, 0},
     {"_rcpp_module_boot_stan_fit4HBAM_MINI_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_MINI_mod, 0},
     {"_rcpp_module_boot_stan_fit4HBAM_MULTI_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_MULTI_mod, 0},
     {"_rcpp_module_boot_stan_fit4HBAM_MULTI_NF_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4HBAM_MULTI_NF_mod, 0},

@@ -87,35 +87,35 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'HBAM_NF', line 29, column 2 to column 17)",
                                                       " (in 'HBAM_NF', line 32, column 2 to column 18)",
                                                       " (in 'HBAM_NF', line 33, column 2 to column 17)",
-                                                      " (in 'HBAM_NF', line 34, column 2 to column 16)",
-                                                      " (in 'HBAM_NF', line 35, column 2 to column 22)",
-                                                      " (in 'HBAM_NF', line 36, column 2 to column 24)",
-                                                      " (in 'HBAM_NF', line 37, column 2 to column 38)",
-                                                      " (in 'HBAM_NF', line 38, column 2 to column 20)",
+                                                      " (in 'HBAM_NF', line 34, column 2 to column 22)",
+                                                      " (in 'HBAM_NF', line 35, column 2 to column 24)",
+                                                      " (in 'HBAM_NF', line 36, column 2 to column 38)",
+                                                      " (in 'HBAM_NF', line 37, column 2 to column 20)",
+                                                      " (in 'HBAM_NF', line 38, column 2 to column 25)",
                                                       " (in 'HBAM_NF', line 39, column 2 to column 25)",
-                                                      " (in 'HBAM_NF', line 40, column 2 to column 25)",
-                                                      " (in 'HBAM_NF', line 41, column 2 to column 34)",
-                                                      " (in 'HBAM_NF', line 42, column 2 to column 36)",
-                                                      " (in 'HBAM_NF', line 43, column 2 to column 30)",
-                                                      " (in 'HBAM_NF', line 45, column 4 to line 46, column 37)",
-                                                      " (in 'HBAM_NF', line 44, column 21 to line 47, column 3)",
-                                                      " (in 'HBAM_NF', line 44, column 2 to line 47, column 3)",
+                                                      " (in 'HBAM_NF', line 40, column 2 to column 34)",
+                                                      " (in 'HBAM_NF', line 41, column 2 to column 36)",
+                                                      " (in 'HBAM_NF', line 43, column 4 to line 44, column 37)",
+                                                      " (in 'HBAM_NF', line 42, column 21 to line 45, column 3)",
+                                                      " (in 'HBAM_NF', line 42, column 2 to line 45, column 3)",
+                                                      " (in 'HBAM_NF', line 67, column 2 to column 37)",
+                                                      " (in 'HBAM_NF', line 68, column 2 to column 88)",
+                                                      " (in 'HBAM_NF', line 48, column 2 to column 27)",
+                                                      " (in 'HBAM_NF', line 49, column 2 to column 26)",
                                                       " (in 'HBAM_NF', line 50, column 2 to column 27)",
-                                                      " (in 'HBAM_NF', line 51, column 2 to column 26)",
-                                                      " (in 'HBAM_NF', line 52, column 2 to column 27)",
-                                                      " (in 'HBAM_NF', line 53, column 2 to column 49)",
-                                                      " (in 'HBAM_NF', line 54, column 2 to column 26)",
-                                                      " (in 'HBAM_NF', line 55, column 2 to column 28)",
-                                                      " (in 'HBAM_NF', line 56, column 2 to column 45)",
-                                                      " (in 'HBAM_NF', line 57, column 2 to column 22)",
-                                                      " (in 'HBAM_NF', line 58, column 2 to column 33)",
-                                                      " (in 'HBAM_NF', line 59, column 2 to column 36)",
-                                                      " (in 'HBAM_NF', line 65, column 8 to column 29)",
-                                                      " (in 'HBAM_NF', line 64, column 6 to line 65, column 29)",
-                                                      " (in 'HBAM_NF', line 63, column 23 to line 66, column 5)",
-                                                      " (in 'HBAM_NF', line 63, column 4 to line 66, column 5)",
-                                                      " (in 'HBAM_NF', line 61, column 4 to column 27)",
-                                                      " (in 'HBAM_NF', line 60, column 2 to line 66, column 5)",
+                                                      " (in 'HBAM_NF', line 51, column 2 to column 49)",
+                                                      " (in 'HBAM_NF', line 52, column 2 to column 26)",
+                                                      " (in 'HBAM_NF', line 53, column 2 to column 28)",
+                                                      " (in 'HBAM_NF', line 54, column 2 to column 45)",
+                                                      " (in 'HBAM_NF', line 55, column 2 to column 22)",
+                                                      " (in 'HBAM_NF', line 56, column 2 to column 33)",
+                                                      " (in 'HBAM_NF', line 57, column 2 to column 36)",
+                                                      " (in 'HBAM_NF', line 63, column 8 to column 29)",
+                                                      " (in 'HBAM_NF', line 62, column 6 to line 63, column 29)",
+                                                      " (in 'HBAM_NF', line 61, column 23 to line 64, column 5)",
+                                                      " (in 'HBAM_NF', line 61, column 4 to line 64, column 5)",
+                                                      " (in 'HBAM_NF', line 59, column 4 to column 27)",
+                                                      " (in 'HBAM_NF', line 58, column 2 to line 64, column 5)",
                                                       " (in 'HBAM_NF', line 2, column 2 to column 19)",
                                                       " (in 'HBAM_NF', line 3, column 2 to column 19)",
                                                       " (in 'HBAM_NF', line 4, column 2 to column 23)",
@@ -142,9 +142,9 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'HBAM_NF', line 29, column 10 to column 11)",
                                                       " (in 'HBAM_NF', line 32, column 9 to column 10)",
                                                       " (in 'HBAM_NF', line 33, column 9 to column 10)",
-                                                      " (in 'HBAM_NF', line 34, column 9 to column 10)",
-                                                      " (in 'HBAM_NF', line 35, column 8 to column 9)",
-                                                      " (in 'HBAM_NF', line 36, column 9 to column 14)"};
+                                                      " (in 'HBAM_NF', line 34, column 8 to column 9)",
+                                                      " (in 'HBAM_NF', line 35, column 9 to column 14)",
+                                                      " (in 'HBAM_NF', line 68, column 9 to column 10)"};
 #include <stan_meta_header.hpp>
 class model_HBAM_NF final : public model_base_crtp<model_HBAM_NF> {
 private:
@@ -409,11 +409,11 @@ public:
       current_statement__ = 67;
       validate_non_negative_index("beta", "N", N);
       current_statement__ = 68;
-      validate_non_negative_index("chi", "N", N);
-      current_statement__ = 69;
       validate_non_negative_index("theta", "J", J);
-      current_statement__ = 70;
+      current_statement__ = 69;
       validate_non_negative_index("log_lik", "N_obs", N_obs);
+      current_statement__ = 70;
+      validate_non_negative_index("chi", "N", N);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
       // Next line prevents compiler griping about no return
@@ -592,10 +592,6 @@ public:
       beta = Eigen::Matrix<local_scalar_t__, -1, 1>(N);
       stan::math::fill(beta, DUMMY_VAR__);
       
-      Eigen::Matrix<local_scalar_t__, -1, 1> chi;
-      chi = Eigen::Matrix<local_scalar_t__, -1, 1>(N);
-      stan::math::fill(chi, DUMMY_VAR__);
-      
       std::vector<local_scalar_t__> theta;
       theta = std::vector<local_scalar_t__>(J, DUMMY_VAR__);
       
@@ -606,37 +602,34 @@ public:
       local_scalar_t__ eta_scale;
       eta_scale = DUMMY_VAR__;
       
-      current_statement__ = 16;
+      current_statement__ = 15;
       eta_scale = (tau * J);
-      current_statement__ = 17;
+      current_statement__ = 16;
       assign(theta, nil_index_list(), theta_raw, "assigning variable theta");
-      current_statement__ = 18;
+      current_statement__ = 17;
       assign(theta, cons_list(index_uni(L), nil_index_list()),
         theta_lr[(1 - 1)], "assigning variable theta");
-      current_statement__ = 19;
+      current_statement__ = 18;
       assign(theta, cons_list(index_uni(R), nil_index_list()),
         theta_lr[(2 - 1)], "assigning variable theta");
-      current_statement__ = 20;
+      current_statement__ = 19;
       assign(alpha, nil_index_list(), multiply(alpha_raw, sigma_alpha),
         "assigning variable alpha");
-      current_statement__ = 21;
+      current_statement__ = 20;
       assign(beta, nil_index_list(),
         stan::math::exp(multiply(beta_raw, sigma_beta)),
         "assigning variable beta");
-      current_statement__ = 22;
-      assign(chi, nil_index_list(), elt_divide(subtract(V, alpha), beta),
-        "assigning variable chi");
-      current_statement__ = 25;
+      current_statement__ = 23;
       for (int n = 1; n <= N_obs; ++n) {
-        current_statement__ = 23;
+        current_statement__ = 21;
         assign(log_lik, cons_list(index_uni(n), nil_index_list()),
           normal_lpdf<false>(Y[(n - 1)],
             (alpha[(ii[(n - 1)] - 1)] +
               (beta[(ii[(n - 1)] - 1)] * theta[(jj[(n - 1)] - 1)])),
             (stan::math::sqrt(eta[(ii[(n - 1)] - 1)]) *
               rho[(jj[(n - 1)] - 1)])), "assigning variable log_lik");}
-      current_statement__ = 16;
-      current_statement__ = 16;
+      current_statement__ = 15;
+      current_statement__ = 15;
       check_greater_or_equal(function__, "eta_scale", eta_scale, 0);
       {
         current_statement__ = 26;
@@ -794,10 +787,6 @@ public:
       beta = Eigen::Matrix<double, -1, 1>(N);
       stan::math::fill(beta, std::numeric_limits<double>::quiet_NaN());
       
-      Eigen::Matrix<double, -1, 1> chi;
-      chi = Eigen::Matrix<double, -1, 1>(N);
-      stan::math::fill(chi, std::numeric_limits<double>::quiet_NaN());
-      
       std::vector<double> theta;
       theta = std::vector<double>(J, std::numeric_limits<double>::quiet_NaN());
       
@@ -828,45 +817,40 @@ public:
             primitive_value(emit_generated_quantities__)))) {
         return ;
       } 
-      current_statement__ = 16;
+      current_statement__ = 15;
       eta_scale = (tau * J);
-      current_statement__ = 17;
+      current_statement__ = 16;
       assign(theta, nil_index_list(), theta_raw, "assigning variable theta");
-      current_statement__ = 18;
+      current_statement__ = 17;
       assign(theta, cons_list(index_uni(L), nil_index_list()),
         theta_lr[(1 - 1)], "assigning variable theta");
-      current_statement__ = 19;
+      current_statement__ = 18;
       assign(theta, cons_list(index_uni(R), nil_index_list()),
         theta_lr[(2 - 1)], "assigning variable theta");
-      current_statement__ = 20;
+      current_statement__ = 19;
       assign(alpha, nil_index_list(), multiply(alpha_raw, sigma_alpha),
         "assigning variable alpha");
-      current_statement__ = 21;
+      current_statement__ = 20;
       assign(beta, nil_index_list(),
         stan::math::exp(multiply(beta_raw, sigma_beta)),
         "assigning variable beta");
-      current_statement__ = 22;
-      assign(chi, nil_index_list(), elt_divide(subtract(V, alpha), beta),
-        "assigning variable chi");
-      current_statement__ = 25;
+      current_statement__ = 23;
       for (int n = 1; n <= N_obs; ++n) {
-        current_statement__ = 23;
+        current_statement__ = 21;
         assign(log_lik, cons_list(index_uni(n), nil_index_list()),
           normal_lpdf<false>(Y[(n - 1)],
             (alpha[(ii[(n - 1)] - 1)] +
               (beta[(ii[(n - 1)] - 1)] * theta[(jj[(n - 1)] - 1)])),
             (stan::math::sqrt(eta[(ii[(n - 1)] - 1)]) *
               rho[(jj[(n - 1)] - 1)])), "assigning variable log_lik");}
-      current_statement__ = 16;
-      current_statement__ = 16;
+      current_statement__ = 15;
+      current_statement__ = 15;
       check_greater_or_equal(function__, "eta_scale", eta_scale, 0);
       if (emit_transformed_parameters__) {
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
           vars__.emplace_back(alpha[(sym1__ - 1)]);}
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
           vars__.emplace_back(beta[(sym1__ - 1)]);}
-        for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          vars__.emplace_back(chi[(sym1__ - 1)]);}
         for (int sym1__ = 1; sym1__ <= J; ++sym1__) {
           vars__.emplace_back(theta[(sym1__ - 1)]);}
         for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
@@ -876,6 +860,29 @@ public:
       if (logical_negation(emit_generated_quantities__)) {
         return ;
       } 
+      double min_rho;
+      min_rho = std::numeric_limits<double>::quiet_NaN();
+      
+      current_statement__ = 24;
+      min_rho = min(rho);
+      Eigen::Matrix<double, -1, 1> chi;
+      chi = Eigen::Matrix<double, -1, 1>(N);
+      stan::math::fill(chi, std::numeric_limits<double>::quiet_NaN());
+      
+      current_statement__ = 25;
+      assign(chi, nil_index_list(),
+        elt_divide(
+          subtract(
+            subtract(V,
+              to_vector(
+                normal_rng(0, multiply(stan::math::sqrt(eta), min_rho),
+                  base_rng__))), alpha), beta), "assigning variable chi");
+      current_statement__ = 24;
+      current_statement__ = 24;
+      check_greater_or_equal(function__, "min_rho", min_rho, 0);
+      vars__.emplace_back(min_rho);
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        vars__.emplace_back(chi[(sym1__ - 1)]);}
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
       // Next line prevents compiler griping about no return
@@ -1101,10 +1108,11 @@ public:
     names__.emplace_back("rho");
     names__.emplace_back("alpha");
     names__.emplace_back("beta");
-    names__.emplace_back("chi");
     names__.emplace_back("theta");
     names__.emplace_back("log_lik");
     names__.emplace_back("eta_scale");
+    names__.emplace_back("min_rho");
+    names__.emplace_back("chi");
     } // get_param_names() 
     
   inline void get_dims(std::vector<std::vector<size_t>>& dimss__) const {
@@ -1133,13 +1141,15 @@ public:
     
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N)});
     
-    dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N)});
-    
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(J)});
     
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N_obs)});
     
     dimss__.emplace_back(std::vector<size_t>{});
+    
+    dimss__.emplace_back(std::vector<size_t>{});
+    
+    dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N)});
     
     } // get_dims() 
     
@@ -1186,10 +1196,6 @@ public:
         {
           param_names__.emplace_back(std::string() + "beta" + '.' + std::to_string(sym1__));
         }}
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        {
-          param_names__.emplace_back(std::string() + "chi" + '.' + std::to_string(sym1__));
-        }}
       for (int sym1__ = 1; sym1__ <= J; ++sym1__) {
         {
           param_names__.emplace_back(std::string() + "theta" + '.' + std::to_string(sym1__));
@@ -1202,7 +1208,11 @@ public:
     }
     
     if (emit_generated_quantities__) {
-      
+      param_names__.emplace_back(std::string() + "min_rho");
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "chi" + '.' + std::to_string(sym1__));
+        }}
     }
     
     } // constrained_param_names() 
@@ -1250,10 +1260,6 @@ public:
         {
           param_names__.emplace_back(std::string() + "beta" + '.' + std::to_string(sym1__));
         }}
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        {
-          param_names__.emplace_back(std::string() + "chi" + '.' + std::to_string(sym1__));
-        }}
       for (int sym1__ = 1; sym1__ <= J; ++sym1__) {
         {
           param_names__.emplace_back(std::string() + "theta" + '.' + std::to_string(sym1__));
@@ -1266,20 +1272,24 @@ public:
     }
     
     if (emit_generated_quantities__) {
-      
+      param_names__.emplace_back(std::string() + "min_rho");
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "chi" + '.' + std::to_string(sym1__));
+        }}
     }
     
     } // unconstrained_param_names() 
     
   inline std::string get_constrained_sizedtypes() const {
     stringstream s__;
-    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"sigma_alpha\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_beta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"nu\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"eta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"rho\",\"type\":{\"name\":\"vector\",\"length\":" << J << "},\"block\":\"parameters\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"eta_scale\",\"type\":{\"name\":\"real\"},\"block\":\"transformed_parameters\"}]";
+    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"sigma_alpha\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_beta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"nu\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"eta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"rho\",\"type\":{\"name\":\"vector\",\"length\":" << J << "},\"block\":\"parameters\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"eta_scale\",\"type\":{\"name\":\"real\"},\"block\":\"transformed_parameters\"},{\"name\":\"min_rho\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"}]";
     return s__.str();
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     stringstream s__;
-    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"sigma_alpha\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_beta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"nu\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"eta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"rho\",\"type\":{\"name\":\"vector\",\"length\":" << (J - 1) << "},\"block\":\"parameters\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"eta_scale\",\"type\":{\"name\":\"real\"},\"block\":\"transformed_parameters\"}]";
+    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"sigma_alpha\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_beta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"nu\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"eta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"rho\",\"type\":{\"name\":\"vector\",\"length\":" << (J - 1) << "},\"block\":\"parameters\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"eta_scale\",\"type\":{\"name\":\"real\"},\"block\":\"transformed_parameters\"},{\"name\":\"min_rho\",\"type\":{\"name\":\"real\"},\"block\":\"generated_quantities\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"}]";
     return s__.str();
     } // get_unconstrained_sizedtypes() 
     

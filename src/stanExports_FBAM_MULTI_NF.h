@@ -85,34 +85,33 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'FBAM_MULTI_NF', line 36, column 2 to column 22)",
                                                       " (in 'FBAM_MULTI_NF', line 37, column 2 to column 18)",
                                                       " (in 'FBAM_MULTI_NF', line 38, column 2 to column 17)",
-                                                      " (in 'FBAM_MULTI_NF', line 39, column 2 to column 16)",
-                                                      " (in 'FBAM_MULTI_NF', line 40, column 2 to column 24)",
-                                                      " (in 'FBAM_MULTI_NF', line 41, column 2 to column 95)",
-                                                      " (in 'FBAM_MULTI_NF', line 42, column 2 to column 92)",
-                                                      " (in 'FBAM_MULTI_NF', line 43, column 2 to column 20)",
+                                                      " (in 'FBAM_MULTI_NF', line 39, column 2 to column 24)",
+                                                      " (in 'FBAM_MULTI_NF', line 40, column 2 to column 95)",
+                                                      " (in 'FBAM_MULTI_NF', line 41, column 2 to column 92)",
+                                                      " (in 'FBAM_MULTI_NF', line 42, column 2 to column 20)",
+                                                      " (in 'FBAM_MULTI_NF', line 43, column 2 to column 25)",
                                                       " (in 'FBAM_MULTI_NF', line 44, column 2 to column 25)",
-                                                      " (in 'FBAM_MULTI_NF', line 45, column 2 to column 25)",
-                                                      " (in 'FBAM_MULTI_NF', line 47, column 4 to column 60)",
-                                                      " (in 'FBAM_MULTI_NF', line 48, column 4 to column 61)",
-                                                      " (in 'FBAM_MULTI_NF', line 46, column 17 to line 49, column 3)",
-                                                      " (in 'FBAM_MULTI_NF', line 46, column 2 to line 49, column 3)",
-                                                      " (in 'FBAM_MULTI_NF', line 50, column 2 to column 30)",
-                                                      " (in 'FBAM_MULTI_NF', line 52, column 4 to column 84)",
-                                                      " (in 'FBAM_MULTI_NF', line 51, column 21 to line 53, column 3)",
-                                                      " (in 'FBAM_MULTI_NF', line 51, column 2 to line 53, column 3)",
+                                                      " (in 'FBAM_MULTI_NF', line 46, column 4 to column 60)",
+                                                      " (in 'FBAM_MULTI_NF', line 47, column 4 to column 61)",
+                                                      " (in 'FBAM_MULTI_NF', line 45, column 17 to line 48, column 3)",
+                                                      " (in 'FBAM_MULTI_NF', line 45, column 2 to line 48, column 3)",
+                                                      " (in 'FBAM_MULTI_NF', line 50, column 4 to column 84)",
+                                                      " (in 'FBAM_MULTI_NF', line 49, column 21 to line 51, column 3)",
+                                                      " (in 'FBAM_MULTI_NF', line 49, column 2 to line 51, column 3)",
+                                                      " (in 'FBAM_MULTI_NF', line 70, column 2 to column 85)",
+                                                      " (in 'FBAM_MULTI_NF', line 54, column 2 to column 27)",
+                                                      " (in 'FBAM_MULTI_NF', line 55, column 2 to column 26)",
                                                       " (in 'FBAM_MULTI_NF', line 56, column 2 to column 27)",
                                                       " (in 'FBAM_MULTI_NF', line 57, column 2 to column 26)",
-                                                      " (in 'FBAM_MULTI_NF', line 58, column 2 to column 27)",
-                                                      " (in 'FBAM_MULTI_NF', line 59, column 2 to column 26)",
-                                                      " (in 'FBAM_MULTI_NF', line 60, column 2 to column 46)",
-                                                      " (in 'FBAM_MULTI_NF', line 61, column 2 to column 45)",
-                                                      " (in 'FBAM_MULTI_NF', line 62, column 2 to column 33)",
-                                                      " (in 'FBAM_MULTI_NF', line 68, column 8 to column 29)",
-                                                      " (in 'FBAM_MULTI_NF', line 67, column 6 to line 68, column 29)",
-                                                      " (in 'FBAM_MULTI_NF', line 66, column 23 to line 69, column 5)",
-                                                      " (in 'FBAM_MULTI_NF', line 66, column 4 to line 69, column 5)",
-                                                      " (in 'FBAM_MULTI_NF', line 64, column 4 to column 27)",
-                                                      " (in 'FBAM_MULTI_NF', line 63, column 2 to line 69, column 5)",
+                                                      " (in 'FBAM_MULTI_NF', line 58, column 2 to column 46)",
+                                                      " (in 'FBAM_MULTI_NF', line 59, column 2 to column 45)",
+                                                      " (in 'FBAM_MULTI_NF', line 60, column 2 to column 33)",
+                                                      " (in 'FBAM_MULTI_NF', line 66, column 8 to column 29)",
+                                                      " (in 'FBAM_MULTI_NF', line 65, column 6 to line 66, column 29)",
+                                                      " (in 'FBAM_MULTI_NF', line 64, column 23 to line 67, column 5)",
+                                                      " (in 'FBAM_MULTI_NF', line 64, column 4 to line 67, column 5)",
+                                                      " (in 'FBAM_MULTI_NF', line 62, column 4 to column 27)",
+                                                      " (in 'FBAM_MULTI_NF', line 61, column 2 to line 67, column 5)",
                                                       " (in 'FBAM_MULTI_NF', line 2, column 2 to column 19)",
                                                       " (in 'FBAM_MULTI_NF', line 3, column 2 to column 19)",
                                                       " (in 'FBAM_MULTI_NF', line 4, column 2 to column 19)",
@@ -148,10 +147,10 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'FBAM_MULTI_NF', line 36, column 8 to column 9)",
                                                       " (in 'FBAM_MULTI_NF', line 37, column 9 to column 10)",
                                                       " (in 'FBAM_MULTI_NF', line 38, column 9 to column 10)",
-                                                      " (in 'FBAM_MULTI_NF', line 39, column 9 to column 10)",
-                                                      " (in 'FBAM_MULTI_NF', line 40, column 9 to column 14)",
+                                                      " (in 'FBAM_MULTI_NF', line 39, column 9 to column 14)",
+                                                      " (in 'FBAM_MULTI_NF', line 40, column 9 to column 10)",
                                                       " (in 'FBAM_MULTI_NF', line 41, column 9 to column 10)",
-                                                      " (in 'FBAM_MULTI_NF', line 42, column 9 to column 10)"};
+                                                      " (in 'FBAM_MULTI_NF', line 70, column 9 to column 10)"};
 #include <stan_meta_header.hpp>
 class model_FBAM_MULTI_NF final : public model_base_crtp<model_FBAM_MULTI_NF> {
 private:
@@ -203,154 +202,154 @@ public:
       pos__ = std::numeric_limits<int>::min();
       
       pos__ = 1;
-      current_statement__ = 39;
+      current_statement__ = 38;
       context__.validate_dims("data initialization","N","int",
           context__.to_vec());
       N = std::numeric_limits<int>::min();
       
-      current_statement__ = 39;
+      current_statement__ = 38;
       N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 39;
-      current_statement__ = 39;
+      current_statement__ = 38;
+      current_statement__ = 38;
       check_greater_or_equal(function__, "N", N, 1);
-      current_statement__ = 40;
+      current_statement__ = 39;
       context__.validate_dims("data initialization","J","int",
           context__.to_vec());
       J = std::numeric_limits<int>::min();
       
-      current_statement__ = 40;
+      current_statement__ = 39;
       J = context__.vals_i("J")[(1 - 1)];
-      current_statement__ = 40;
-      current_statement__ = 40;
+      current_statement__ = 39;
+      current_statement__ = 39;
       check_greater_or_equal(function__, "J", J, 1);
-      current_statement__ = 41;
+      current_statement__ = 40;
       context__.validate_dims("data initialization","G","int",
           context__.to_vec());
       G = std::numeric_limits<int>::min();
       
-      current_statement__ = 41;
+      current_statement__ = 40;
       G = context__.vals_i("G")[(1 - 1)];
-      current_statement__ = 41;
-      current_statement__ = 41;
+      current_statement__ = 40;
+      current_statement__ = 40;
       check_greater_or_equal(function__, "G", G, 1);
-      current_statement__ = 42;
+      current_statement__ = 41;
       context__.validate_dims("data initialization","N_obs","int",
           context__.to_vec());
       N_obs = std::numeric_limits<int>::min();
       
-      current_statement__ = 42;
+      current_statement__ = 41;
       N_obs = context__.vals_i("N_obs")[(1 - 1)];
-      current_statement__ = 42;
-      current_statement__ = 42;
+      current_statement__ = 41;
+      current_statement__ = 41;
       check_greater_or_equal(function__, "N_obs", N_obs, 1);
-      current_statement__ = 43;
+      current_statement__ = 42;
       validate_non_negative_index("ii", "N_obs", N_obs);
-      current_statement__ = 44;
+      current_statement__ = 43;
       context__.validate_dims("data initialization","ii","int",
           context__.to_vec(N_obs));
       ii = std::vector<int>(N_obs, std::numeric_limits<int>::min());
       
-      current_statement__ = 44;
+      current_statement__ = 43;
       assign(ii, nil_index_list(), context__.vals_i("ii"),
         "assigning variable ii");
-      current_statement__ = 44;
+      current_statement__ = 43;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 44;
-        current_statement__ = 44;
+        current_statement__ = 43;
+        current_statement__ = 43;
         check_greater_or_equal(function__, "ii[sym1__]", ii[(sym1__ - 1)], 1);
       }
-      current_statement__ = 45;
+      current_statement__ = 44;
       validate_non_negative_index("jj", "N_obs", N_obs);
-      current_statement__ = 46;
+      current_statement__ = 45;
       context__.validate_dims("data initialization","jj","int",
           context__.to_vec(N_obs));
       jj = std::vector<int>(N_obs, std::numeric_limits<int>::min());
       
-      current_statement__ = 46;
+      current_statement__ = 45;
       assign(jj, nil_index_list(), context__.vals_i("jj"),
         "assigning variable jj");
-      current_statement__ = 46;
+      current_statement__ = 45;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 46;
-        current_statement__ = 46;
+        current_statement__ = 45;
+        current_statement__ = 45;
         check_greater_or_equal(function__, "jj[sym1__]", jj[(sym1__ - 1)], 1);
       }
-      current_statement__ = 47;
+      current_statement__ = 46;
       validate_non_negative_index("gg", "N", N);
-      current_statement__ = 48;
+      current_statement__ = 47;
       context__.validate_dims("data initialization","gg","int",
           context__.to_vec(N));
       gg = std::vector<int>(N, std::numeric_limits<int>::min());
       
-      current_statement__ = 48;
+      current_statement__ = 47;
       assign(gg, nil_index_list(), context__.vals_i("gg"),
         "assigning variable gg");
-      current_statement__ = 48;
+      current_statement__ = 47;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 48;
-        current_statement__ = 48;
+        current_statement__ = 47;
+        current_statement__ = 47;
         check_greater_or_equal(function__, "gg[sym1__]", gg[(sym1__ - 1)], 1);
       }
-      current_statement__ = 49;
+      current_statement__ = 48;
       context__.validate_dims("data initialization","B","int",
           context__.to_vec());
       B = std::numeric_limits<int>::min();
       
-      current_statement__ = 49;
+      current_statement__ = 48;
       B = context__.vals_i("B")[(1 - 1)];
-      current_statement__ = 49;
-      current_statement__ = 49;
+      current_statement__ = 48;
+      current_statement__ = 48;
       check_greater_or_equal(function__, "B", B, 1);
-      current_statement__ = 50;
+      current_statement__ = 49;
       context__.validate_dims("data initialization","L","int",
           context__.to_vec());
       L = std::numeric_limits<int>::min();
       
-      current_statement__ = 50;
+      current_statement__ = 49;
       L = context__.vals_i("L")[(1 - 1)];
-      current_statement__ = 50;
-      current_statement__ = 50;
+      current_statement__ = 49;
+      current_statement__ = 49;
       check_greater_or_equal(function__, "L", L, 1);
-      current_statement__ = 50;
-      current_statement__ = 50;
+      current_statement__ = 49;
+      current_statement__ = 49;
       check_less_or_equal(function__, "L", L, J);
-      current_statement__ = 51;
+      current_statement__ = 50;
       context__.validate_dims("data initialization","R","int",
           context__.to_vec());
       R = std::numeric_limits<int>::min();
       
-      current_statement__ = 51;
+      current_statement__ = 50;
       R = context__.vals_i("R")[(1 - 1)];
-      current_statement__ = 51;
-      current_statement__ = 51;
+      current_statement__ = 50;
+      current_statement__ = 50;
       check_greater_or_equal(function__, "R", R, 1);
-      current_statement__ = 51;
-      current_statement__ = 51;
+      current_statement__ = 50;
+      current_statement__ = 50;
       check_less_or_equal(function__, "R", R, J);
-      current_statement__ = 52;
+      current_statement__ = 51;
       validate_non_negative_index("Y", "N_obs", N_obs);
-      current_statement__ = 53;
+      current_statement__ = 52;
       context__.validate_dims("data initialization","Y","int",
           context__.to_vec(N_obs));
       Y = std::vector<int>(N_obs, std::numeric_limits<int>::min());
       
-      current_statement__ = 53;
+      current_statement__ = 52;
       assign(Y, nil_index_list(), context__.vals_i("Y"),
         "assigning variable Y");
-      current_statement__ = 53;
+      current_statement__ = 52;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 53;
-        current_statement__ = 53;
+        current_statement__ = 52;
+        current_statement__ = 52;
         check_greater_or_equal(function__, "Y[sym1__]", Y[(sym1__ - 1)], -B);
       }
-      current_statement__ = 53;
+      current_statement__ = 52;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 53;
-        current_statement__ = 53;
+        current_statement__ = 52;
+        current_statement__ = 52;
         check_less_or_equal(function__, "Y[sym1__]", Y[(sym1__ - 1)], B);}
-      current_statement__ = 54;
+      current_statement__ = 53;
       validate_non_negative_index("V", "N", N);
-      current_statement__ = 55;
+      current_statement__ = 54;
       context__.validate_dims("data initialization","V","double",
           context__.to_vec(N));
       V = Eigen::Matrix<double, -1, 1>(N);
@@ -358,149 +357,149 @@ public:
       
       {
         std::vector<local_scalar_t__> V_flat__;
-        current_statement__ = 55;
+        current_statement__ = 54;
         assign(V_flat__, nil_index_list(), context__.vals_r("V"),
           "assigning variable V_flat__");
-        current_statement__ = 55;
+        current_statement__ = 54;
         pos__ = 1;
-        current_statement__ = 55;
+        current_statement__ = 54;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 55;
+          current_statement__ = 54;
           assign(V, cons_list(index_uni(sym1__), nil_index_list()),
             V_flat__[(pos__ - 1)], "assigning variable V");
-          current_statement__ = 55;
+          current_statement__ = 54;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 55;
+      current_statement__ = 54;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 55;
-        current_statement__ = 55;
+        current_statement__ = 54;
+        current_statement__ = 54;
         check_greater_or_equal(function__, "V[sym1__]", V[(sym1__ - 1)], -B);
       }
-      current_statement__ = 55;
+      current_statement__ = 54;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 55;
-        current_statement__ = 55;
+        current_statement__ = 54;
+        current_statement__ = 54;
         check_less_or_equal(function__, "V[sym1__]", V[(sym1__ - 1)], B);}
-      current_statement__ = 56;
+      current_statement__ = 55;
       context__.validate_dims("data initialization","CV","int",
           context__.to_vec());
       CV = std::numeric_limits<int>::min();
       
-      current_statement__ = 56;
+      current_statement__ = 55;
       CV = context__.vals_i("CV")[(1 - 1)];
-      current_statement__ = 56;
-      current_statement__ = 56;
+      current_statement__ = 55;
+      current_statement__ = 55;
       check_greater_or_equal(function__, "CV", CV, 0);
-      current_statement__ = 56;
-      current_statement__ = 56;
+      current_statement__ = 55;
+      current_statement__ = 55;
       check_less_or_equal(function__, "CV", CV, 1);
-      current_statement__ = 57;
+      current_statement__ = 56;
       validate_non_negative_index("holdout", "N_obs", N_obs);
-      current_statement__ = 58;
+      current_statement__ = 57;
       context__.validate_dims("data initialization","holdout","int",
           context__.to_vec(N_obs));
       holdout = std::vector<int>(N_obs, std::numeric_limits<int>::min());
       
-      current_statement__ = 58;
+      current_statement__ = 57;
       assign(holdout, nil_index_list(), context__.vals_i("holdout"),
         "assigning variable holdout");
-      current_statement__ = 58;
+      current_statement__ = 57;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 58;
-        current_statement__ = 58;
+        current_statement__ = 57;
+        current_statement__ = 57;
         check_greater_or_equal(function__, "holdout[sym1__]",
                                holdout[(sym1__ - 1)], 0);}
-      current_statement__ = 58;
+      current_statement__ = 57;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 58;
-        current_statement__ = 58;
+        current_statement__ = 57;
+        current_statement__ = 57;
         check_less_or_equal(function__, "holdout[sym1__]",
                             holdout[(sym1__ - 1)], 1);}
-      current_statement__ = 59;
+      current_statement__ = 58;
       context__.validate_dims("data initialization","sigma_alpha","double",
           context__.to_vec());
       sigma_alpha = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 59;
+      current_statement__ = 58;
       sigma_alpha = context__.vals_r("sigma_alpha")[(1 - 1)];
-      current_statement__ = 59;
-      current_statement__ = 59;
+      current_statement__ = 58;
+      current_statement__ = 58;
       check_greater_or_equal(function__, "sigma_alpha", sigma_alpha, 0);
-      current_statement__ = 60;
+      current_statement__ = 59;
       context__.validate_dims("data initialization","sigma_beta","double",
           context__.to_vec());
       sigma_beta = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 60;
+      current_statement__ = 59;
       sigma_beta = context__.vals_r("sigma_beta")[(1 - 1)];
-      current_statement__ = 60;
-      current_statement__ = 60;
+      current_statement__ = 59;
+      current_statement__ = 59;
       check_greater_or_equal(function__, "sigma_beta", sigma_beta, 0);
-      current_statement__ = 61;
+      current_statement__ = 60;
       context__.validate_dims("data initialization","sigma_mu_alpha",
           "double",context__.to_vec());
       sigma_mu_alpha = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 61;
+      current_statement__ = 60;
       sigma_mu_alpha = context__.vals_r("sigma_mu_alpha")[(1 - 1)];
-      current_statement__ = 61;
-      current_statement__ = 61;
+      current_statement__ = 60;
+      current_statement__ = 60;
       check_greater_or_equal(function__, "sigma_mu_alpha", sigma_mu_alpha, 0);
-      current_statement__ = 62;
+      current_statement__ = 61;
       context__.validate_dims("data initialization","sigma_mu_beta","double",
           context__.to_vec());
       sigma_mu_beta = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 62;
+      current_statement__ = 61;
       sigma_mu_beta = context__.vals_r("sigma_mu_beta")[(1 - 1)];
-      current_statement__ = 62;
-      current_statement__ = 62;
+      current_statement__ = 61;
+      current_statement__ = 61;
       check_greater_or_equal(function__, "sigma_mu_beta", sigma_mu_beta, 0);
-      current_statement__ = 63;
+      current_statement__ = 62;
       tau_prior_rate = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 63;
+      current_statement__ = 62;
       tau_prior_rate = ((2 - 1) / (B / 5.0));
-      current_statement__ = 64;
+      current_statement__ = 63;
       mean_mu_simplexes = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 64;
+      current_statement__ = 63;
       mean_mu_simplexes = (1.0 / G);
-      current_statement__ = 65;
+      current_statement__ = 64;
       sd_mu_simplexes = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 65;
+      current_statement__ = 64;
       sd_mu_simplexes = stan::math::sqrt(
                           ((mean_mu_simplexes * (1 - mean_mu_simplexes)) /
                             ((50 * G) + 1)));
-      current_statement__ = 63;
-      current_statement__ = 63;
+      current_statement__ = 62;
+      current_statement__ = 62;
       check_greater_or_equal(function__, "tau_prior_rate", tau_prior_rate, 0);
-      current_statement__ = 66;
+      current_statement__ = 65;
       validate_non_negative_index("alpha_raw", "N", N);
-      current_statement__ = 67;
+      current_statement__ = 66;
       validate_non_negative_index("beta_raw", "N", N);
-      current_statement__ = 68;
+      current_statement__ = 67;
       validate_non_negative_index("theta_raw", "J", J);
-      current_statement__ = 69;
+      current_statement__ = 68;
       validate_positive_index("mu_alpha_raw", "G", G);
-      current_statement__ = 70;
+      current_statement__ = 69;
       validate_positive_index("mu_beta_raw", "G", G);
-      current_statement__ = 71;
+      current_statement__ = 70;
       validate_non_negative_index("theta", "J", J);
-      current_statement__ = 72;
+      current_statement__ = 71;
       validate_non_negative_index("alpha", "N", N);
-      current_statement__ = 73;
+      current_statement__ = 72;
       validate_non_negative_index("beta", "N", N);
-      current_statement__ = 74;
-      validate_non_negative_index("chi", "N", N);
-      current_statement__ = 75;
+      current_statement__ = 73;
       validate_non_negative_index("log_lik", "N_obs", N_obs);
-      current_statement__ = 76;
+      current_statement__ = 74;
       validate_non_negative_index("mu_alpha", "G", G);
-      current_statement__ = 77;
+      current_statement__ = 75;
       validate_non_negative_index("mu_beta", "G", G);
+      current_statement__ = 76;
+      validate_non_negative_index("chi", "N", N);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
       // Next line prevents compiler griping about no return
@@ -643,10 +642,6 @@ public:
       beta = Eigen::Matrix<local_scalar_t__, -1, 1>(N);
       stan::math::fill(beta, DUMMY_VAR__);
       
-      Eigen::Matrix<local_scalar_t__, -1, 1> chi;
-      chi = Eigen::Matrix<local_scalar_t__, -1, 1>(N);
-      stan::math::fill(chi, DUMMY_VAR__);
-      
       Eigen::Matrix<local_scalar_t__, -1, 1> log_lik;
       log_lik = Eigen::Matrix<local_scalar_t__, -1, 1>(N_obs);
       stan::math::fill(log_lik, DUMMY_VAR__);
@@ -655,7 +650,7 @@ public:
       mu_alpha = Eigen::Matrix<local_scalar_t__, -1, 1>(G);
       stan::math::fill(mu_alpha, DUMMY_VAR__);
       
-      current_statement__ = 13;
+      current_statement__ = 12;
       assign(mu_alpha, nil_index_list(),
         multiply(
           divide(subtract(mu_alpha_raw, mean_mu_simplexes), sd_mu_simplexes),
@@ -664,68 +659,65 @@ public:
       mu_beta = Eigen::Matrix<local_scalar_t__, -1, 1>(G);
       stan::math::fill(mu_beta, DUMMY_VAR__);
       
-      current_statement__ = 14;
+      current_statement__ = 13;
       assign(mu_beta, nil_index_list(),
         multiply(
           divide(subtract(mu_beta_raw, mean_mu_simplexes), sd_mu_simplexes),
           sigma_mu_beta), "assigning variable mu_beta");
-      current_statement__ = 15;
+      current_statement__ = 14;
       assign(theta, nil_index_list(), theta_raw, "assigning variable theta");
-      current_statement__ = 16;
+      current_statement__ = 15;
       assign(theta, cons_list(index_uni(L), nil_index_list()),
         theta_lr[(1 - 1)], "assigning variable theta");
-      current_statement__ = 17;
+      current_statement__ = 16;
       assign(theta, cons_list(index_uni(R), nil_index_list()),
         theta_lr[(2 - 1)], "assigning variable theta");
-      current_statement__ = 21;
+      current_statement__ = 20;
       for (int i = 1; i <= N; ++i) {
-        current_statement__ = 18;
+        current_statement__ = 17;
         assign(alpha, cons_list(index_uni(i), nil_index_list()),
           ((alpha_raw[(i - 1)] * sigma_alpha) + mu_alpha[(gg[(i - 1)] - 1)]),
           "assigning variable alpha");
-        current_statement__ = 19;
+        current_statement__ = 18;
         assign(beta, cons_list(index_uni(i), nil_index_list()),
           stan::math::exp(
             ((beta_raw[(i - 1)] * sigma_beta) + mu_beta[(gg[(i - 1)] - 1)])),
           "assigning variable beta");}
-      current_statement__ = 22;
-      assign(chi, nil_index_list(), elt_divide(subtract(V, alpha), beta),
-        "assigning variable chi");
-      current_statement__ = 25;
+      current_statement__ = 23;
       for (int n = 1; n <= N_obs; ++n) {
-        current_statement__ = 23;
+        current_statement__ = 21;
         assign(log_lik, cons_list(index_uni(n), nil_index_list()),
           normal_lpdf<false>(Y[(n - 1)],
             (alpha[(ii[(n - 1)] - 1)] +
               (beta[(ii[(n - 1)] - 1)] * theta[(jj[(n - 1)] - 1)])), tau),
           "assigning variable log_lik");}
       {
-        current_statement__ = 26;
+        current_statement__ = 25;
         lp_accum__.add(normal_lpdf<propto__>(theta_raw, 0, B));
-        current_statement__ = 27;
+        current_statement__ = 26;
         lp_accum__.add(normal_lpdf<propto__>(theta_lr, 0, B));
-        current_statement__ = 28;
+        current_statement__ = 27;
         lp_accum__.add(normal_lpdf<propto__>(alpha_raw, 0, 1));
-        current_statement__ = 29;
+        current_statement__ = 28;
         lp_accum__.add(normal_lpdf<propto__>(beta_raw, 0, 1));
-        current_statement__ = 30;
+        current_statement__ = 29;
         lp_accum__.add(
           dirichlet_lpdf<propto__>(mu_alpha_raw, rep_vector(50, G)));
-        current_statement__ = 31;
+        current_statement__ = 30;
         lp_accum__.add(
           dirichlet_lpdf<propto__>(mu_beta_raw, rep_vector(50, G)));
-        current_statement__ = 32;
+        current_statement__ = 31;
         lp_accum__.add(gamma_lpdf<propto__>(tau, 2, tau_prior_rate));
-        current_statement__ = 38;
+        current_statement__ = 37;
         if (logical_eq(CV, 0)) {
-          current_statement__ = 37;
+          current_statement__ = 36;
           lp_accum__.add(sum(log_lik));
         } else {
-          current_statement__ = 36;
+          current_statement__ = 35;
           for (int n = 1; n <= N_obs; ++n) {
-            current_statement__ = 34;
+            current_statement__ = 33;
             if (logical_eq(holdout[(n - 1)], 0)) {
-              current_statement__ = 33;
+              current_statement__ = 32;
               lp_accum__.add(log_lik[(n - 1)]);
             } }
         }
@@ -834,10 +826,6 @@ public:
       beta = Eigen::Matrix<double, -1, 1>(N);
       stan::math::fill(beta, std::numeric_limits<double>::quiet_NaN());
       
-      Eigen::Matrix<double, -1, 1> chi;
-      chi = Eigen::Matrix<double, -1, 1>(N);
-      stan::math::fill(chi, std::numeric_limits<double>::quiet_NaN());
-      
       Eigen::Matrix<double, -1, 1> log_lik;
       log_lik = Eigen::Matrix<double, -1, 1>(N_obs);
       stan::math::fill(log_lik, std::numeric_limits<double>::quiet_NaN());
@@ -867,41 +855,38 @@ public:
             primitive_value(emit_generated_quantities__)))) {
         return ;
       } 
-      current_statement__ = 13;
+      current_statement__ = 12;
       assign(mu_alpha, nil_index_list(),
         multiply(
           divide(subtract(mu_alpha_raw, mean_mu_simplexes), sd_mu_simplexes),
           sigma_mu_alpha), "assigning variable mu_alpha");
-      current_statement__ = 14;
+      current_statement__ = 13;
       assign(mu_beta, nil_index_list(),
         multiply(
           divide(subtract(mu_beta_raw, mean_mu_simplexes), sd_mu_simplexes),
           sigma_mu_beta), "assigning variable mu_beta");
-      current_statement__ = 15;
+      current_statement__ = 14;
       assign(theta, nil_index_list(), theta_raw, "assigning variable theta");
-      current_statement__ = 16;
+      current_statement__ = 15;
       assign(theta, cons_list(index_uni(L), nil_index_list()),
         theta_lr[(1 - 1)], "assigning variable theta");
-      current_statement__ = 17;
+      current_statement__ = 16;
       assign(theta, cons_list(index_uni(R), nil_index_list()),
         theta_lr[(2 - 1)], "assigning variable theta");
-      current_statement__ = 21;
+      current_statement__ = 20;
       for (int i = 1; i <= N; ++i) {
-        current_statement__ = 18;
+        current_statement__ = 17;
         assign(alpha, cons_list(index_uni(i), nil_index_list()),
           ((alpha_raw[(i - 1)] * sigma_alpha) + mu_alpha[(gg[(i - 1)] - 1)]),
           "assigning variable alpha");
-        current_statement__ = 19;
+        current_statement__ = 18;
         assign(beta, cons_list(index_uni(i), nil_index_list()),
           stan::math::exp(
             ((beta_raw[(i - 1)] * sigma_beta) + mu_beta[(gg[(i - 1)] - 1)])),
           "assigning variable beta");}
-      current_statement__ = 22;
-      assign(chi, nil_index_list(), elt_divide(subtract(V, alpha), beta),
-        "assigning variable chi");
-      current_statement__ = 25;
+      current_statement__ = 23;
       for (int n = 1; n <= N_obs; ++n) {
-        current_statement__ = 23;
+        current_statement__ = 21;
         assign(log_lik, cons_list(index_uni(n), nil_index_list()),
           normal_lpdf<false>(Y[(n - 1)],
             (alpha[(ii[(n - 1)] - 1)] +
@@ -914,8 +899,6 @@ public:
           vars__.emplace_back(alpha[(sym1__ - 1)]);}
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
           vars__.emplace_back(beta[(sym1__ - 1)]);}
-        for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          vars__.emplace_back(chi[(sym1__ - 1)]);}
         for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
           vars__.emplace_back(log_lik[(sym1__ - 1)]);}
         for (int sym1__ = 1; sym1__ <= G; ++sym1__) {
@@ -926,6 +909,19 @@ public:
       if (logical_negation(emit_generated_quantities__)) {
         return ;
       } 
+      Eigen::Matrix<double, -1, 1> chi;
+      chi = Eigen::Matrix<double, -1, 1>(N);
+      stan::math::fill(chi, std::numeric_limits<double>::quiet_NaN());
+      
+      current_statement__ = 24;
+      assign(chi, nil_index_list(),
+        elt_divide(
+          subtract(
+            subtract(V,
+              to_vector(normal_rng(0, rep_vector(tau, N), base_rng__))),
+            alpha), beta), "assigning variable chi");
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        vars__.emplace_back(chi[(sym1__ - 1)]);}
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
       // Next line prevents compiler griping about no return
@@ -1119,10 +1115,10 @@ public:
     names__.emplace_back("theta");
     names__.emplace_back("alpha");
     names__.emplace_back("beta");
-    names__.emplace_back("chi");
     names__.emplace_back("log_lik");
     names__.emplace_back("mu_alpha");
     names__.emplace_back("mu_beta");
+    names__.emplace_back("chi");
     } // get_param_names() 
     
   inline void get_dims(std::vector<std::vector<size_t>>& dimss__) const {
@@ -1147,13 +1143,13 @@ public:
     
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N)});
     
-    dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N)});
-    
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N_obs)});
     
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(G)});
     
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(G)});
+    
+    dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N)});
     
     } // get_dims() 
     
@@ -1201,10 +1197,6 @@ public:
         {
           param_names__.emplace_back(std::string() + "beta" + '.' + std::to_string(sym1__));
         }}
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        {
-          param_names__.emplace_back(std::string() + "chi" + '.' + std::to_string(sym1__));
-        }}
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
         {
           param_names__.emplace_back(std::string() + "log_lik" + '.' + std::to_string(sym1__));
@@ -1220,7 +1212,10 @@ public:
     }
     
     if (emit_generated_quantities__) {
-      
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "chi" + '.' + std::to_string(sym1__));
+        }}
     }
     
     } // constrained_param_names() 
@@ -1269,10 +1264,6 @@ public:
         {
           param_names__.emplace_back(std::string() + "beta" + '.' + std::to_string(sym1__));
         }}
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        {
-          param_names__.emplace_back(std::string() + "chi" + '.' + std::to_string(sym1__));
-        }}
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
         {
           param_names__.emplace_back(std::string() + "log_lik" + '.' + std::to_string(sym1__));
@@ -1288,20 +1279,23 @@ public:
     }
     
     if (emit_generated_quantities__) {
-      
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "chi" + '.' + std::to_string(sym1__));
+        }}
     }
     
     } // unconstrained_param_names() 
     
   inline std::string get_constrained_sizedtypes() const {
     stringstream s__;
-    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"mu_alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"parameters\"},{\"name\":\"mu_beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu_alpha\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu_beta\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"transformed_parameters\"}]";
+    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"mu_alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"parameters\"},{\"name\":\"mu_beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu_alpha\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu_beta\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"transformed_parameters\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"}]";
     return s__.str();
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     stringstream s__;
-    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"mu_alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << (G - 1) << "},\"block\":\"parameters\"},{\"name\":\"mu_beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << (G - 1) << "},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu_alpha\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu_beta\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"transformed_parameters\"}]";
+    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"mu_alpha_raw\",\"type\":{\"name\":\"vector\",\"length\":" << (G - 1) << "},\"block\":\"parameters\"},{\"name\":\"mu_beta_raw\",\"type\":{\"name\":\"vector\",\"length\":" << (G - 1) << "},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu_alpha\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu_beta\",\"type\":{\"name\":\"vector\",\"length\":" << G << "},\"block\":\"transformed_parameters\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"}]";
     return s__.str();
     } // get_unconstrained_sizedtypes() 
     

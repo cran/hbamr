@@ -92,53 +92,55 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'HBAM_R_MINI', line 43, column 2 to column 22)",
                                                       " (in 'HBAM_R_MINI', line 44, column 2 to column 22)",
                                                       " (in 'HBAM_R_MINI', line 45, column 2 to column 21)",
-                                                      " (in 'HBAM_R_MINI', line 46, column 2 to column 20)",
-                                                      " (in 'HBAM_R_MINI', line 47, column 2 to column 16)",
-                                                      " (in 'HBAM_R_MINI', line 48, column 2 to column 24)",
-                                                      " (in 'HBAM_R_MINI', line 49, column 2 to column 77)",
-                                                      " (in 'HBAM_R_MINI', line 50, column 2 to column 20)",
+                                                      " (in 'HBAM_R_MINI', line 46, column 2 to column 16)",
+                                                      " (in 'HBAM_R_MINI', line 47, column 2 to column 24)",
+                                                      " (in 'HBAM_R_MINI', line 48, column 2 to column 77)",
+                                                      " (in 'HBAM_R_MINI', line 49, column 2 to column 20)",
+                                                      " (in 'HBAM_R_MINI', line 50, column 2 to column 25)",
                                                       " (in 'HBAM_R_MINI', line 51, column 2 to column 25)",
-                                                      " (in 'HBAM_R_MINI', line 52, column 2 to column 25)",
+                                                      " (in 'HBAM_R_MINI', line 52, column 2 to column 45)",
                                                       " (in 'HBAM_R_MINI', line 53, column 2 to column 45)",
-                                                      " (in 'HBAM_R_MINI', line 54, column 2 to column 45)",
-                                                      " (in 'HBAM_R_MINI', line 55, column 2 to column 47)",
-                                                      " (in 'HBAM_R_MINI', line 56, column 2 to column 48)",
-                                                      " (in 'HBAM_R_MINI', line 57, column 2 to column 51)",
-                                                      " (in 'HBAM_R_MINI', line 58, column 2 to column 51)",
-                                                      " (in 'HBAM_R_MINI', line 60, column 4 to column 63)",
-                                                      " (in 'HBAM_R_MINI', line 61, column 4 to column 63)",
-                                                      " (in 'HBAM_R_MINI', line 62, column 4 to line 63, column 84)",
-                                                      " (in 'HBAM_R_MINI', line 64, column 4 to line 65, column 84)",
-                                                      " (in 'HBAM_R_MINI', line 66, column 4 to line 67, column 84)",
-                                                      " (in 'HBAM_R_MINI', line 68, column 4 to line 69, column 84)",
-                                                      " (in 'HBAM_R_MINI', line 70, column 4 to column 40)",
-                                                      " (in 'HBAM_R_MINI', line 59, column 21 to line 71, column 3)",
-                                                      " (in 'HBAM_R_MINI', line 59, column 2 to line 71, column 3)",
-                                                      " (in 'HBAM_R_MINI', line 98, column 2 to column 53)",
-                                                      " (in 'HBAM_R_MINI', line 99, column 2 to column 68)",
-                                                      " (in 'HBAM_R_MINI', line 100, column 2 to column 74)",
-                                                      " (in 'HBAM_R_MINI', line 101, column 2 to column 71)",
-                                                      " (in 'HBAM_R_MINI', line 74, column 2 to column 27)",
-                                                      " (in 'HBAM_R_MINI', line 75, column 2 to column 26)",
-                                                      " (in 'HBAM_R_MINI', line 76, column 2 to column 32)",
-                                                      " (in 'HBAM_R_MINI', line 77, column 2 to column 32)",
-                                                      " (in 'HBAM_R_MINI', line 78, column 2 to column 49)",
-                                                      " (in 'HBAM_R_MINI', line 79, column 2 to column 31)",
-                                                      " (in 'HBAM_R_MINI', line 80, column 2 to column 31)",
-                                                      " (in 'HBAM_R_MINI', line 81, column 2 to column 28)",
-                                                      " (in 'HBAM_R_MINI', line 82, column 2 to column 29)",
-                                                      " (in 'HBAM_R_MINI', line 83, column 2 to column 25)",
-                                                      " (in 'HBAM_R_MINI', line 84, column 2 to column 25)",
-                                                      " (in 'HBAM_R_MINI', line 85, column 2 to column 24)",
-                                                      " (in 'HBAM_R_MINI', line 86, column 2 to column 33)",
-                                                      " (in 'HBAM_R_MINI', line 87, column 2 to column 30)",
-                                                      " (in 'HBAM_R_MINI', line 88, column 2 to column 27)",
-                                                      " (in 'HBAM_R_MINI', line 94, column 8 to column 29)",
-                                                      " (in 'HBAM_R_MINI', line 93, column 6 to line 94, column 29)",
-                                                      " (in 'HBAM_R_MINI', line 92, column 23 to line 95, column 5)",
-                                                      " (in 'HBAM_R_MINI', line 92, column 4 to line 95, column 5)",
-                                                      " (in 'HBAM_R_MINI', line 90, column 4 to column 27)",
-                                                      " (in 'HBAM_R_MINI', line 89, column 2 to line 95, column 5)",
+                                                      " (in 'HBAM_R_MINI', line 54, column 2 to column 47)",
+                                                      " (in 'HBAM_R_MINI', line 55, column 2 to column 48)",
+                                                      " (in 'HBAM_R_MINI', line 57, column 4 to column 63)",
+                                                      " (in 'HBAM_R_MINI', line 58, column 4 to column 63)",
+                                                      " (in 'HBAM_R_MINI', line 59, column 4 to line 60, column 84)",
+                                                      " (in 'HBAM_R_MINI', line 61, column 4 to line 62, column 84)",
+                                                      " (in 'HBAM_R_MINI', line 63, column 4 to line 64, column 84)",
+                                                      " (in 'HBAM_R_MINI', line 65, column 4 to line 66, column 84)",
+                                                      " (in 'HBAM_R_MINI', line 67, column 4 to column 40)",
+                                                      " (in 'HBAM_R_MINI', line 56, column 21 to line 68, column 3)",
+                                                      " (in 'HBAM_R_MINI', line 56, column 2 to line 68, column 3)",
+                                                      " (in 'HBAM_R_MINI', line 95, column 2 to column 20)",
+                                                      " (in 'HBAM_R_MINI', line 96, column 2 to column 16)",
+                                                      " (in 'HBAM_R_MINI', line 97, column 2 to column 53)",
+                                                      " (in 'HBAM_R_MINI', line 98, column 2 to column 74)",
+                                                      " (in 'HBAM_R_MINI', line 99, column 2 to column 71)",
+                                                      " (in 'HBAM_R_MINI', line 100, column 2 to column 67)",
+                                                      " (in 'HBAM_R_MINI', line 101, column 2 to column 61)",
+                                                      " (in 'HBAM_R_MINI', line 102, column 2 to column 61)",
+                                                      " (in 'HBAM_R_MINI', line 103, column 2 to column 58)",
+                                                      " (in 'HBAM_R_MINI', line 71, column 2 to column 27)",
+                                                      " (in 'HBAM_R_MINI', line 72, column 2 to column 26)",
+                                                      " (in 'HBAM_R_MINI', line 73, column 2 to column 32)",
+                                                      " (in 'HBAM_R_MINI', line 74, column 2 to column 32)",
+                                                      " (in 'HBAM_R_MINI', line 75, column 2 to column 49)",
+                                                      " (in 'HBAM_R_MINI', line 76, column 2 to column 31)",
+                                                      " (in 'HBAM_R_MINI', line 77, column 2 to column 31)",
+                                                      " (in 'HBAM_R_MINI', line 78, column 2 to column 28)",
+                                                      " (in 'HBAM_R_MINI', line 79, column 2 to column 29)",
+                                                      " (in 'HBAM_R_MINI', line 80, column 2 to column 25)",
+                                                      " (in 'HBAM_R_MINI', line 81, column 2 to column 25)",
+                                                      " (in 'HBAM_R_MINI', line 82, column 2 to column 24)",
+                                                      " (in 'HBAM_R_MINI', line 83, column 2 to column 33)",
+                                                      " (in 'HBAM_R_MINI', line 84, column 2 to column 30)",
+                                                      " (in 'HBAM_R_MINI', line 85, column 2 to column 27)",
+                                                      " (in 'HBAM_R_MINI', line 91, column 8 to column 29)",
+                                                      " (in 'HBAM_R_MINI', line 90, column 6 to line 91, column 29)",
+                                                      " (in 'HBAM_R_MINI', line 89, column 23 to line 92, column 5)",
+                                                      " (in 'HBAM_R_MINI', line 89, column 4 to line 92, column 5)",
+                                                      " (in 'HBAM_R_MINI', line 87, column 4 to column 27)",
+                                                      " (in 'HBAM_R_MINI', line 86, column 2 to line 92, column 5)",
                                                       " (in 'HBAM_R_MINI', line 2, column 2 to column 19)",
                                                       " (in 'HBAM_R_MINI', line 3, column 2 to column 19)",
                                                       " (in 'HBAM_R_MINI', line 4, column 2 to column 23)",
@@ -177,13 +179,14 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'HBAM_R_MINI', line 43, column 8 to column 9)",
                                                       " (in 'HBAM_R_MINI', line 44, column 9 to column 10)",
                                                       " (in 'HBAM_R_MINI', line 45, column 9 to column 10)",
-                                                      " (in 'HBAM_R_MINI', line 46, column 9 to column 10)",
-                                                      " (in 'HBAM_R_MINI', line 48, column 9 to column 14)",
-                                                      " (in 'HBAM_R_MINI', line 49, column 31 to column 32)",
+                                                      " (in 'HBAM_R_MINI', line 47, column 9 to column 14)",
+                                                      " (in 'HBAM_R_MINI', line 48, column 31 to column 32)",
+                                                      " (in 'HBAM_R_MINI', line 95, column 9 to column 10)",
+                                                      " (in 'HBAM_R_MINI', line 96, column 9 to column 10)",
+                                                      " (in 'HBAM_R_MINI', line 97, column 9 to column 10)",
                                                       " (in 'HBAM_R_MINI', line 98, column 9 to column 10)",
                                                       " (in 'HBAM_R_MINI', line 99, column 9 to column 10)",
-                                                      " (in 'HBAM_R_MINI', line 100, column 9 to column 10)",
-                                                      " (in 'HBAM_R_MINI', line 101, column 9 to column 10)"};
+                                                      " (in 'HBAM_R_MINI', line 100, column 9 to column 10)"};
 #include <stan_meta_header.hpp>
 class model_HBAM_R_MINI final : public model_base_crtp<model_HBAM_R_MINI> {
 private:
@@ -232,308 +235,310 @@ public:
       pos__ = std::numeric_limits<int>::min();
       
       pos__ = 1;
-      current_statement__ = 65;
+      current_statement__ = 67;
       context__.validate_dims("data initialization","N","int",
           context__.to_vec());
       N = std::numeric_limits<int>::min();
       
-      current_statement__ = 65;
+      current_statement__ = 67;
       N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 65;
-      current_statement__ = 65;
+      current_statement__ = 67;
+      current_statement__ = 67;
       check_greater_or_equal(function__, "N", N, 1);
-      current_statement__ = 66;
+      current_statement__ = 68;
       context__.validate_dims("data initialization","J","int",
           context__.to_vec());
       J = std::numeric_limits<int>::min();
       
-      current_statement__ = 66;
+      current_statement__ = 68;
       J = context__.vals_i("J")[(1 - 1)];
-      current_statement__ = 66;
-      current_statement__ = 66;
+      current_statement__ = 68;
+      current_statement__ = 68;
       check_greater_or_equal(function__, "J", J, 1);
-      current_statement__ = 67;
+      current_statement__ = 69;
       context__.validate_dims("data initialization","N_obs","int",
           context__.to_vec());
       N_obs = std::numeric_limits<int>::min();
       
-      current_statement__ = 67;
-      N_obs = context__.vals_i("N_obs")[(1 - 1)];
-      current_statement__ = 67;
-      current_statement__ = 67;
-      check_greater_or_equal(function__, "N_obs", N_obs, 1);
-      current_statement__ = 68;
-      validate_non_negative_index("ii", "N_obs", N_obs);
       current_statement__ = 69;
+      N_obs = context__.vals_i("N_obs")[(1 - 1)];
+      current_statement__ = 69;
+      current_statement__ = 69;
+      check_greater_or_equal(function__, "N_obs", N_obs, 1);
+      current_statement__ = 70;
+      validate_non_negative_index("ii", "N_obs", N_obs);
+      current_statement__ = 71;
       context__.validate_dims("data initialization","ii","int",
           context__.to_vec(N_obs));
       ii = std::vector<int>(N_obs, std::numeric_limits<int>::min());
       
-      current_statement__ = 69;
+      current_statement__ = 71;
       assign(ii, nil_index_list(), context__.vals_i("ii"),
         "assigning variable ii");
-      current_statement__ = 69;
+      current_statement__ = 71;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 69;
-        current_statement__ = 69;
+        current_statement__ = 71;
+        current_statement__ = 71;
         check_greater_or_equal(function__, "ii[sym1__]", ii[(sym1__ - 1)], 1);
       }
-      current_statement__ = 70;
+      current_statement__ = 72;
       validate_non_negative_index("jj", "N_obs", N_obs);
-      current_statement__ = 71;
+      current_statement__ = 73;
       context__.validate_dims("data initialization","jj","int",
           context__.to_vec(N_obs));
       jj = std::vector<int>(N_obs, std::numeric_limits<int>::min());
       
-      current_statement__ = 71;
+      current_statement__ = 73;
       assign(jj, nil_index_list(), context__.vals_i("jj"),
         "assigning variable jj");
-      current_statement__ = 71;
+      current_statement__ = 73;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 71;
-        current_statement__ = 71;
+        current_statement__ = 73;
+        current_statement__ = 73;
         check_greater_or_equal(function__, "jj[sym1__]", jj[(sym1__ - 1)], 1);
       }
-      current_statement__ = 72;
+      current_statement__ = 74;
       context__.validate_dims("data initialization","B","int",
           context__.to_vec());
       B = std::numeric_limits<int>::min();
       
-      current_statement__ = 72;
+      current_statement__ = 74;
       B = context__.vals_i("B")[(1 - 1)];
-      current_statement__ = 72;
-      current_statement__ = 72;
+      current_statement__ = 74;
+      current_statement__ = 74;
       check_greater_or_equal(function__, "B", B, 1);
-      current_statement__ = 73;
+      current_statement__ = 75;
       context__.validate_dims("data initialization","L","int",
           context__.to_vec());
       L = std::numeric_limits<int>::min();
       
-      current_statement__ = 73;
+      current_statement__ = 75;
       L = context__.vals_i("L")[(1 - 1)];
-      current_statement__ = 73;
-      current_statement__ = 73;
+      current_statement__ = 75;
+      current_statement__ = 75;
       check_greater_or_equal(function__, "L", L, 1);
-      current_statement__ = 73;
-      current_statement__ = 73;
+      current_statement__ = 75;
+      current_statement__ = 75;
       check_less_or_equal(function__, "L", L, J);
-      current_statement__ = 74;
+      current_statement__ = 76;
       context__.validate_dims("data initialization","R","int",
           context__.to_vec());
       R = std::numeric_limits<int>::min();
       
-      current_statement__ = 74;
-      R = context__.vals_i("R")[(1 - 1)];
-      current_statement__ = 74;
-      current_statement__ = 74;
-      check_greater_or_equal(function__, "R", R, 1);
-      current_statement__ = 74;
-      current_statement__ = 74;
-      check_less_or_equal(function__, "R", R, J);
-      current_statement__ = 75;
-      validate_non_negative_index("Y", "N_obs", N_obs);
       current_statement__ = 76;
+      R = context__.vals_i("R")[(1 - 1)];
+      current_statement__ = 76;
+      current_statement__ = 76;
+      check_greater_or_equal(function__, "R", R, 1);
+      current_statement__ = 76;
+      current_statement__ = 76;
+      check_less_or_equal(function__, "R", R, J);
+      current_statement__ = 77;
+      validate_non_negative_index("Y", "N_obs", N_obs);
+      current_statement__ = 78;
       context__.validate_dims("data initialization","Y","int",
           context__.to_vec(N_obs));
       Y = std::vector<int>(N_obs, std::numeric_limits<int>::min());
       
-      current_statement__ = 76;
+      current_statement__ = 78;
       assign(Y, nil_index_list(), context__.vals_i("Y"),
         "assigning variable Y");
-      current_statement__ = 76;
+      current_statement__ = 78;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 76;
-        current_statement__ = 76;
+        current_statement__ = 78;
+        current_statement__ = 78;
         check_greater_or_equal(function__, "Y[sym1__]", Y[(sym1__ - 1)], -B);
       }
-      current_statement__ = 76;
-      for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 76;
-        current_statement__ = 76;
-        check_less_or_equal(function__, "Y[sym1__]", Y[(sym1__ - 1)], B);}
-      current_statement__ = 77;
-      validate_non_negative_index("U", "N_obs", N_obs);
       current_statement__ = 78;
+      for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
+        current_statement__ = 78;
+        current_statement__ = 78;
+        check_less_or_equal(function__, "Y[sym1__]", Y[(sym1__ - 1)], B);}
+      current_statement__ = 79;
+      validate_non_negative_index("U", "N_obs", N_obs);
+      current_statement__ = 80;
       context__.validate_dims("data initialization","U","double",
           context__.to_vec(N_obs));
       U = std::vector<double>(N_obs, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 78;
+      current_statement__ = 80;
       assign(U, nil_index_list(), context__.vals_r("U"),
         "assigning variable U");
-      current_statement__ = 78;
-      for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 78;
-        current_statement__ = 78;
-        check_greater_or_equal(function__, "U[sym1__]", U[(sym1__ - 1)], 0);}
-      current_statement__ = 78;
-      for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 78;
-        current_statement__ = 78;
-        check_less_or_equal(function__, "U[sym1__]", U[(sym1__ - 1)], 1);}
-      current_statement__ = 79;
-      validate_non_negative_index("V", "N", N);
       current_statement__ = 80;
+      for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
+        current_statement__ = 80;
+        current_statement__ = 80;
+        check_greater_or_equal(function__, "U[sym1__]", U[(sym1__ - 1)], 0);}
+      current_statement__ = 80;
+      for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
+        current_statement__ = 80;
+        current_statement__ = 80;
+        check_less_or_equal(function__, "U[sym1__]", U[(sym1__ - 1)], 1);}
+      current_statement__ = 81;
+      validate_non_negative_index("V", "N", N);
+      current_statement__ = 82;
       context__.validate_dims("data initialization","V","int",
           context__.to_vec(N));
       V = std::vector<int>(N, std::numeric_limits<int>::min());
       
-      current_statement__ = 80;
+      current_statement__ = 82;
       assign(V, nil_index_list(), context__.vals_i("V"),
         "assigning variable V");
-      current_statement__ = 80;
+      current_statement__ = 82;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 80;
-        current_statement__ = 80;
+        current_statement__ = 82;
+        current_statement__ = 82;
         check_greater_or_equal(function__, "V[sym1__]", V[(sym1__ - 1)], -B);
       }
-      current_statement__ = 80;
+      current_statement__ = 82;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 80;
-        current_statement__ = 80;
+        current_statement__ = 82;
+        current_statement__ = 82;
         check_less_or_equal(function__, "V[sym1__]", V[(sym1__ - 1)], B);}
-      current_statement__ = 81;
+      current_statement__ = 83;
       context__.validate_dims("data initialization","CV","int",
           context__.to_vec());
       CV = std::numeric_limits<int>::min();
       
-      current_statement__ = 81;
-      CV = context__.vals_i("CV")[(1 - 1)];
-      current_statement__ = 81;
-      current_statement__ = 81;
-      check_greater_or_equal(function__, "CV", CV, 0);
-      current_statement__ = 81;
-      current_statement__ = 81;
-      check_less_or_equal(function__, "CV", CV, 1);
-      current_statement__ = 82;
-      validate_non_negative_index("holdout", "N_obs", N_obs);
       current_statement__ = 83;
+      CV = context__.vals_i("CV")[(1 - 1)];
+      current_statement__ = 83;
+      current_statement__ = 83;
+      check_greater_or_equal(function__, "CV", CV, 0);
+      current_statement__ = 83;
+      current_statement__ = 83;
+      check_less_or_equal(function__, "CV", CV, 1);
+      current_statement__ = 84;
+      validate_non_negative_index("holdout", "N_obs", N_obs);
+      current_statement__ = 85;
       context__.validate_dims("data initialization","holdout","int",
           context__.to_vec(N_obs));
       holdout = std::vector<int>(N_obs, std::numeric_limits<int>::min());
       
-      current_statement__ = 83;
+      current_statement__ = 85;
       assign(holdout, nil_index_list(), context__.vals_i("holdout"),
         "assigning variable holdout");
-      current_statement__ = 83;
+      current_statement__ = 85;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 83;
-        current_statement__ = 83;
+        current_statement__ = 85;
+        current_statement__ = 85;
         check_greater_or_equal(function__, "holdout[sym1__]",
                                holdout[(sym1__ - 1)], 0);}
-      current_statement__ = 83;
+      current_statement__ = 85;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 83;
-        current_statement__ = 83;
+        current_statement__ = 85;
+        current_statement__ = 85;
         check_less_or_equal(function__, "holdout[sym1__]",
                             holdout[(sym1__ - 1)], 1);}
-      current_statement__ = 84;
+      current_statement__ = 86;
       sigma_alpha_prior_rate = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 84;
+      current_statement__ = 86;
       sigma_alpha_prior_rate = ((2 - 1) / (B / 5.0));
-      current_statement__ = 85;
+      current_statement__ = 87;
       tau_prior_rate = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 85;
-      tau_prior_rate = ((2 - 1) / (B / 5.0));
-      current_statement__ = 86;
-      validate_non_negative_index("Vvec", "N", N);
       current_statement__ = 87;
+      tau_prior_rate = ((2 - 1) / (B / 5.0));
+      current_statement__ = 88;
+      validate_non_negative_index("Vvec", "N", N);
+      current_statement__ = 89;
       Vvec = Eigen::Matrix<double, -1, 1>(N);
       stan::math::fill(Vvec, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 87;
-      assign(Vvec, nil_index_list(), to_vector(V), "assigning variable Vvec");
-      current_statement__ = 88;
-      validate_non_negative_index("p", "N_obs", N_obs);
       current_statement__ = 89;
+      assign(Vvec, nil_index_list(), to_vector(V), "assigning variable Vvec");
+      current_statement__ = 90;
+      validate_non_negative_index("p", "N_obs", N_obs);
+      current_statement__ = 91;
       p = std::vector<std::vector<double>>(2, std::vector<double>(N_obs, std::numeric_limits<double>::quiet_NaN()));
       
-      current_statement__ = 93;
+      current_statement__ = 95;
       for (int n = 1; n <= N_obs; ++n) {
-        current_statement__ = 90;
+        current_statement__ = 92;
         assign(p,
           cons_list(index_uni(1), cons_list(index_uni(n), nil_index_list())),
           (((U[(n - 1)] * V[(ii[(n - 1)] - 1)]) + (B * U[(n - 1)])) - B),
           "assigning variable p");
-        current_statement__ = 91;
+        current_statement__ = 93;
         assign(p,
           cons_list(index_uni(2), cons_list(index_uni(n), nil_index_list())),
           (((U[(n - 1)] * V[(ii[(n - 1)] - 1)]) - (B * U[(n - 1)])) + B),
           "assigning variable p");}
-      current_statement__ = 84;
-      current_statement__ = 84;
+      current_statement__ = 86;
+      current_statement__ = 86;
       check_greater_or_equal(function__, "sigma_alpha_prior_rate",
                              sigma_alpha_prior_rate, 0);
-      current_statement__ = 85;
-      current_statement__ = 85;
-      check_greater_or_equal(function__, "tau_prior_rate", tau_prior_rate, 0);
       current_statement__ = 87;
+      current_statement__ = 87;
+      check_greater_or_equal(function__, "tau_prior_rate", tau_prior_rate, 0);
+      current_statement__ = 89;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 87;
-        current_statement__ = 87;
+        current_statement__ = 89;
+        current_statement__ = 89;
         check_greater_or_equal(function__, "Vvec[sym1__]",
                                Vvec[(sym1__ - 1)], -B);}
-      current_statement__ = 87;
+      current_statement__ = 89;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 87;
-        current_statement__ = 87;
+        current_statement__ = 89;
+        current_statement__ = 89;
         check_less_or_equal(function__, "Vvec[sym1__]", Vvec[(sym1__ - 1)], B);
       }
-      current_statement__ = 89;
+      current_statement__ = 91;
       for (int sym1__ = 1; sym1__ <= 2; ++sym1__) {
-        current_statement__ = 89;
+        current_statement__ = 91;
         for (int sym2__ = 1; sym2__ <= N_obs; ++sym2__) {
-          current_statement__ = 89;
-          current_statement__ = 89;
+          current_statement__ = 91;
+          current_statement__ = 91;
           check_greater_or_equal(function__, "p[sym1__, sym2__]",
                                  p[(sym1__ - 1)][(sym2__ - 1)], -B);}}
-      current_statement__ = 89;
+      current_statement__ = 91;
       for (int sym1__ = 1; sym1__ <= 2; ++sym1__) {
-        current_statement__ = 89;
+        current_statement__ = 91;
         for (int sym2__ = 1; sym2__ <= N_obs; ++sym2__) {
-          current_statement__ = 89;
-          current_statement__ = 89;
+          current_statement__ = 91;
+          current_statement__ = 91;
           check_less_or_equal(function__, "p[sym1__, sym2__]",
                               p[(sym1__ - 1)][(sym2__ - 1)], B);}}
-      current_statement__ = 94;
-      validate_non_negative_index("alpha_raw", "N", N);
-      current_statement__ = 95;
-      validate_non_negative_index("beta_raw", "N", N);
       current_statement__ = 96;
-      validate_non_negative_index("theta_raw", "J", J);
+      validate_non_negative_index("alpha_raw", "N", N);
       current_statement__ = 97;
-      validate_non_negative_index("logit_lambda", "N", N);
+      validate_non_negative_index("beta_raw", "N", N);
       current_statement__ = 98;
-      validate_non_negative_index("gamma", "N", N);
+      validate_non_negative_index("theta_raw", "J", J);
       current_statement__ = 99;
+      validate_non_negative_index("logit_lambda", "N", N);
+      current_statement__ = 100;
+      validate_non_negative_index("gamma", "N", N);
+      current_statement__ = 101;
       zeta_1dim__ = std::numeric_limits<int>::min();
       
-      current_statement__ = 99;
-      zeta_1dim__ = ((2 * B) + 1);
-      current_statement__ = 99;
-      validate_non_negative_index("zeta", "2 * B + 1", zeta_1dim__);
-      current_statement__ = 100;
-      validate_non_negative_index("theta", "J", J);
       current_statement__ = 101;
-      validate_non_negative_index("alpha0", "N", N);
+      zeta_1dim__ = ((2 * B) + 1);
+      current_statement__ = 101;
+      validate_non_negative_index("zeta", "2 * B + 1", zeta_1dim__);
       current_statement__ = 102;
-      validate_non_negative_index("beta0", "N", N);
+      validate_non_negative_index("theta", "J", J);
       current_statement__ = 103;
-      validate_non_negative_index("chi0", "N", N);
+      validate_non_negative_index("alpha0", "N", N);
       current_statement__ = 104;
-      validate_non_negative_index("log_lik", "N_obs", N_obs);
+      validate_non_negative_index("beta0", "N", N);
       current_statement__ = 105;
-      validate_non_negative_index("lambda", "N", N);
+      validate_non_negative_index("log_lik", "N_obs", N_obs);
       current_statement__ = 106;
-      validate_non_negative_index("kappa", "N", N);
+      validate_non_negative_index("lambda", "N", N);
       current_statement__ = 107;
-      validate_non_negative_index("chi", "N", N);
+      validate_non_negative_index("chi0", "N", N);
       current_statement__ = 108;
-      validate_non_negative_index("alpha", "N", N);
+      validate_non_negative_index("chi", "N", N);
       current_statement__ = 109;
+      validate_non_negative_index("kappa", "N", N);
+      current_statement__ = 110;
+      validate_non_negative_index("alpha", "N", N);
+      current_statement__ = 111;
       validate_non_negative_index("beta", "N", N);
+      current_statement__ = 112;
+      validate_non_negative_index("V_error", "N", N);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
       // Next line prevents compiler griping about no return
@@ -755,10 +760,6 @@ public:
       beta0 = Eigen::Matrix<local_scalar_t__, -1, -1>(N, 2);
       stan::math::fill(beta0, DUMMY_VAR__);
       
-      Eigen::Matrix<local_scalar_t__, -1, -1> chi0;
-      chi0 = Eigen::Matrix<local_scalar_t__, -1, -1>(N, 2);
-      stan::math::fill(chi0, DUMMY_VAR__);
-      
       Eigen::Matrix<local_scalar_t__, -1, 1> mu0;
       mu0 = Eigen::Matrix<local_scalar_t__, -1, 1>(2);
       stan::math::fill(mu0, DUMMY_VAR__);
@@ -771,19 +772,19 @@ public:
       lambda = Eigen::Matrix<local_scalar_t__, -1, 1>(N);
       stan::math::fill(lambda, DUMMY_VAR__);
       
-      current_statement__ = 21;
+      current_statement__ = 20;
       assign(lambda, nil_index_list(),
         inv_logit(add(psi, multiply(logit_lambda, 3))),
         "assigning variable lambda");
-      current_statement__ = 22;
+      current_statement__ = 21;
       assign(theta, nil_index_list(), theta_raw, "assigning variable theta");
-      current_statement__ = 23;
+      current_statement__ = 22;
       assign(theta, cons_list(index_uni(L), nil_index_list()),
         theta_lr[(1 - 1)], "assigning variable theta");
-      current_statement__ = 24;
+      current_statement__ = 23;
       assign(theta, cons_list(index_uni(R), nil_index_list()),
         theta_lr[(2 - 1)], "assigning variable theta");
-      current_statement__ = 25;
+      current_statement__ = 24;
       assign(alpha0,
         cons_list(index_omni(), cons_list(index_uni(1), nil_index_list())),
         multiply(
@@ -791,7 +792,7 @@ public:
             cons_list(index_omni(),
               cons_list(index_uni(1), nil_index_list())), "alpha_raw"),
           sigma_alpha), "assigning variable alpha0");
-      current_statement__ = 26;
+      current_statement__ = 25;
       assign(alpha0,
         cons_list(index_omni(), cons_list(index_uni(2), nil_index_list())),
         multiply(
@@ -799,7 +800,7 @@ public:
             cons_list(index_omni(),
               cons_list(index_uni(2), nil_index_list())), "alpha_raw"),
           sigma_alpha), "assigning variable alpha0");
-      current_statement__ = 27;
+      current_statement__ = 26;
       assign(beta0,
         cons_list(index_omni(), cons_list(index_uni(1), nil_index_list())),
         stan::math::exp(
@@ -808,7 +809,7 @@ public:
               cons_list(index_omni(),
                 cons_list(index_uni(1), nil_index_list())), "beta_raw"),
             sigma_beta)), "assigning variable beta0");
-      current_statement__ = 28;
+      current_statement__ = 27;
       assign(beta0,
         cons_list(index_omni(), cons_list(index_uni(2), nil_index_list())),
         minus(
@@ -818,33 +819,9 @@ public:
                 cons_list(index_omni(),
                   cons_list(index_uni(2), nil_index_list())), "beta_raw"),
               sigma_beta))), "assigning variable beta0");
-      current_statement__ = 29;
-      assign(chi0,
-        cons_list(index_omni(), cons_list(index_uni(1), nil_index_list())),
-        elt_divide(
-          subtract(Vvec,
-            rvalue(alpha0,
-              cons_list(index_omni(),
-                cons_list(index_uni(1), nil_index_list())), "alpha0")),
-          rvalue(beta0,
-            cons_list(index_omni(),
-              cons_list(index_uni(1), nil_index_list())), "beta0")),
-        "assigning variable chi0");
-      current_statement__ = 30;
-      assign(chi0,
-        cons_list(index_omni(), cons_list(index_uni(2), nil_index_list())),
-        elt_divide(
-          subtract(Vvec,
-            rvalue(alpha0,
-              cons_list(index_omni(),
-                cons_list(index_uni(2), nil_index_list())), "alpha0")),
-          rvalue(beta0,
-            cons_list(index_omni(),
-              cons_list(index_uni(2), nil_index_list())), "beta0")),
-        "assigning variable chi0");
-      current_statement__ = 39;
+      current_statement__ = 36;
       for (int n = 1; n <= N_obs; ++n) {
-        current_statement__ = 31;
+        current_statement__ = 28;
         assign(mu0, cons_list(index_uni(1), nil_index_list()),
           (rvalue(alpha0,
              cons_list(index_uni(ii[(n - 1)]),
@@ -853,7 +830,7 @@ public:
                cons_list(index_uni(ii[(n - 1)]),
                  cons_list(index_uni(1), nil_index_list())), "beta0") *
               theta[(jj[(n - 1)] - 1)])), "assigning variable mu0");
-        current_statement__ = 32;
+        current_statement__ = 29;
         assign(mu0, cons_list(index_uni(2), nil_index_list()),
           (rvalue(alpha0,
              cons_list(index_uni(ii[(n - 1)]),
@@ -862,7 +839,7 @@ public:
                cons_list(index_uni(ii[(n - 1)]),
                  cons_list(index_uni(2), nil_index_list())), "beta0") *
               theta[(jj[(n - 1)] - 1)])), "assigning variable mu0");
-        current_statement__ = 33;
+        current_statement__ = 30;
         assign(log_probs, cons_list(index_uni(1), nil_index_list()),
           ((stan::math::log(lambda[(ii[(n - 1)] - 1)]) +
              stan::math::log(zeta[(((V[(ii[(n - 1)] - 1)] + B) + 1) - 1)])) +
@@ -870,7 +847,7 @@ public:
               (((1 - gamma[(ii[(n - 1)] - 1)]) * mu0[(1 - 1)]) +
                 (gamma[(ii[(n - 1)] - 1)] * p[(1 - 1)][(n - 1)])), tau)),
           "assigning variable log_probs");
-        current_statement__ = 34;
+        current_statement__ = 31;
         assign(log_probs, cons_list(index_uni(2), nil_index_list()),
           ((stan::math::log(lambda[(ii[(n - 1)] - 1)]) +
              stan::math::log(
@@ -879,7 +856,7 @@ public:
               (((1 - gamma[(ii[(n - 1)] - 1)]) * mu0[(1 - 1)]) +
                 (gamma[(ii[(n - 1)] - 1)] * p[(2 - 1)][(n - 1)])), tau)),
           "assigning variable log_probs");
-        current_statement__ = 35;
+        current_statement__ = 32;
         assign(log_probs, cons_list(index_uni(3), nil_index_list()),
           ((stan::math::log((1 - lambda[(ii[(n - 1)] - 1)])) +
              stan::math::log(zeta[(((V[(ii[(n - 1)] - 1)] + B) + 1) - 1)])) +
@@ -887,7 +864,7 @@ public:
               (((1 - gamma[(ii[(n - 1)] - 1)]) * mu0[(2 - 1)]) +
                 (gamma[(ii[(n - 1)] - 1)] * p[(1 - 1)][(n - 1)])), tau)),
           "assigning variable log_probs");
-        current_statement__ = 36;
+        current_statement__ = 33;
         assign(log_probs, cons_list(index_uni(4), nil_index_list()),
           ((stan::math::log((1 - lambda[(ii[(n - 1)] - 1)])) +
              stan::math::log(
@@ -896,83 +873,83 @@ public:
               (((1 - gamma[(ii[(n - 1)] - 1)]) * mu0[(2 - 1)]) +
                 (gamma[(ii[(n - 1)] - 1)] * p[(2 - 1)][(n - 1)])), tau)),
           "assigning variable log_probs");
-        current_statement__ = 37;
+        current_statement__ = 34;
         assign(log_lik, cons_list(index_uni(n), nil_index_list()),
           log_sum_exp(log_probs), "assigning variable log_lik");}
-      current_statement__ = 21;
+      current_statement__ = 20;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 21;
-        current_statement__ = 21;
+        current_statement__ = 20;
+        current_statement__ = 20;
         check_greater_or_equal(function__, "lambda[sym1__]",
                                lambda[(sym1__ - 1)], 0);}
-      current_statement__ = 21;
+      current_statement__ = 20;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 21;
-        current_statement__ = 21;
+        current_statement__ = 20;
+        current_statement__ = 20;
         check_less_or_equal(function__, "lambda[sym1__]",
                             lambda[(sym1__ - 1)], 1);}
       {
-        current_statement__ = 44;
-        lp_accum__.add(normal_lpdf<propto__>(theta_raw, 0, B));
-        current_statement__ = 45;
-        lp_accum__.add(normal_lpdf<propto__>(theta_lr, 0, B));
         current_statement__ = 46;
+        lp_accum__.add(normal_lpdf<propto__>(theta_raw, 0, B));
+        current_statement__ = 47;
+        lp_accum__.add(normal_lpdf<propto__>(theta_lr, 0, B));
+        current_statement__ = 48;
         lp_accum__.add(
           normal_lpdf<propto__>(
             rvalue(alpha_raw,
               cons_list(index_omni(),
                 cons_list(index_uni(1), nil_index_list())), "alpha_raw"), 0,
             1));
-        current_statement__ = 47;
+        current_statement__ = 49;
         lp_accum__.add(
           normal_lpdf<propto__>(
             rvalue(alpha_raw,
               cons_list(index_omni(),
                 cons_list(index_uni(2), nil_index_list())), "alpha_raw"), 0,
             1));
-        current_statement__ = 48;
+        current_statement__ = 50;
         lp_accum__.add(
           gamma_lpdf<propto__>(sigma_alpha, 2, sigma_alpha_prior_rate));
-        current_statement__ = 49;
+        current_statement__ = 51;
         lp_accum__.add(
           normal_lpdf<propto__>(
             rvalue(beta_raw,
               cons_list(index_omni(),
                 cons_list(index_uni(1), nil_index_list())), "beta_raw"), 0,
             1));
-        current_statement__ = 50;
+        current_statement__ = 52;
         lp_accum__.add(
           normal_lpdf<propto__>(
             rvalue(beta_raw,
               cons_list(index_omni(),
                 cons_list(index_uni(2), nil_index_list())), "beta_raw"), 0,
             1));
-        current_statement__ = 51;
-        lp_accum__.add(gamma_lpdf<propto__>(sigma_beta, 3, 10));
-        current_statement__ = 52;
-        lp_accum__.add(beta_lpdf<propto__>(gamma, gam_a, gam_b));
         current_statement__ = 53;
-        lp_accum__.add(gamma_lpdf<propto__>(gam_a, 1.5, .5));
+        lp_accum__.add(gamma_lpdf<propto__>(sigma_beta, 3, 10));
         current_statement__ = 54;
-        lp_accum__.add(gamma_lpdf<propto__>(gam_b, 1.5, .5));
+        lp_accum__.add(beta_lpdf<propto__>(gamma, gam_a, gam_b));
         current_statement__ = 55;
-        lp_accum__.add(beta_lpdf<propto__>(zeta, 1.2, 1.2));
+        lp_accum__.add(gamma_lpdf<propto__>(gam_a, 1.5, .5));
         current_statement__ = 56;
-        lp_accum__.add(gamma_lpdf<propto__>(tau, 2, tau_prior_rate));
+        lp_accum__.add(gamma_lpdf<propto__>(gam_b, 1.5, .5));
         current_statement__ = 57;
-        lp_accum__.add(normal_lpdf<propto__>(logit_lambda, 0, 1));
+        lp_accum__.add(beta_lpdf<propto__>(zeta, 1.2, 1.2));
         current_statement__ = 58;
+        lp_accum__.add(gamma_lpdf<propto__>(tau, 2, tau_prior_rate));
+        current_statement__ = 59;
+        lp_accum__.add(normal_lpdf<propto__>(logit_lambda, 0, 1));
+        current_statement__ = 60;
         lp_accum__.add(lognormal_lpdf<propto__>(psi, 1.4, .5));
-        current_statement__ = 64;
+        current_statement__ = 66;
         if (logical_eq(CV, 0)) {
-          current_statement__ = 63;
+          current_statement__ = 65;
           lp_accum__.add(sum(log_lik));
         } else {
-          current_statement__ = 62;
+          current_statement__ = 64;
           for (int n = 1; n <= N_obs; ++n) {
-            current_statement__ = 60;
+            current_statement__ = 62;
             if (logical_eq(holdout[(n - 1)], 0)) {
-              current_statement__ = 59;
+              current_statement__ = 61;
               lp_accum__.add(log_lik[(n - 1)]);
             } }
         }
@@ -1124,10 +1101,6 @@ public:
       beta0 = Eigen::Matrix<double, -1, -1>(N, 2);
       stan::math::fill(beta0, std::numeric_limits<double>::quiet_NaN());
       
-      Eigen::Matrix<double, -1, -1> chi0;
-      chi0 = Eigen::Matrix<double, -1, -1>(N, 2);
-      stan::math::fill(chi0, std::numeric_limits<double>::quiet_NaN());
-      
       Eigen::Matrix<double, -1, 1> mu0;
       mu0 = Eigen::Matrix<double, -1, 1>(2);
       stan::math::fill(mu0, std::numeric_limits<double>::quiet_NaN());
@@ -1174,19 +1147,19 @@ public:
             primitive_value(emit_generated_quantities__)))) {
         return ;
       } 
-      current_statement__ = 21;
+      current_statement__ = 20;
       assign(lambda, nil_index_list(),
         inv_logit(add(psi, multiply(logit_lambda, 3))),
         "assigning variable lambda");
-      current_statement__ = 22;
+      current_statement__ = 21;
       assign(theta, nil_index_list(), theta_raw, "assigning variable theta");
-      current_statement__ = 23;
+      current_statement__ = 22;
       assign(theta, cons_list(index_uni(L), nil_index_list()),
         theta_lr[(1 - 1)], "assigning variable theta");
-      current_statement__ = 24;
+      current_statement__ = 23;
       assign(theta, cons_list(index_uni(R), nil_index_list()),
         theta_lr[(2 - 1)], "assigning variable theta");
-      current_statement__ = 25;
+      current_statement__ = 24;
       assign(alpha0,
         cons_list(index_omni(), cons_list(index_uni(1), nil_index_list())),
         multiply(
@@ -1194,7 +1167,7 @@ public:
             cons_list(index_omni(),
               cons_list(index_uni(1), nil_index_list())), "alpha_raw"),
           sigma_alpha), "assigning variable alpha0");
-      current_statement__ = 26;
+      current_statement__ = 25;
       assign(alpha0,
         cons_list(index_omni(), cons_list(index_uni(2), nil_index_list())),
         multiply(
@@ -1202,7 +1175,7 @@ public:
             cons_list(index_omni(),
               cons_list(index_uni(2), nil_index_list())), "alpha_raw"),
           sigma_alpha), "assigning variable alpha0");
-      current_statement__ = 27;
+      current_statement__ = 26;
       assign(beta0,
         cons_list(index_omni(), cons_list(index_uni(1), nil_index_list())),
         stan::math::exp(
@@ -1211,7 +1184,7 @@ public:
               cons_list(index_omni(),
                 cons_list(index_uni(1), nil_index_list())), "beta_raw"),
             sigma_beta)), "assigning variable beta0");
-      current_statement__ = 28;
+      current_statement__ = 27;
       assign(beta0,
         cons_list(index_omni(), cons_list(index_uni(2), nil_index_list())),
         minus(
@@ -1221,33 +1194,9 @@ public:
                 cons_list(index_omni(),
                   cons_list(index_uni(2), nil_index_list())), "beta_raw"),
               sigma_beta))), "assigning variable beta0");
-      current_statement__ = 29;
-      assign(chi0,
-        cons_list(index_omni(), cons_list(index_uni(1), nil_index_list())),
-        elt_divide(
-          subtract(Vvec,
-            rvalue(alpha0,
-              cons_list(index_omni(),
-                cons_list(index_uni(1), nil_index_list())), "alpha0")),
-          rvalue(beta0,
-            cons_list(index_omni(),
-              cons_list(index_uni(1), nil_index_list())), "beta0")),
-        "assigning variable chi0");
-      current_statement__ = 30;
-      assign(chi0,
-        cons_list(index_omni(), cons_list(index_uni(2), nil_index_list())),
-        elt_divide(
-          subtract(Vvec,
-            rvalue(alpha0,
-              cons_list(index_omni(),
-                cons_list(index_uni(2), nil_index_list())), "alpha0")),
-          rvalue(beta0,
-            cons_list(index_omni(),
-              cons_list(index_uni(2), nil_index_list())), "beta0")),
-        "assigning variable chi0");
-      current_statement__ = 39;
+      current_statement__ = 36;
       for (int n = 1; n <= N_obs; ++n) {
-        current_statement__ = 31;
+        current_statement__ = 28;
         assign(mu0, cons_list(index_uni(1), nil_index_list()),
           (rvalue(alpha0,
              cons_list(index_uni(ii[(n - 1)]),
@@ -1256,7 +1205,7 @@ public:
                cons_list(index_uni(ii[(n - 1)]),
                  cons_list(index_uni(1), nil_index_list())), "beta0") *
               theta[(jj[(n - 1)] - 1)])), "assigning variable mu0");
-        current_statement__ = 32;
+        current_statement__ = 29;
         assign(mu0, cons_list(index_uni(2), nil_index_list()),
           (rvalue(alpha0,
              cons_list(index_uni(ii[(n - 1)]),
@@ -1265,7 +1214,7 @@ public:
                cons_list(index_uni(ii[(n - 1)]),
                  cons_list(index_uni(2), nil_index_list())), "beta0") *
               theta[(jj[(n - 1)] - 1)])), "assigning variable mu0");
-        current_statement__ = 33;
+        current_statement__ = 30;
         assign(log_probs, cons_list(index_uni(1), nil_index_list()),
           ((stan::math::log(lambda[(ii[(n - 1)] - 1)]) +
              stan::math::log(zeta[(((V[(ii[(n - 1)] - 1)] + B) + 1) - 1)])) +
@@ -1273,7 +1222,7 @@ public:
               (((1 - gamma[(ii[(n - 1)] - 1)]) * mu0[(1 - 1)]) +
                 (gamma[(ii[(n - 1)] - 1)] * p[(1 - 1)][(n - 1)])), tau)),
           "assigning variable log_probs");
-        current_statement__ = 34;
+        current_statement__ = 31;
         assign(log_probs, cons_list(index_uni(2), nil_index_list()),
           ((stan::math::log(lambda[(ii[(n - 1)] - 1)]) +
              stan::math::log(
@@ -1282,7 +1231,7 @@ public:
               (((1 - gamma[(ii[(n - 1)] - 1)]) * mu0[(1 - 1)]) +
                 (gamma[(ii[(n - 1)] - 1)] * p[(2 - 1)][(n - 1)])), tau)),
           "assigning variable log_probs");
-        current_statement__ = 35;
+        current_statement__ = 32;
         assign(log_probs, cons_list(index_uni(3), nil_index_list()),
           ((stan::math::log((1 - lambda[(ii[(n - 1)] - 1)])) +
              stan::math::log(zeta[(((V[(ii[(n - 1)] - 1)] + B) + 1) - 1)])) +
@@ -1290,7 +1239,7 @@ public:
               (((1 - gamma[(ii[(n - 1)] - 1)]) * mu0[(2 - 1)]) +
                 (gamma[(ii[(n - 1)] - 1)] * p[(1 - 1)][(n - 1)])), tau)),
           "assigning variable log_probs");
-        current_statement__ = 36;
+        current_statement__ = 33;
         assign(log_probs, cons_list(index_uni(4), nil_index_list()),
           ((stan::math::log((1 - lambda[(ii[(n - 1)] - 1)])) +
              stan::math::log(
@@ -1299,19 +1248,19 @@ public:
               (((1 - gamma[(ii[(n - 1)] - 1)]) * mu0[(2 - 1)]) +
                 (gamma[(ii[(n - 1)] - 1)] * p[(2 - 1)][(n - 1)])), tau)),
           "assigning variable log_probs");
-        current_statement__ = 37;
+        current_statement__ = 34;
         assign(log_lik, cons_list(index_uni(n), nil_index_list()),
           log_sum_exp(log_probs), "assigning variable log_lik");}
-      current_statement__ = 21;
+      current_statement__ = 20;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 21;
-        current_statement__ = 21;
+        current_statement__ = 20;
+        current_statement__ = 20;
         check_greater_or_equal(function__, "lambda[sym1__]",
                                lambda[(sym1__ - 1)], 0);}
-      current_statement__ = 21;
+      current_statement__ = 20;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 21;
-        current_statement__ = 21;
+        current_statement__ = 20;
+        current_statement__ = 20;
         check_less_or_equal(function__, "lambda[sym1__]",
                             lambda[(sym1__ - 1)], 1);}
       if (emit_transformed_parameters__) {
@@ -1334,13 +1283,6 @@ public:
                   cons_list(index_uni(sym1__), nil_index_list())), "beta0"));
           }}
         for (int sym1__ = 1; sym1__ <= 2; ++sym1__) {
-          for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
-            vars__.emplace_back(
-              rvalue(chi0,
-                cons_list(index_uni(sym2__),
-                  cons_list(index_uni(sym1__), nil_index_list())), "chi0"));}
-        }
-        for (int sym1__ = 1; sym1__ <= 2; ++sym1__) {
           vars__.emplace_back(mu0[(sym1__ - 1)]);}
         for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
           vars__.emplace_back(log_lik[(sym1__ - 1)]);}
@@ -1350,35 +1292,27 @@ public:
       if (logical_negation(emit_generated_quantities__)) {
         return ;
       } 
-      Eigen::Matrix<double, -1, 1> kappa;
-      kappa = Eigen::Matrix<double, -1, 1>(N);
-      stan::math::fill(kappa, std::numeric_limits<double>::quiet_NaN());
+      Eigen::Matrix<double, -1, -1> chi0;
+      chi0 = Eigen::Matrix<double, -1, -1>(N, 2);
+      stan::math::fill(chi0, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 40;
-      assign(kappa, nil_index_list(),
-        to_vector(bernoulli_rng(lambda, base_rng__)),
-        "assigning variable kappa");
       Eigen::Matrix<double, -1, 1> chi;
       chi = Eigen::Matrix<double, -1, 1>(N);
       stan::math::fill(chi, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 41;
-      assign(chi, nil_index_list(),
-        add(
-          elt_multiply(kappa,
-            rvalue(chi0,
-              cons_list(index_omni(),
-                cons_list(index_uni(1), nil_index_list())), "chi0")),
-          elt_multiply(subtract(1, kappa),
-            rvalue(chi0,
-              cons_list(index_omni(),
-                cons_list(index_uni(2), nil_index_list())), "chi0"))),
-        "assigning variable chi");
+      Eigen::Matrix<double, -1, 1> kappa;
+      kappa = Eigen::Matrix<double, -1, 1>(N);
+      stan::math::fill(kappa, std::numeric_limits<double>::quiet_NaN());
+      
+      current_statement__ = 39;
+      assign(kappa, nil_index_list(),
+        to_vector(bernoulli_rng(lambda, base_rng__)),
+        "assigning variable kappa");
       Eigen::Matrix<double, -1, 1> alpha;
       alpha = Eigen::Matrix<double, -1, 1>(N);
       stan::math::fill(alpha, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 42;
+      current_statement__ = 40;
       assign(alpha, nil_index_list(),
         add(
           elt_multiply(kappa,
@@ -1394,7 +1328,7 @@ public:
       beta = Eigen::Matrix<double, -1, 1>(N);
       stan::math::fill(beta, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 43;
+      current_statement__ = 41;
       assign(beta, nil_index_list(),
         add(
           elt_multiply(kappa,
@@ -1406,14 +1340,66 @@ public:
               cons_list(index_omni(),
                 cons_list(index_uni(2), nil_index_list())), "beta0"))),
         "assigning variable beta");
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        vars__.emplace_back(kappa[(sym1__ - 1)]);}
+      Eigen::Matrix<double, -1, 1> V_error;
+      V_error = Eigen::Matrix<double, -1, 1>(N);
+      stan::math::fill(V_error, std::numeric_limits<double>::quiet_NaN());
+      
+      current_statement__ = 42;
+      assign(V_error, nil_index_list(),
+        to_vector(normal_rng(0, rep_vector(tau, N), base_rng__)),
+        "assigning variable V_error");
+      current_statement__ = 43;
+      assign(chi0,
+        cons_list(index_omni(), cons_list(index_uni(1), nil_index_list())),
+        elt_divide(
+          subtract(subtract(Vvec, V_error),
+            rvalue(alpha0,
+              cons_list(index_omni(),
+                cons_list(index_uni(1), nil_index_list())), "alpha0")),
+          rvalue(beta0,
+            cons_list(index_omni(),
+              cons_list(index_uni(1), nil_index_list())), "beta0")),
+        "assigning variable chi0");
+      current_statement__ = 44;
+      assign(chi0,
+        cons_list(index_omni(), cons_list(index_uni(2), nil_index_list())),
+        elt_divide(
+          subtract(subtract(Vvec, V_error),
+            rvalue(alpha0,
+              cons_list(index_omni(),
+                cons_list(index_uni(2), nil_index_list())), "alpha0")),
+          rvalue(beta0,
+            cons_list(index_omni(),
+              cons_list(index_uni(2), nil_index_list())), "beta0")),
+        "assigning variable chi0");
+      current_statement__ = 45;
+      assign(chi, nil_index_list(),
+        add(
+          elt_multiply(kappa,
+            rvalue(chi0,
+              cons_list(index_omni(),
+                cons_list(index_uni(1), nil_index_list())), "chi0")),
+          elt_multiply(subtract(1, kappa),
+            rvalue(chi0,
+              cons_list(index_omni(),
+                cons_list(index_uni(2), nil_index_list())), "chi0"))),
+        "assigning variable chi");
+      for (int sym1__ = 1; sym1__ <= 2; ++sym1__) {
+        for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
+          vars__.emplace_back(
+            rvalue(chi0,
+              cons_list(index_uni(sym2__),
+                cons_list(index_uni(sym1__), nil_index_list())), "chi0"));}}
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         vars__.emplace_back(chi[(sym1__ - 1)]);}
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        vars__.emplace_back(kappa[(sym1__ - 1)]);}
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         vars__.emplace_back(alpha[(sym1__ - 1)]);}
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         vars__.emplace_back(beta[(sym1__ - 1)]);}
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        vars__.emplace_back(V_error[(sym1__ - 1)]);}
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
       // Next line prevents compiler griping about no return
@@ -1697,14 +1683,15 @@ public:
     names__.emplace_back("theta");
     names__.emplace_back("alpha0");
     names__.emplace_back("beta0");
-    names__.emplace_back("chi0");
     names__.emplace_back("mu0");
     names__.emplace_back("log_lik");
     names__.emplace_back("lambda");
-    names__.emplace_back("kappa");
+    names__.emplace_back("chi0");
     names__.emplace_back("chi");
+    names__.emplace_back("kappa");
     names__.emplace_back("alpha");
     names__.emplace_back("beta");
+    names__.emplace_back("V_error");
     } // get_param_names() 
     
   inline void get_dims(std::vector<std::vector<size_t>>& dimss__) const {
@@ -1747,12 +1734,14 @@ public:
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N),
                                              static_cast<size_t>(2)});
     
-    dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N),
-                                             static_cast<size_t>(2)});
-    
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(2)});
     
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N_obs)});
+    
+    dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N)});
+    
+    dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N),
+                                             static_cast<size_t>(2)});
     
     dimss__.emplace_back(std::vector<size_t>{static_cast<size_t>(N)});
     
@@ -1837,13 +1826,6 @@ public:
         }}
       for (int sym1__ = 1; sym1__ <= 2; ++sym1__) {
         {
-          for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
-            {
-              param_names__.emplace_back(std::string() + "chi0" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
-            }}
-        }}
-      for (int sym1__ = 1; sym1__ <= 2; ++sym1__) {
-        {
           param_names__.emplace_back(std::string() + "mu0" + '.' + std::to_string(sym1__));
         }}
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
@@ -1857,13 +1839,20 @@ public:
     }
     
     if (emit_generated_quantities__) {
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+      for (int sym1__ = 1; sym1__ <= 2; ++sym1__) {
         {
-          param_names__.emplace_back(std::string() + "kappa" + '.' + std::to_string(sym1__));
+          for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
+            {
+              param_names__.emplace_back(std::string() + "chi0" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
+            }}
         }}
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
           param_names__.emplace_back(std::string() + "chi" + '.' + std::to_string(sym1__));
+        }}
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "kappa" + '.' + std::to_string(sym1__));
         }}
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
@@ -1872,6 +1861,10 @@ public:
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
           param_names__.emplace_back(std::string() + "beta" + '.' + std::to_string(sym1__));
+        }}
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "V_error" + '.' + std::to_string(sym1__));
         }}
     }
     
@@ -1948,13 +1941,6 @@ public:
         }}
       for (int sym1__ = 1; sym1__ <= 2; ++sym1__) {
         {
-          for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
-            {
-              param_names__.emplace_back(std::string() + "chi0" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
-            }}
-        }}
-      for (int sym1__ = 1; sym1__ <= 2; ++sym1__) {
-        {
           param_names__.emplace_back(std::string() + "mu0" + '.' + std::to_string(sym1__));
         }}
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
@@ -1968,13 +1954,20 @@ public:
     }
     
     if (emit_generated_quantities__) {
-      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+      for (int sym1__ = 1; sym1__ <= 2; ++sym1__) {
         {
-          param_names__.emplace_back(std::string() + "kappa" + '.' + std::to_string(sym1__));
+          for (int sym2__ = 1; sym2__ <= N; ++sym2__) {
+            {
+              param_names__.emplace_back(std::string() + "chi0" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
+            }}
         }}
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
           param_names__.emplace_back(std::string() + "chi" + '.' + std::to_string(sym1__));
+        }}
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "kappa" + '.' + std::to_string(sym1__));
         }}
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
         {
@@ -1984,19 +1977,23 @@ public:
         {
           param_names__.emplace_back(std::string() + "beta" + '.' + std::to_string(sym1__));
         }}
+      for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "V_error" + '.' + std::to_string(sym1__));
+        }}
     }
     
     } // unconstrained_param_names() 
     
   inline std::string get_constrained_sizedtypes() const {
     stringstream s__;
-    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"sigma_alpha\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_beta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"logit_lambda\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"psi\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"gamma\",\"type\":{\"name\":\"array\",\"length\":" << N << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"gam_a\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"gam_b\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"zeta\",\"type\":{\"name\":\"vector\",\"length\":" << zeta_1dim__ << "},\"block\":\"parameters\"},{\"name\":\"log_probs\",\"type\":{\"name\":\"vector\",\"length\":" << 4 << "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"alpha0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"chi0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu0\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"lambda\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"kappa\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"}]";
+    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"sigma_alpha\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_beta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"logit_lambda\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"psi\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"gamma\",\"type\":{\"name\":\"array\",\"length\":" << N << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"gam_a\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"gam_b\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"zeta\",\"type\":{\"name\":\"vector\",\"length\":" << zeta_1dim__ << "},\"block\":\"parameters\"},{\"name\":\"log_probs\",\"type\":{\"name\":\"vector\",\"length\":" << 4 << "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"alpha0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu0\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"lambda\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"chi0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"generated_quantities\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"kappa\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"V_error\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"}]";
     return s__.str();
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     stringstream s__;
-    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"sigma_alpha\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_beta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"logit_lambda\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"psi\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"gamma\",\"type\":{\"name\":\"array\",\"length\":" << N << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"gam_a\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"gam_b\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"zeta\",\"type\":{\"name\":\"vector\",\"length\":" << zeta_1dim__ << "},\"block\":\"parameters\"},{\"name\":\"log_probs\",\"type\":{\"name\":\"vector\",\"length\":" << 4 << "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"alpha0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"chi0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu0\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"lambda\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"kappa\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"}]";
+    s__ << "[{\"name\":\"alpha_raw\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"beta_raw\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_lr\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"parameters\"},{\"name\":\"theta_raw\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"sigma_alpha\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_beta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"tau\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"logit_lambda\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"parameters\"},{\"name\":\"psi\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"gamma\",\"type\":{\"name\":\"array\",\"length\":" << N << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"parameters\"},{\"name\":\"gam_a\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"gam_b\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"zeta\",\"type\":{\"name\":\"vector\",\"length\":" << zeta_1dim__ << "},\"block\":\"parameters\"},{\"name\":\"log_probs\",\"type\":{\"name\":\"vector\",\"length\":" << 4 << "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"array\",\"length\":" << J << ",\"element_type\":{\"name\":\"real\"}},\"block\":\"transformed_parameters\"},{\"name\":\"alpha0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"beta0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"mu0\",\"type\":{\"name\":\"vector\",\"length\":" << 2 << "},\"block\":\"transformed_parameters\"},{\"name\":\"log_lik\",\"type\":{\"name\":\"vector\",\"length\":" << N_obs << "},\"block\":\"transformed_parameters\"},{\"name\":\"lambda\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"transformed_parameters\"},{\"name\":\"chi0\",\"type\":{\"name\":\"matrix\",\"rows\":" << N << ",\"cols\":" << 2 << "},\"block\":\"generated_quantities\"},{\"name\":\"chi\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"kappa\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"alpha\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"beta\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"},{\"name\":\"V_error\",\"type\":{\"name\":\"vector\",\"length\":" << N << "},\"block\":\"generated_quantities\"}]";
     return s__.str();
     } // get_unconstrained_sizedtypes() 
     

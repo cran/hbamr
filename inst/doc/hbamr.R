@@ -59,12 +59,6 @@ knitr::include_graphics("p_resp.svg")
 ## ----get_plot_dat, include = TRUE, eval = FALSE, include= FALSE, eval = FALSE----
 #  get_plot_data(fit_hbam)
 
-## ----plot_eta, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .67, fig.width = 4.25, fig.align = "center", out.width = "50%"----
-#  plot_over_self(fit_hbam, dat, "eta")
-
-## ----echo = FALSE, fig.align = "center", fig.asp = .67, fig.width = 4.25, fig.align = "center", out.width = "50%"----
-knitr::include_graphics("p_eta.svg")
-
 ## ----plot_alpha, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
 #  plot_over_self(list(fit_hbam, fit_hbam_mini), dat, "alpha")
 
@@ -77,11 +71,24 @@ knitr::include_graphics("p_alpha.svg")
 ## ----echo = FALSE, fig.align = "center", fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
 knitr::include_graphics("p_abs_beta.svg")
 
+## ----plot_lambda, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
+#  plot_over_self(list(fit_hbam, fit_hbam_mini), dat, "lambda")
+
+## ----echo = FALSE, fig.align = "center", fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
+knitr::include_graphics("p_lambda.svg")
+
 ## ----plot_chi, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
 #  plot_over_self(list(fit_hbam, fit_hbam_mini), dat, "chi")
 
 ## ----echo = FALSE, fig.align = "center", fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
 knitr::include_graphics("p_chi.svg")
+
+## ----plot_eta, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .67, fig.width = 4.25, fig.align = "center", out.width = "50%"----
+#  fit_hbam <- hbam(data = dat, extra_pars = "eta")
+#  plot_over_self(fit_hbam, dat, "eta")
+
+## ----echo = FALSE, fig.align = "center", fig.asp = .67, fig.width = 4.25, fig.align = "center", out.width = "50%"----
+knitr::include_graphics("p_eta.svg")
 
 ## ----get_est_t, include = TRUE, eval = FALSE----------------------------------
 #  get_est(fit_hbam, "theta")
@@ -94,12 +101,6 @@ est_theta
 
 ## ----echo = FALSE-------------------------------------------------------------
 est_chi
-
-## ----traceplot_code, eval = FALSE, include = TRUE-----------------------------
-#  rstan::traceplot(fit_hbam, pars = "theta")
-
-## ----echo = FALSE, fig.align = "center", fig.asp = .5, fig.width = 8, fig.align = "center", out.width = "100%", warning = FALSE, message = FALSE----
-knitr::include_graphics("p_trace_theta.svg")
 
 ## ----include = FALSE----------------------------------------------------------
 load("elpds.rda")
@@ -123,4 +124,10 @@ elpds[order(elpds$ELPD), ]
 
 ## ----echo = FALSE-------------------------------------------------------------
 elpd_hbam_mini
+
+## ----traceplot_code, eval = FALSE, include = TRUE-----------------------------
+#  rstan::traceplot(fit_hbam, pars = "theta")
+
+## ----echo = FALSE, fig.align = "center", fig.asp = .5, fig.width = 8, fig.align = "center", out.width = "100%", warning = FALSE, message = FALSE----
+knitr::include_graphics("p_trace_theta.svg")
 
