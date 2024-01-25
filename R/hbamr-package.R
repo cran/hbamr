@@ -14,9 +14,10 @@
 #' @import Rcpp ggplot2 RColorBrewer parallel tidyr loo
 #' @importFrom rstan sampling sflist2stanfit
 #' @importFrom matrixStats colLogSumExps
+#' @importFrom future plan multisession sequential
+#' @importFrom future.apply future_lapply
 #' @importFrom plyr llply
 #' @importFrom dplyr bind_cols
-#' @importFrom pbmcapply pbmclapply
 #' @importFrom rlang .data
 #' @importFrom RcppParallel RcppParallelLibs
 #' @importFrom rstantools rstan_config

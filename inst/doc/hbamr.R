@@ -102,28 +102,44 @@ est_theta
 ## ----echo = FALSE-------------------------------------------------------------
 est_chi
 
+## ----eval = FALSE-------------------------------------------------------------
+#  fit_hbam <- hbam(data = dat, extra_pars = "log_lik")
+#  loo_hbam <- loo::loo(fit_hbam)
+
+## ----eval = FALSE-------------------------------------------------------------
+#  library(future)
+#  plan(multisession, workers = 4)
+
 ## ----include = FALSE----------------------------------------------------------
 load("elpds.rda")
 
 ## ----run_cv_new, eval = FALSE-------------------------------------------------
-#  elpd_hbam <- hbam_cv(self, stimuli, model = "HBAM")
-#  elpd_hbam_nf <- hbam_cv(self, stimuli, model = "HBAM_NF")
-#  elpd_bam <- hbam_cv(self, stimuli, model = "BAM")
-
-## ----elpd_ill, eval = FALSE, include = TRUE-----------------------------------
-#  elpds <- rbind(elpd_bam, elpd_hbam, elpd_hbam_nf)
-#  elpds[order(elpds$ELPD), ]
-
-## ----echo = FALSE, include = TRUE---------------------------------------------
-elpds <- rbind(elpd_bam, elpd_hbam, elpd_hbam_nf)
-elpds[order(elpds$ELPD), ]
+#  kfold_bam <- hbam_cv(self, stimuli, model = "BAM")
+#  kfold_hbam <- hbam_cv(self, stimuli, model = "HBAM")
+#  kfold_hbam_nf <- hbam_cv(self, stimuli, model = "HBAM_NF")
+#  kfold_hbam_multi <- hbam_cv(self, stimuli, group_id = self,
+#                              model = "HBAM_MULTI")
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  elpd_hbam_mini <- hbam_cv(self, stimuli, model = "HBAM_MINI")
-#  elpd_hbam_mini
+#  print(loo::loo_compare(list(BAM = kfold_bam,
+#                              HBAM = kfold_hbam,
+#                              HBAM_NF = kfold_hbam_nf,
+#                              HBAM_MULTI = kfold_hbam_multi)), simplify = FALSE)
+
+## ----echo = FALSE, message = FALSE, warning = FALSE---------------------------
+library(loo)
+print(loo1, simplify = FALSE)
+
+## ----eval = FALSE-------------------------------------------------------------
+#  kfold_hbam_mini <- hbam_cv(self, stimuli, model = "HBAM_MINI")
+#  kfold_fbam_mini <- hbam_cv(self, stimuli, model = "FBAM_MINI")
+
+## ----eval = FALSE-------------------------------------------------------------
+#  print(loo::loo_compare(list(HBAM_MINI = kfold_hbam_mini,
+#                              FBAM_MINI = kfold_fbam_mini)), simplify = FALSE)
 
 ## ----echo = FALSE-------------------------------------------------------------
-elpd_hbam_mini
+print(loo2, simplify = FALSE)
 
 ## ----traceplot_code, eval = FALSE, include = TRUE-----------------------------
 #  rstan::traceplot(fit_hbam, pars = "theta")

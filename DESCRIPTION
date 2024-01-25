@@ -1,6 +1,6 @@
 Package: hbamr
 Title: Hierarchical Bayesian Aldrich-McKelvey Scaling via 'Stan'
-Version: 2.1.0
+Version: 2.1.1
 Authors@R: 
     person("Jørgen", "Bølstad", , "jorgen.bolstad@stv.uio.no", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7623-5741"))
@@ -17,10 +17,10 @@ License: GPL (>= 3)
 URL: https://jbolstad.github.io/hbamr/
 BugReports: https://github.com/jbolstad/hbamr/issues
 Depends: R (>= 3.4.0)
-Imports: dplyr, ggplot2, loo, matrixStats, methods, parallel,
-        pbmcapply, plyr, RColorBrewer, Rcpp (>= 1.0.7), RcppParallel
-        (>= 5.1.4), rlang, rstan (>= 2.26.1), rstantools (>= 2.2.0),
-        stats, tidyr
+Imports: dplyr, future, future.apply, ggplot2, loo, matrixStats,
+        methods, parallel, plyr, progressr, RColorBrewer, Rcpp (>=
+        1.0.7), RcppParallel (>= 5.1.4), rlang, rstan (>= 2.26.1),
+        rstantools (>= 2.2.0), stats, tidyr
 Suggests: data.table, knitr, rmarkdown
 LinkingTo: BH (>= 1.66.0), Rcpp (>= 1.0.7), RcppEigen (>= 0.3.3.9.1),
         RcppParallel (>= 5.1.4), rstan (>= 2.26.1), StanHeaders (>=
@@ -32,8 +32,8 @@ RoxygenNote: 7.2.3
 SystemRequirements: GNU make
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2024-01-17 14:10:54 UTC; boelstad
+Packaged: 2024-01-25 09:17:41 UTC; boelstad
 Author: Jørgen Bølstad [aut, cre] (<https://orcid.org/0000-0002-7623-5741>)
 Maintainer: Jørgen Bølstad <jorgen.bolstad@stv.uio.no>
 Repository: CRAN
-Date/Publication: 2024-01-17 15:10:02 UTC
+Date/Publication: 2024-01-25 10:30:02 UTC

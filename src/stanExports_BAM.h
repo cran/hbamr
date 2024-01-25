@@ -75,41 +75,38 @@ using stan::math::pow;
 stan::math::profile_map profiles__;
 static int current_statement__= 0;
 static const std::vector<string> locations_array__ = {" (found before start of program)",
-                                                      " (in 'BAM', line 19, column 2 to column 18)",
-                                                      " (in 'BAM', line 20, column 2 to column 17)",
-                                                      " (in 'BAM', line 21, column 2 to column 41)",
-                                                      " (in 'BAM', line 22, column 2 to column 39)",
-                                                      " (in 'BAM', line 23, column 2 to column 26)",
-                                                      " (in 'BAM', line 24, column 2 to column 33)",
-                                                      " (in 'BAM', line 25, column 2 to column 22)",
-                                                      " (in 'BAM', line 26, column 2 to column 27)",
-                                                      " (in 'BAM', line 27, column 2 to column 17)",
-                                                      " (in 'BAM', line 30, column 2 to column 22)",
-                                                      " (in 'BAM', line 31, column 2 to column 24)",
-                                                      " (in 'BAM', line 32, column 2 to column 38)",
-                                                      " (in 'BAM', line 33, column 2 to column 20)",
+                                                      " (in 'BAM', line 20, column 2 to column 18)",
+                                                      " (in 'BAM', line 21, column 2 to column 17)",
+                                                      " (in 'BAM', line 22, column 2 to column 41)",
+                                                      " (in 'BAM', line 23, column 2 to column 39)",
+                                                      " (in 'BAM', line 24, column 2 to column 26)",
+                                                      " (in 'BAM', line 25, column 2 to column 33)",
+                                                      " (in 'BAM', line 26, column 2 to column 22)",
+                                                      " (in 'BAM', line 27, column 2 to column 27)",
+                                                      " (in 'BAM', line 28, column 2 to column 17)",
+                                                      " (in 'BAM', line 31, column 2 to column 22)",
+                                                      " (in 'BAM', line 32, column 2 to column 24)",
+                                                      " (in 'BAM', line 33, column 2 to column 38)",
                                                       " (in 'BAM', line 34, column 2 to column 20)",
                                                       " (in 'BAM', line 35, column 2 to column 20)",
-                                                      " (in 'BAM', line 37, column 4 to line 38, column 37)",
-                                                      " (in 'BAM', line 36, column 21 to line 39, column 3)",
-                                                      " (in 'BAM', line 36, column 2 to line 39, column 3)",
-                                                      " (in 'BAM', line 60, column 2 to column 37)",
-                                                      " (in 'BAM', line 61, column 2 to column 88)",
-                                                      " (in 'BAM', line 42, column 2 to column 29)",
-                                                      " (in 'BAM', line 43, column 2 to column 28)",
-                                                      " (in 'BAM', line 44, column 2 to column 27)",
-                                                      " (in 'BAM', line 45, column 2 to column 24)",
+                                                      " (in 'BAM', line 36, column 2 to column 20)",
+                                                      " (in 'BAM', line 38, column 4 to line 39, column 37)",
+                                                      " (in 'BAM', line 37, column 21 to line 40, column 3)",
+                                                      " (in 'BAM', line 37, column 2 to line 40, column 3)",
+                                                      " (in 'BAM', line 58, column 2 to column 37)",
+                                                      " (in 'BAM', line 59, column 2 to column 88)",
+                                                      " (in 'BAM', line 43, column 2 to column 29)",
+                                                      " (in 'BAM', line 44, column 2 to column 28)",
+                                                      " (in 'BAM', line 45, column 2 to column 27)",
                                                       " (in 'BAM', line 46, column 2 to column 24)",
-                                                      " (in 'BAM', line 47, column 2 to column 45)",
-                                                      " (in 'BAM', line 48, column 2 to column 22)",
-                                                      " (in 'BAM', line 49, column 2 to column 32)",
-                                                      " (in 'BAM', line 50, column 2 to column 36)",
-                                                      " (in 'BAM', line 56, column 8 to column 29)",
-                                                      " (in 'BAM', line 55, column 6 to line 56, column 29)",
-                                                      " (in 'BAM', line 54, column 23 to line 57, column 5)",
-                                                      " (in 'BAM', line 54, column 4 to line 57, column 5)",
-                                                      " (in 'BAM', line 52, column 4 to column 27)",
-                                                      " (in 'BAM', line 51, column 2 to line 57, column 5)",
+                                                      " (in 'BAM', line 47, column 2 to column 24)",
+                                                      " (in 'BAM', line 48, column 2 to column 45)",
+                                                      " (in 'BAM', line 49, column 2 to column 22)",
+                                                      " (in 'BAM', line 50, column 2 to column 32)",
+                                                      " (in 'BAM', line 51, column 2 to column 36)",
+                                                      " (in 'BAM', line 55, column 4 to column 42)",
+                                                      " (in 'BAM', line 53, column 4 to column 27)",
+                                                      " (in 'BAM', line 52, column 2 to line 55, column 42)",
                                                       " (in 'BAM', line 2, column 2 to column 19)",
                                                       " (in 'BAM', line 3, column 2 to column 19)",
                                                       " (in 'BAM', line 4, column 2 to column 23)",
@@ -125,17 +122,19 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'BAM', line 11, column 32 to column 33)",
                                                       " (in 'BAM', line 11, column 2 to column 37)",
                                                       " (in 'BAM', line 12, column 2 to column 31)",
-                                                      " (in 'BAM', line 13, column 8 to column 13)",
-                                                      " (in 'BAM', line 13, column 2 to column 49)",
+                                                      " (in 'BAM', line 13, column 31 to column 36)",
+                                                      " (in 'BAM', line 13, column 2 to column 46)",
                                                       " (in 'BAM', line 16, column 2 to column 55)",
-                                                      " (in 'BAM', line 19, column 9 to column 10)",
+                                                      " (in 'BAM', line 17, column 31 to column 36)",
+                                                      " (in 'BAM', line 17, column 2 to column 64)",
                                                       " (in 'BAM', line 20, column 9 to column 10)",
-                                                      " (in 'BAM', line 23, column 8 to column 9)",
-                                                      " (in 'BAM', line 26, column 20 to column 21)",
-                                                      " (in 'BAM', line 27, column 10 to column 11)",
-                                                      " (in 'BAM', line 30, column 8 to column 9)",
-                                                      " (in 'BAM', line 31, column 9 to column 14)",
-                                                      " (in 'BAM', line 61, column 9 to column 10)"};
+                                                      " (in 'BAM', line 21, column 9 to column 10)",
+                                                      " (in 'BAM', line 24, column 8 to column 9)",
+                                                      " (in 'BAM', line 27, column 20 to column 21)",
+                                                      " (in 'BAM', line 28, column 10 to column 11)",
+                                                      " (in 'BAM', line 31, column 8 to column 9)",
+                                                      " (in 'BAM', line 32, column 9 to column 14)",
+                                                      " (in 'BAM', line 59, column 9 to column 10)"};
 #include <stan_meta_header.hpp>
 class model_BAM final : public model_base_crtp<model_BAM> {
 private:
@@ -150,8 +149,9 @@ private:
   std::vector<int> Y;
   Eigen::Matrix<double, -1, 1> V;
   int CV;
-  std::vector<int> holdout;
+  Eigen::Matrix<double, -1, 1> holdout;
   double tau_prior_rate;
+  Eigen::Matrix<double, -1, 1> not_holdout;
  
 public:
   ~model_BAM() { }
@@ -178,128 +178,128 @@ public:
       pos__ = std::numeric_limits<int>::min();
       
       pos__ = 1;
-      current_statement__ = 36;
+      current_statement__ = 33;
       context__.validate_dims("data initialization","N","int",
           context__.to_vec());
       N = std::numeric_limits<int>::min();
       
-      current_statement__ = 36;
+      current_statement__ = 33;
       N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 36;
-      current_statement__ = 36;
+      current_statement__ = 33;
+      current_statement__ = 33;
       check_greater_or_equal(function__, "N", N, 1);
-      current_statement__ = 37;
+      current_statement__ = 34;
       context__.validate_dims("data initialization","J","int",
           context__.to_vec());
       J = std::numeric_limits<int>::min();
       
-      current_statement__ = 37;
+      current_statement__ = 34;
       J = context__.vals_i("J")[(1 - 1)];
-      current_statement__ = 37;
-      current_statement__ = 37;
+      current_statement__ = 34;
+      current_statement__ = 34;
       check_greater_or_equal(function__, "J", J, 1);
-      current_statement__ = 38;
+      current_statement__ = 35;
       context__.validate_dims("data initialization","N_obs","int",
           context__.to_vec());
       N_obs = std::numeric_limits<int>::min();
       
-      current_statement__ = 38;
+      current_statement__ = 35;
       N_obs = context__.vals_i("N_obs")[(1 - 1)];
-      current_statement__ = 38;
-      current_statement__ = 38;
+      current_statement__ = 35;
+      current_statement__ = 35;
       check_greater_or_equal(function__, "N_obs", N_obs, 1);
-      current_statement__ = 39;
+      current_statement__ = 36;
       validate_non_negative_index("ii", "N_obs", N_obs);
-      current_statement__ = 40;
+      current_statement__ = 37;
       context__.validate_dims("data initialization","ii","int",
           context__.to_vec(N_obs));
       ii = std::vector<int>(N_obs, std::numeric_limits<int>::min());
       
-      current_statement__ = 40;
+      current_statement__ = 37;
       assign(ii, nil_index_list(), context__.vals_i("ii"),
         "assigning variable ii");
-      current_statement__ = 40;
+      current_statement__ = 37;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 40;
-        current_statement__ = 40;
+        current_statement__ = 37;
+        current_statement__ = 37;
         check_greater_or_equal(function__, "ii[sym1__]", ii[(sym1__ - 1)], 1);
       }
-      current_statement__ = 41;
+      current_statement__ = 38;
       validate_non_negative_index("jj", "N_obs", N_obs);
-      current_statement__ = 42;
+      current_statement__ = 39;
       context__.validate_dims("data initialization","jj","int",
           context__.to_vec(N_obs));
       jj = std::vector<int>(N_obs, std::numeric_limits<int>::min());
       
-      current_statement__ = 42;
+      current_statement__ = 39;
       assign(jj, nil_index_list(), context__.vals_i("jj"),
         "assigning variable jj");
-      current_statement__ = 42;
+      current_statement__ = 39;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 42;
-        current_statement__ = 42;
+        current_statement__ = 39;
+        current_statement__ = 39;
         check_greater_or_equal(function__, "jj[sym1__]", jj[(sym1__ - 1)], 1);
       }
-      current_statement__ = 43;
+      current_statement__ = 40;
       context__.validate_dims("data initialization","B","int",
           context__.to_vec());
       B = std::numeric_limits<int>::min();
       
-      current_statement__ = 43;
+      current_statement__ = 40;
       B = context__.vals_i("B")[(1 - 1)];
-      current_statement__ = 43;
-      current_statement__ = 43;
+      current_statement__ = 40;
+      current_statement__ = 40;
       check_greater_or_equal(function__, "B", B, 1);
-      current_statement__ = 44;
+      current_statement__ = 41;
       context__.validate_dims("data initialization","L","int",
           context__.to_vec());
       L = std::numeric_limits<int>::min();
       
-      current_statement__ = 44;
+      current_statement__ = 41;
       L = context__.vals_i("L")[(1 - 1)];
-      current_statement__ = 44;
-      current_statement__ = 44;
+      current_statement__ = 41;
+      current_statement__ = 41;
       check_greater_or_equal(function__, "L", L, 1);
-      current_statement__ = 44;
-      current_statement__ = 44;
+      current_statement__ = 41;
+      current_statement__ = 41;
       check_less_or_equal(function__, "L", L, J);
-      current_statement__ = 45;
+      current_statement__ = 42;
       context__.validate_dims("data initialization","R","int",
           context__.to_vec());
       R = std::numeric_limits<int>::min();
       
-      current_statement__ = 45;
+      current_statement__ = 42;
       R = context__.vals_i("R")[(1 - 1)];
-      current_statement__ = 45;
-      current_statement__ = 45;
+      current_statement__ = 42;
+      current_statement__ = 42;
       check_greater_or_equal(function__, "R", R, 1);
-      current_statement__ = 45;
-      current_statement__ = 45;
+      current_statement__ = 42;
+      current_statement__ = 42;
       check_less_or_equal(function__, "R", R, J);
-      current_statement__ = 46;
+      current_statement__ = 43;
       validate_non_negative_index("Y", "N_obs", N_obs);
-      current_statement__ = 47;
+      current_statement__ = 44;
       context__.validate_dims("data initialization","Y","int",
           context__.to_vec(N_obs));
       Y = std::vector<int>(N_obs, std::numeric_limits<int>::min());
       
-      current_statement__ = 47;
+      current_statement__ = 44;
       assign(Y, nil_index_list(), context__.vals_i("Y"),
         "assigning variable Y");
-      current_statement__ = 47;
+      current_statement__ = 44;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 47;
-        current_statement__ = 47;
+        current_statement__ = 44;
+        current_statement__ = 44;
         check_greater_or_equal(function__, "Y[sym1__]", Y[(sym1__ - 1)], -B);
       }
-      current_statement__ = 47;
+      current_statement__ = 44;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 47;
-        current_statement__ = 47;
+        current_statement__ = 44;
+        current_statement__ = 44;
         check_less_or_equal(function__, "Y[sym1__]", Y[(sym1__ - 1)], B);}
-      current_statement__ = 48;
+      current_statement__ = 45;
       validate_non_negative_index("V", "N", N);
-      current_statement__ = 49;
+      current_statement__ = 46;
       context__.validate_dims("data initialization","V","double",
           context__.to_vec(N));
       V = Eigen::Matrix<double, -1, 1>(N);
@@ -307,88 +307,122 @@ public:
       
       {
         std::vector<local_scalar_t__> V_flat__;
-        current_statement__ = 49;
+        current_statement__ = 46;
         assign(V_flat__, nil_index_list(), context__.vals_r("V"),
           "assigning variable V_flat__");
-        current_statement__ = 49;
+        current_statement__ = 46;
         pos__ = 1;
-        current_statement__ = 49;
+        current_statement__ = 46;
         for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-          current_statement__ = 49;
+          current_statement__ = 46;
           assign(V, cons_list(index_uni(sym1__), nil_index_list()),
             V_flat__[(pos__ - 1)], "assigning variable V");
-          current_statement__ = 49;
+          current_statement__ = 46;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 49;
+      current_statement__ = 46;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 49;
-        current_statement__ = 49;
+        current_statement__ = 46;
+        current_statement__ = 46;
         check_greater_or_equal(function__, "V[sym1__]", V[(sym1__ - 1)], -B);
       }
-      current_statement__ = 49;
+      current_statement__ = 46;
       for (int sym1__ = 1; sym1__ <= N; ++sym1__) {
-        current_statement__ = 49;
-        current_statement__ = 49;
+        current_statement__ = 46;
+        current_statement__ = 46;
         check_less_or_equal(function__, "V[sym1__]", V[(sym1__ - 1)], B);}
-      current_statement__ = 50;
+      current_statement__ = 47;
       context__.validate_dims("data initialization","CV","int",
           context__.to_vec());
       CV = std::numeric_limits<int>::min();
       
-      current_statement__ = 50;
+      current_statement__ = 47;
       CV = context__.vals_i("CV")[(1 - 1)];
-      current_statement__ = 50;
-      current_statement__ = 50;
+      current_statement__ = 47;
+      current_statement__ = 47;
       check_greater_or_equal(function__, "CV", CV, 0);
-      current_statement__ = 50;
-      current_statement__ = 50;
+      current_statement__ = 47;
+      current_statement__ = 47;
       check_less_or_equal(function__, "CV", CV, 1);
-      current_statement__ = 51;
+      current_statement__ = 48;
       validate_non_negative_index("holdout", "N_obs", N_obs);
-      current_statement__ = 52;
-      context__.validate_dims("data initialization","holdout","int",
+      current_statement__ = 49;
+      context__.validate_dims("data initialization","holdout","double",
           context__.to_vec(N_obs));
-      holdout = std::vector<int>(N_obs, std::numeric_limits<int>::min());
+      holdout = Eigen::Matrix<double, -1, 1>(N_obs);
+      stan::math::fill(holdout, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 52;
-      assign(holdout, nil_index_list(), context__.vals_i("holdout"),
-        "assigning variable holdout");
-      current_statement__ = 52;
+      {
+        std::vector<local_scalar_t__> holdout_flat__;
+        current_statement__ = 49;
+        assign(holdout_flat__, nil_index_list(), context__.vals_r("holdout"),
+          "assigning variable holdout_flat__");
+        current_statement__ = 49;
+        pos__ = 1;
+        current_statement__ = 49;
+        for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
+          current_statement__ = 49;
+          assign(holdout, cons_list(index_uni(sym1__), nil_index_list()),
+            holdout_flat__[(pos__ - 1)], "assigning variable holdout");
+          current_statement__ = 49;
+          pos__ = (pos__ + 1);}
+      }
+      current_statement__ = 49;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 52;
-        current_statement__ = 52;
+        current_statement__ = 49;
+        current_statement__ = 49;
         check_greater_or_equal(function__, "holdout[sym1__]",
                                holdout[(sym1__ - 1)], 0);}
+      current_statement__ = 49;
+      for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
+        current_statement__ = 49;
+        current_statement__ = 49;
+        check_less_or_equal(function__, "holdout[sym1__]",
+                            holdout[(sym1__ - 1)], 1);}
+      current_statement__ = 50;
+      tau_prior_rate = std::numeric_limits<double>::quiet_NaN();
+      
+      current_statement__ = 50;
+      tau_prior_rate = ((2 - 1) / (B / 5.0));
+      current_statement__ = 51;
+      validate_non_negative_index("not_holdout", "N_obs", N_obs);
+      current_statement__ = 52;
+      not_holdout = Eigen::Matrix<double, -1, 1>(N_obs);
+      stan::math::fill(not_holdout, std::numeric_limits<double>::quiet_NaN());
+      
+      current_statement__ = 52;
+      assign(not_holdout, nil_index_list(), subtract(1, holdout),
+        "assigning variable not_holdout");
+      current_statement__ = 50;
+      current_statement__ = 50;
+      check_greater_or_equal(function__, "tau_prior_rate", tau_prior_rate, 0);
       current_statement__ = 52;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
         current_statement__ = 52;
         current_statement__ = 52;
-        check_less_or_equal(function__, "holdout[sym1__]",
-                            holdout[(sym1__ - 1)], 1);}
+        check_greater_or_equal(function__, "not_holdout[sym1__]",
+                               not_holdout[(sym1__ - 1)], 0);}
+      current_statement__ = 52;
+      for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
+        current_statement__ = 52;
+        current_statement__ = 52;
+        check_less_or_equal(function__, "not_holdout[sym1__]",
+                            not_holdout[(sym1__ - 1)], 1);}
       current_statement__ = 53;
-      tau_prior_rate = std::numeric_limits<double>::quiet_NaN();
-      
-      current_statement__ = 53;
-      tau_prior_rate = ((2 - 1) / (B / 5.0));
-      current_statement__ = 53;
-      current_statement__ = 53;
-      check_greater_or_equal(function__, "tau_prior_rate", tau_prior_rate, 0);
-      current_statement__ = 54;
       validate_non_negative_index("alpha", "N", N);
-      current_statement__ = 55;
+      current_statement__ = 54;
       validate_non_negative_index("beta", "N", N);
-      current_statement__ = 56;
+      current_statement__ = 55;
       validate_non_negative_index("theta_raw", "J", J);
-      current_statement__ = 57;
+      current_statement__ = 56;
       validate_non_negative_index("eta", "N", N);
-      current_statement__ = 58;
+      current_statement__ = 57;
       validate_positive_index("rho", "J", J);
-      current_statement__ = 59;
+      current_statement__ = 58;
       validate_non_negative_index("theta", "J", J);
-      current_statement__ = 60;
+      current_statement__ = 59;
       validate_non_negative_index("log_lik", "N_obs", N_obs);
-      current_statement__ = 61;
+      current_statement__ = 60;
       validate_non_negative_index("chi", "N", N);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -593,18 +627,13 @@ public:
         lp_accum__.add(gamma_lpdf<propto__>(tau, 2, (5 / (B * 1.0))));
         current_statement__ = 29;
         lp_accum__.add(dirichlet_lpdf<propto__>(rho, rep_vector(5, J)));
-        current_statement__ = 35;
+        current_statement__ = 32;
         if (logical_eq(CV, 0)) {
-          current_statement__ = 34;
+          current_statement__ = 31;
           lp_accum__.add(sum(log_lik));
         } else {
-          current_statement__ = 33;
-          for (int n = 1; n <= N_obs; ++n) {
-            current_statement__ = 31;
-            if (logical_eq(holdout[(n - 1)], 0)) {
-              current_statement__ = 30;
-              lp_accum__.add(log_lik[(n - 1)]);
-            } }
+          current_statement__ = 30;
+          lp_accum__.add(sum(elt_multiply(log_lik, not_holdout)));
         }
       }
     } catch (const std::exception& e) {

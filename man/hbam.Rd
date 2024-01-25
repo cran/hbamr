@@ -42,7 +42,7 @@ hbam(
 
 \item{req_unique}{Integer specifying how may unique positions on the ideological scale each respondent is required to have used when placing the stimuli in order to be included in the analysis. The default is \code{req_unique = 2}. This argument will not be used if the data have been prepared in advance via the \code{prep_data} function.}
 
-\item{prefs}{An N × J matrix of numerical stimulus ratings or preference scores. These data are only required by the HBAM_R and HBAM_R_MINI models and will be ignored when fitting other models.}
+\item{prefs}{An N × J matrix of numerical stimulus ratings or preference scores. These data are only required by the HBAM_R_MINI model and will be ignored when fitting other models.}
 
 \item{group_id}{Integer vector of length N identifying which group each respondent belongs to. The supplied vector should range from 1 to the total number of groups in the data, and all integers between these numbers should be represented in the supplied data. These data are only required by models with "MULTI" in their name and will be ignored when fitting other models.}
 
@@ -103,7 +103,7 @@ This package provides several alternative models that can be selected using the 
 
 \strong{BAM} is an unpooled model with wide uniform priors on the shift and stretch parameters. It is similar to the JAGS version introduced by Hare et al. (2015). This model is mainly provided to offer a baseline for model comparisons. While it is simple and fast, this model tends to overfit the data and produce invalid posterior distributions for some respondent positions (see Bølstad 2024).
 
-\strong{HBAM_2} is deprecated and replaced by the more general HBAM_MULTI model.
+\strong{HBAM_2} has been replaced by the more general HBAM_MULTI model.
 
 These models can also be used in situations where self-placements are not available and the only goal is to estimate stimulus positions. This can be achieved by supplying a vector of zeros (or random data) instead of real self-placements: \code{self = rep(0, nrow(stimuli))}.
 

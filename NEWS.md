@@ -1,10 +1,17 @@
+# hbamr 2.1.1
+
+### Improved cross-validation function
+
+-   The `hbam_cv()` function no longer uses `parallel::mclapply()` for parallel computation as the latter relies on forking, which is not available on Windows. `hbam_cv()` has been revised to work with the `future` package, where the user decides the computational strategy and options are available for parallel computation on all systems. 
+-   The return value of `hbam_cv()` has been changed to comply with the standards of the `loo` package. The function now returns a list with classes `kfold` and `loo`. This allows the user to compare estimated ELPDs and obtain standard errors for their differences via `loo::loo_compare()`. 
+
 # hbamr 2.1.0
 
 ### Revisions to existing models
 
 -   All models in the package now simulate errors in respondents' self-placements. In the original HBAM model, respondents' latent positions were treated as parameters, which had several consequences: It yielded a realistic level of uncertainty in the estimated positions, but also led to slower sampling. Furthermore, the hierarchical prior on the latent respondent positions shrunk them toward zero, which was undesirable in most applications as it affected the distances between respondents and stimuli. Finally, the original approach led to a more nuanced posterior distribution where combinations of individual-level parameter values that would lead to implausible values for the respondent positions were weighted down. However, the model's log-normal prior on the stretch parameters is by itself sufficient to yield meaningful respondent positions estimates, so there is no significant cost to not treating the latent respondent positions as parameters. The current versions of the model instead simulate errors in the self-placements to yield the same level of uncertainty as the original model, while sampling considerably faster.
 
-### Deprecated models
+### Discontinued model
 
 -   **HBAM_MAX** has been removed as it offered little extra after the other models were revised to simulate errors in respondents' self-placements.
 
@@ -33,7 +40,7 @@
 -   All models (except HBAM_MAX) have been revised to not treat the respondent positions as parameters. This results in considerably faster sampling.
 -   All HBAM models that allow for scale flipping have been given a logit-normal prior on the mixing proportions, lambda (i.e. the expectations of the latent discrete flipping parameters, kappa). This replaces the original beta prior, which could trigger divergent transitions.
 
-### Deprecated models
+### Discontinued models
 
 -   **HBAM_2** has been replaced by the more general HBAM_MULTI model.
 -   **HBAM_HM** has been removed as it offered little extra and the number of models should be kept somewhat limited.

@@ -462,7 +462,9 @@ unchanged by the functions in this package.)</p>
 <p>This package provides several alternative models that can be selected
 using the names below. Users who are unsure which model to use are
 advised to use the default HBAM model. If speed or sampling diagnostics
-are an issue, HBAM_MINI may provide a useful alternative.</p>
+are an issue, HBAM_MINI may provide a useful alternative. (See also the
+section on cross-validation for further discussion on the issue of model
+selection.)</p>
 <p><strong>HBAM</strong> is the default model, which allows for scale
 flipping and employs hierarchical priors on the shift and stretch
 parameters. It also models heteroskedastic errors that vary by both
@@ -544,8 +546,8 @@ model is mainly provided to offer a baseline for model comparisons.
 While it is simple and fast, this model tends to overfit the data and
 produce invalid posterior distributions for some respondent positions
 <span class="citation">(Bølstad 2024)</span>.</p>
-<p><strong>HBAM_2</strong> is deprecated and replaced by the more
-general HBAM_MULTI model.</p>
+<p><strong>HBAM_2</strong> has been replaced by the more general
+HBAM_MULTI model.</p>
 <p>These models can also be used in situations where self-placements are
 not available and the only goal is to estimate stimulus positions. This
 can be achieved by supplying a vector of zeros (or random data) instead
@@ -611,8 +613,8 @@ of real self-placements: <code>self = rep(0, nrow(stimuli))</code>.</p>
 </tbody>
 </table>
 <table>
-<caption>Non-hierarchical, specialized, and historical models (“*” marks
-optional features)</caption>
+<caption>Non-hierarchical and special purpose models (“*” marks optional
+features)</caption>
 <colgroup>
 <col width="29%" />
 <col width="14%" />
@@ -2479,33 +2481,30 @@ follows:</p>
 <p>A useful way to compare alternative models is to estimate their
 out-of-sample prediction accuracy. More specifically, we can estimate
 their expected log pointwise predictive density for a new data set
-(ELPD). It is most straightforward to do so for the stimuli placements,
-and this is informative because these form the basis for estimating most
-individual level parameters. A similar analysis for the self-placement
-data is generally not possible, as the models require these placements
-to estimate the corresponding latent respondent positions. This section
-therefore focuses on estimating the ELPD for stimulus placements.</p>
+(ELPD).</p>
 <p>The <strong>rstan</strong> and <strong>loo</strong> packages contain
 functions for estimating ELPDs by performing approximate leave-one-out
 (LOO) cross-validation using Pareto smoothed importance sampling (PSIS).
-However, PSIS-LOO only works when all Pareto <em>k</em> values are
+These functions can be used on model fits from <code>hbam()</code> if
+the argument <code>extra_pars = &quot;log_lik&quot;</code> is specified when
+fitting the model:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>fit_hbam <span class="ot">&lt;-</span> <span class="fu">hbam</span>(<span class="at">data =</span> dat, <span class="at">extra_pars =</span> <span class="st">&quot;log_lik&quot;</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>loo_hbam <span class="ot">&lt;-</span> loo<span class="sc">::</span><span class="fu">loo</span>(fit_hbam)</span></code></pre></div>
+<p>However, PSIS-LOO only works when all Pareto <em>k</em> values are
 sufficiently low, or when the number of high values is so low that
-moment matching can be used on the problematic cases. In practice, this
-is not always the case, and it rarely seems to be the case with the BAM
-model.</p>
-<p>The <strong>hbamr</strong> package therefore includes model codes and
-functions to perform <em>K</em>-fold cross-validation. The function
-<code>hbam_cv()</code> is similar to <code>hbam()</code> and takes the
-same arguments, but will perform a <em>K</em>-fold cross-validation for
-the chosen model. In contrast to <code>hbam()</code>, the default for
-<code>hbam_cv()</code> is to not allow respondents to have any missing
-values (<code>allow_miss = 0</code>). The reason is that the
-cross-validation essentially creates missing values by excluding some
-data from each run.</p>
+moment matching can be used on the problematic cases. This is not always
+the case for the models in this package.</p>
+<p>The <strong>hbamr</strong> package therefore allows users to perform
+<em>K</em>-fold cross-validation. The function <code>hbam_cv()</code> is
+similar to <code>hbam()</code> and takes the same arguments, but will
+perform a <em>K</em>-fold cross-validation for the chosen model. In
+contrast to <code>hbam()</code>, the default for <code>hbam_cv()</code>
+is to not allow respondents to have any missing values
+(<code>allow_miss = 0</code>). The reason is that the cross-validation
+essentially creates missing values by excluding some data from each
+run.</p>
 <p>A key choice when performing cross-validation is to set <em>K</em>
-(the number of folds to use), and the default in this package is 10. The
-function is parallelized so that users can specify a higher number of
-cores than chains and run chains for different folds simultaneously. To
+(the number of folds to use), and the default in this package is 10. To
 preserve memory, the function extracts the summaries of the
 log-likelihoods for the held-out data and drops the stanfit objects once
 this is done. The memory requirements of the function is therefore
@@ -2513,34 +2512,59 @@ similar to running a single analysis with one chain per core. The
 function that splits the data into <em>K</em> folds uses a default seed
 to produce the same folds each time, unless a different seed is
 specified.</p>
+<p>The <code>hbam_cv()</code> function is written to allow parallel
+computation via the <code>future</code> package to minimize execution
+time. The <code>future</code> package offers several computational
+strategies, of which “multisession” works on all operating systems. It
+most settings, it is advisable to use all physical CPU cores when
+performing cross-validation. To set up parallel computation using 4
+cores via the <code>future</code> package, we could run:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">library</span>(future)</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers =</span> <span class="dv">4</span>)</span></code></pre></div>
 <p>To perform 10-fold cross-validation for a selection of models, we
 could run:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>elpd_hbam <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM&quot;</span>)</span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>elpd_hbam_nf <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_NF&quot;</span>)</span>
-<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>elpd_bam <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;BAM&quot;</span>)</span></code></pre></div>
-<p>Rather than returning stanfit objects, the function returns a data
-frame containing the estimated ELPD and its standard error. To compare
-results across models, we could run:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a>elpds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(elpd_bam, elpd_hbam, elpd_hbam_nf)</span>
-<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>elpds[<span class="fu">order</span>(elpds<span class="sc">$</span>ELPD), ]</span></code></pre></div>
-<pre><code>##            ELPD   SE
-## BAM     -5835.7 58.6
-## HBAM_NF -5766.9 51.2
-## HBAM    -5524.6 48.6</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>kfold_bam <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;BAM&quot;</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>kfold_hbam <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM&quot;</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>kfold_hbam_nf <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_NF&quot;</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a>kfold_hbam_multi <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">group_id =</span> self, </span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a>                            <span class="at">model =</span> <span class="st">&quot;HBAM_MULTI&quot;</span>)</span></code></pre></div>
+<p>The <code>hbam_cv()</code> function returns an object of classes
+<code>kfold</code> and <code>loo</code>, which can be further processed
+using the <code>loo</code> package. To compare the estimated ELPDs, we
+could run:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="fu">print</span>(loo<span class="sc">::</span><span class="fu">loo_compare</span>(<span class="fu">list</span>(<span class="at">BAM =</span> kfold_bam, </span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>                            <span class="at">HBAM =</span> kfold_hbam, </span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>                            <span class="at">HBAM_NF =</span> kfold_hbam_nf, </span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>                            <span class="at">HBAM_MULTI =</span> kfold_hbam_multi)), <span class="at">simplify =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>##            elpd_diff se_diff elpd_kfold se_elpd_kfold
+## HBAM_MULTI     0.0       0.0 -5503.3       49.2      
+## HBAM          -8.6       8.8 -5511.9       49.3      
+## HBAM_NF     -255.5      27.7 -5758.7       51.3      
+## BAM         -331.5      38.4 -5834.8       58.7</code></pre>
 <p>We see that the unpooled BAM model is worse at predicting
 out-of-sample data than the other models, suggesting it overfits the
 data. The HBAM_NF model – which does not allow for scale flipping – also
 performs worse, suggesting it is too restrictive and underfits. The HBAM
-model outperforms the other two models in this case.</p>
-<p>We could also perform cross-validation for a model that does not
-account for heteroskedastic errors:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>elpd_hbam_mini <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_MINI&quot;</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>elpd_hbam_mini</span></code></pre></div>
-<pre><code>##              ELPD   SE
-## HBAM_MINI -5889.4 47.1</code></pre>
-<p>The estimated ELPD is notably higher for this model compared to its
-heteroskedastic counterpart. This suggest there is a considerable degree
-of heteroskedasticity in the data – which is not surprising.</p>
+and HBAM_MULTI models outperform the other two models in this case. The
+HBAM_MULTI model – with self-placements as <code>group_id</code> – may
+have a slight edge, but the default HBAM model performs about equally
+well.</p>
+<p>We could also perform cross-validation for a couple of models that do
+not account for heteroskedastic errors:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>kfold_hbam_mini <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_MINI&quot;</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>kfold_fbam_mini <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;FBAM_MINI&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="fu">print</span>(loo<span class="sc">::</span><span class="fu">loo_compare</span>(<span class="fu">list</span>(<span class="at">HBAM_MINI =</span> kfold_hbam_mini, </span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>                            <span class="at">FBAM_MINI =</span> kfold_fbam_mini)), <span class="at">simplify =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>##           elpd_diff se_diff elpd_kfold se_elpd_kfold
+## HBAM_MINI     0.0       0.0 -5882.0       48.6      
+## FBAM_MINI  -158.7      22.9 -6040.7       46.0</code></pre>
+<p>The ELPD for the FBAM_MINI model is lower than that of the HBAM_MINI
+model, which suggests that the default priors of the FBAM model are too
+wide to yield optimal results for these data. While the ELPD for the
+HBAM_MINI model is higher than that of the FBAM model, it is still
+notably lower than that of its heteroskedastic counterpart (HBAM). This
+suggest there is a considerable degree of heteroskedasticity in the data
+– which is not surprising.</p>
 <p>Modeling the heteroskedasticity increases prediction accuracy, but it
 should be noted that this does not necessarily translate into much more
 accurate estimates of key model outputs. As shown in section on
@@ -2549,9 +2573,9 @@ similar. In fact, their estimated respondent positions correlate at .97
 and .99, depending on whether we use the posterior means or medians.
 Their estimated stimulus positions also correlate at .99, but this masks
 the fact that the HBAM_MINI model places the less well known candidate
-John B. Anderson further to the left than the HBAM model does. This
-illustrates that there are some subtle differences that users should be
-aware of, even if these models tend to produce very similar results.</p>
+John B. Anderson further to the left than the HBAM model does. There are
+some subtle differences that users should be aware of, even if these
+models tend to produce very similar results.</p>
 </div>
 <div id="diagnostics" class="section level2">
 <h2>Diagnostics</h2>
@@ -2573,7 +2597,7 @@ full range of diagnostic tools from the <strong>rstan</strong> package.
 Users should consult the <strong>rstan</strong> documentation for
 details on the various diagnostic tests and plots that are available.
 One example of the available tools is <code>traceplot()</code>:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>rstan<span class="sc">::</span><span class="fu">traceplot</span>(fit_hbam, <span class="at">pars =</span> <span class="st">&quot;theta&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>rstan<span class="sc">::</span><span class="fu">traceplot</span>(fit_hbam, <span class="at">pars =</span> <span class="st">&quot;theta&quot;</span>)</span></code></pre></div>
 <p><svg width="100%" style="display: block; margin: auto;" class="svglite" height="288.00pt" viewBox="0 0 576.00 288.00">
 <defs>
   <style type="text/css">

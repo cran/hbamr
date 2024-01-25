@@ -10,7 +10,7 @@
 #' @param req_valid Integer specifying how many valid observations to require for a respondent to be included in the analysis. The default is `req_valid = J - allow_miss`, but if specified, `req_valid` takes precedence. This argument will not be used if the data have been prepared in advance via the `prep_data` function.
 #' @param req_unique Integer specifying how may unique positions on the ideological scale each respondent is required to have used when placing the stimuli in order to be included in the analysis. The default is `req_unique = 2`. This argument will not be used if the data have been prepared in advance via the `prep_data` function.
 #' @param data List of data that have been prepared in advance via the `prep_data` function. Not required if the arguments `self` and `stimuli` are provided.
-#' @param prefs An N × J matrix of numerical stimulus ratings or preference scores. These data are only required by the HBAM_R and HBAM_R_MINI models and will be ignored when fitting other models.
+#' @param prefs An N × J matrix of numerical stimulus ratings or preference scores. These data are only required by the HBAM_R_MINI model and will be ignored when fitting other models.
 #' @param group_id Integer vector of length N identifying which group each respondent belongs to. The supplied vector should range from 1 to the total number of groups in the data, and all integers between these numbers should be represented in the supplied data. These data are only required by models with "MULTI" in their name and will be ignored when fitting other models.
 #' @param pars A vector of character strings specifying parameters of interest. If `include = TRUE`, only samples for parameters named in pars are stored in the fitted results. Conversely, if `include = FALSE`, samples for all parameters except those named in pars are stored in the fitted results. The default is to store results for "alpha", "beta", "chi", "lambda", and "theta".
 #' @param extra_pars A vector of character strings specifying parameters to be added to `pars`. This makes it easy to add one or several additional parameters of interest, without having to repeat the default `pars` vector. The default is `NULL`.
@@ -47,7 +47,7 @@
 #'
 #' **BAM** is an unpooled model with wide uniform priors on the shift and stretch parameters. It is similar to the JAGS version introduced by Hare et al. (2015). This model is mainly provided to offer a baseline for model comparisons. While it is simple and fast, this model tends to overfit the data and produce invalid posterior distributions for some respondent positions (see Bølstad 2024).
 #'
-#' **HBAM_2** is deprecated and replaced by the more general HBAM_MULTI model.
+#' **HBAM_2** has been replaced by the more general HBAM_MULTI model.
 #'
 #' These models can also be used in situations where self-placements are not available and the only goal is to estimate stimulus positions. This can be achieved by supplying a vector of zeros (or random data) instead of real self-placements: `self = rep(0, nrow(stimuli))`.
 #'
