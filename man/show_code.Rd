@@ -4,16 +4,16 @@
 \alias{show_code}
 \title{Show the code for an HBAM or FBAM model}
 \usage{
-show_code(model = NULL)
+show_code(model = "HBAM")
 }
 \arguments{
-\item{model}{Character: Name of the model. See the documentation for the \code{hbam()} function for a list of the available models.}
+\item{model}{Character: Name of the model to show. Defaults to "HBAM". See the documentation for the \code{hbam()} function for a list of the available models.}
 }
 \value{
 The function prints Stan code.
 }
 \description{
-Show the Stan code for one of the models in the package.
+Show Stan code for one of the models in the package.
 }
 \examples{
 show_code("HBAM")
