@@ -61,7 +61,9 @@ head_stimuli
 
 ## Preparing the Data
 
-The function `prep_data()` serves to prepare the data. This function can be run ahead of fitting the models, or it can be run implicitly as part of a single function call to fit the models (as shown below). The function takes a vector of $N$ ideological self-placements and an $N \times J$ matrix of stimulus placements. It applies a set of inclusion criteria, performs any necessary data transformation, and returns a list of data suited for sampling in **rstan**. The stimuli data are stored in a vector as a long-form sparse matrix. If the stimuli data include column-names, these will be preserved for later use.
+The function `prep_data()` serves to prepare the data. This function can be run ahead of fitting the models, or it can be run implicitly as part of a single function call to fit the models (as shown below). The function takes a vector of $N$ ideological self-placements and an $N \times J$ matrix of stimulus placements. The self-placement vector is required to estimate respondent positions, but can be dropped if such data are not available or if the respondent positions are not of interest. 
+
+`prep_data()` applies a set of inclusion criteria, performs any necessary data transformation, and returns a list of data suited for sampling in **rstan**. The stimuli data are stored in a vector as a long-form sparse matrix. If the stimuli data include column-names, these will be preserved for later use.
 
 Any missing data must be set to `NA` before use. The `prep_data()` function allows the user to decide how many missing values should be permitted per respondent by specifying the argument `allow_miss`. (The default is `allow_miss = 2`. Alternatively, the argument `req_valid` specifies how many valid observations to require per respondent. The default is `req_valid = J - allow_miss`, but, if specified, `req_valid` takes precedence.) Similarly, the user may specify how may unique positions on the ideological scale each respondent is required to have used when placing the stimuli in order to be included in the analysis. The default is `req_unique = 2`, which means that respondents who place all stimuli in exactly the same place will not be included.
 
@@ -81,7 +83,7 @@ This package provides several alternative models that can be selected using the 
 
 **HBAM** is the default model, which allows for scale flipping and employs hierarchical priors on the shift and stretch parameters. It also models heteroskedastic errors that vary by both individual and stimuli. Compared to the model in @boelstad:2023, this version has been slightly revised to provide faster sampling. A key difference from the original model is that the respondent positions are not treated as parameters, but rather calculated as a function of self-placements, individual-level parameters, and simulated errors. This makes the model considerably faster, while yielding very similar results. The model simulates errors in the self-placements of the same magnitude as that with which the respondent in question places the stimulus with the smallest errors. All models in the package use this approach.
 
-**HBAM_MULTI** is a version that models differences between groups defined by the user. It requires an integer vector identifying the groups to be supplied as the argument `group_id`. The model gives each group separate hyperparameters for the locations of the prior distributions for the shift and stretch parameters. Rather than shrinking the estimates toward the mode for the whole dataset, this model shrinks the estimates toward the mode for the group. The vectors of hyperparameters are called `mu_alpha` and `mu_beta` and are constructed to have means of 0. The scales of the priors on these hyperparameters can be set by the user via the arguments `sigma_mu_alpha` and `sigma_mu_beta`. The default values are B / 5 and .3, respectively. (Here, B measures the length of the survey scale as the number of possible placements on one side of the center.) One potential use for this model is to supply self-placements (appropriately transformed) as `group_id`, and thus give each self-placement group its own prior distribution for the shift and stretch parameters.
+**HBAM_MULTI** is a version that models differences between groups defined by the user. It requires a vector identifying the groups to be supplied as the argument `group_id`. The model gives each group separate hyperparameters for the locations of the prior distributions for the shift and stretch parameters. Rather than shrinking the estimates toward the mode for the whole dataset, this model shrinks the estimates toward the mode for the group. The vectors of hyperparameters are called `mu_alpha` and `mu_beta` and are constructed to have means of 0. The scales of the priors on these hyperparameters can be set by the user via the arguments `sigma_mu_alpha` and `sigma_mu_beta`. The default values are B / 5 and .3, respectively. (Here, B measures the length of the survey scale as the number of possible placements on one side of the center.) One potential use for this model is to supply self-placements as `group_id`, and thus give each self-placement group its own prior distribution for the shift and stretch parameters.
 
 **HBAM_NF** (formerly HBAM_0) is a version of the HBAM model that does not allow for scale flipping. This may be useful if there are truly zero cases of scale flipping in the data. Such scenarios can be created artificially, but may also arise in real data. For example, expert surveys appear unlikely to contain many instances of scale flipping. For data that contain zero cases of flipping, models that allow for flipping contain superfluous parameters that lead to inefficient sampling. Models that do not allow for flipping will sample faster and typically yield slightly more accurate estimates. Such models are therefore preferable when no flipping is present.
 
@@ -97,11 +99,11 @@ This package provides several alternative models that can be selected using the 
 
 **HBAM_R_MINI** is a version of the HBAM_MINI model that incorporates the rationalization component of the ISR model in @boelstad:2020. This model requires additional data to be supplied as the argument `pref`: An N × J matrix of stimuli ratings from the respondents. The rationalization part of the model is simplified relative to the original ISR model: The direction in which respondents move disfavored stimuli is estimated as a common expectation for each possible self-placement on the scale.
 
-**BAM** is an unpooled model with wide uniform priors on the shift and stretch parameters. It is similar to the JAGS version introduced by @hare:2015. This model is mainly provided to offer a baseline for model comparisons. While it is simple and fast, this model tends to overfit the data and produce invalid posterior distributions for some respondent positions [@boelstad:2023].
+**BAM** is an unpooled model with wide uniform priors on the shift and stretch parameters. It is similar to the JAGS version introduced by @hare:2015, although the version included here has been adjusted to yield stretch parameters with an average of approximately one (and thus produce a scale similar to those of the other models in the package). Like the other models, this version of the BAM model also simulates errors in the self-placements to yield a realistic level of uncertainty. While this model is simple and fast, it tends to overfit the data and produce invalid posterior distributions for some respondent positions [@boelstad:2023]. However, it could potentially be useful as a baseline for model comparisons in situations where respondent positions are not of interest.
 
 **HBAM_2** has been replaced by the more general HBAM_MULTI model.
 
-These models can also be used in situations where self-placements are not available and the only goal is to estimate stimulus positions. This can be achieved by supplying a vector of zeros (or random data) instead of real self-placements: `self = rep(0, nrow(stimuli))`.
+These models can also be used in situations where self-placements are not available and the only goal is to estimate stimulus positions or respondents' shift and stretch parameters. While the latent respondent positions will not be estimated, all other parameters are unaffected if the argument `self` is dropped when calling `prep_data()` or `hbam()`.
 
 To see the Stan code for any of the models, use the `show_code()` function:
 
@@ -134,9 +136,9 @@ show_code("HBAM_MULTI")
 
 ## Fitting
 
-The `hbam()` function can be used to fit all models in this package and it returns a `stanfit` object. The default model is HBAM, while other models can be specified via the argument `model`. For each model, `hbam()` selects a suitable function to produce initial values for the sampling algorithm.
+The `hbam()` function can be used to fit all models in this package and obtain a `stanfit` object. The default model is HBAM, while other models can be specified via the argument `model`. 
 
-Unless the user supplies pre-prepared data via the `data`-argument, `hbam()` will implicitly run `prep_data()`. It therefore takes the same arguments as the `prep_data()` function (i.e. `self`, `stimuli`, `allow_miss`, `req_valid`, and `req_unique`).
+Unless the user supplies pre-prepared data via the `data`-argument, `hbam()` will implicitly run `prep_data()`. It therefore takes the same arguments as the `prep_data()` function (i.e. `self`, `stimuli`, `group_id`, `allow_miss`, `req_valid`, and `req_unique`).
 
 To fit the HBAM model using the default settings, we would run:
 
@@ -161,7 +163,7 @@ fit_hbam <- hbam(data = dat)
 dat <- prep_data(self, stimuli, allow_miss = 0) 
 ```
 
-To fit the HBAM_MULTI or FBAM_MULTI model, we would need to supply a vector identifying the groups of interest. One option would be to give each self-placement group their own prior distributions for the shift and stretch parameters. (Note that supplying the raw self-placements as `group_id` works in this case because the self-placements are stored as positive integers from 1 to 7 -- otherwise they would have to be re-coded.) If we decided to fit the FBAM_MULTI model, we could also specify our own scales for the priors on key parameters:
+To fit the HBAM_MULTI or FBAM_MULTI model, we would need to supply a vector identifying the groups of interest. One option would be to supply respondents' self-placements as `group_id` and thus give each self-placement group their own prior distributions for the shift and stretch parameters. If we decided to fit the FBAM_MULTI model, we could also specify our own scales for the priors on key parameters:
 
 ```{r, eval = FALSE}
 fit_fbam_multi <- hbam(self, stimuli, model = "FBAM_MULTI", group_id = self, 
@@ -230,7 +232,7 @@ get_plot_data(fit_hbam)
 
 ### Individual Parameters over Self-Placements
 
-The function `plot_over_self()` plots the distributions of key parameter estimates over the respondents' self-placements. The function will accept either a single `stanfit` object produced by `hbam()`, results from `fbam()`, or a list of such objects. In addition, the function requires the list of data that was produced by `prep_data()` before fitting the model(s). 
+The function `plot_over_self()` plots the distributions of key parameter estimates over the respondents' self-placements. The function will accept either a single `stanfit` object produced by `hbam()`, results from `fbam()`, or a list of such objects. 
 
 The user specifies which parameter to show via the argument `par`. This can be either of the following: `"alpha"`, `"beta"`, `"abs_beta"`, `"lambda"`, or `"chi"`, where `"abs_beta"` calls for the absolute value of beta to be used. By default, the function uses posterior median estimates, but this can be changed by specifying `estimate = "mean"`.
 
@@ -239,7 +241,7 @@ The user specifies which parameter to show via the argument `par`. This can be e
 To compare the distributions of estimated shift parameters from the HBAM and HBAM_MINI models, we would run:
 
 ```{r plot_alpha, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"}
-plot_over_self(list(fit_hbam, fit_hbam_mini), dat, "alpha")
+plot_over_self(list(fit_hbam, fit_hbam_mini), "alpha")
 ```
 
 ```{r, echo = FALSE, fig.align = "center", fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"}
@@ -251,7 +253,7 @@ knitr::include_graphics("p_alpha.svg")
 For models that allow for scale flipping, the draws for $\beta$ combine the separate parameters for each flipping-state. The absolute value of $\beta$ may therefore be better suited for examining the extent to which each individual stretches the ideological space. To inspect the distribution of these values across self-placements, we would run:
 
 ```{r plot_beta, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"}
-plot_over_self(list(fit_hbam, fit_hbam_mini), dat, "abs_beta")
+plot_over_self(list(fit_hbam, fit_hbam_mini), "abs_beta")
 ```
 
 ```{r, echo = FALSE, fig.align = "center", fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"}
@@ -265,7 +267,7 @@ The pattern above, where respondents with more extreme self-placements have more
 To see whether the $\beta$ parameters are likely to be positive or negative, we can look at the expectations of the flipping parameters, $\lambda$. These parameters represent each respondent's probability of *not* flipping the scale:
 
 ```{r plot_lambda, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"}
-plot_over_self(list(fit_hbam, fit_hbam_mini), dat, "lambda")
+plot_over_self(list(fit_hbam, fit_hbam_mini), "lambda")
 ```
 
 ```{r, echo = FALSE, fig.align = "center", fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"}
@@ -279,7 +281,7 @@ In this example, flipping is uncommon, but respondents who place themselves in t
 It may also be useful to inspect the distribution of the scaled respondent positions over the self-placements. This illustrates the extent to which the model has transformed the original data. In this example, the impact of the models is generally modest, although a few respondents have been detected as having flipped the scale, and thus have had their self-placement flipped back.
 
 ```{r plot_chi, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"}
-plot_over_self(list(fit_hbam, fit_hbam_mini), dat, "chi")
+plot_over_self(list(fit_hbam, fit_hbam_mini), "chi")
 ```
 
 ```{r, echo = FALSE, fig.align = "center", fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"}
@@ -294,7 +296,7 @@ The estimated $\eta$ parameters yield information about the accuracy of responde
 
 ```{r plot_eta, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .67, fig.width = 4.25, fig.align = "center", out.width = "50%"}
 fit_hbam <- hbam(data = dat, extra_pars = "eta")
-plot_over_self(fit_hbam, dat, "eta")
+plot_over_self(fit_hbam, "eta")
 ```
 
 ```{r, echo = FALSE, fig.align = "center", fig.asp = .67, fig.width = 4.25, fig.align = "center", out.width = "50%"}
@@ -315,14 +317,14 @@ get_est(fit_hbam, "theta")
 est_theta
 ```
 
-The equivalent call for the respondent positions is:
+To get summaries of the respondent positions, we would specify `par = "chi"`. If we want the results to match the rows in the original dataset by reporting rows of NAs for respondents who were not included in the analysis, we would add the argument `format_orig = TRUE`:
 
 ```{r get_est_v, include = TRUE, eval = FALSE}
-get_est(fit_hbam, "chi")
+get_est(fit_hbam, "chi", format_orig = TRUE)
 ```
 
 ```{r, echo = FALSE}
-est_chi
+est_chi_orig
 ```
 
 ## Cross-Validation

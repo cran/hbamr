@@ -60,32 +60,32 @@ knitr::include_graphics("p_resp.svg")
 #  get_plot_data(fit_hbam)
 
 ## ----plot_alpha, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
-#  plot_over_self(list(fit_hbam, fit_hbam_mini), dat, "alpha")
+#  plot_over_self(list(fit_hbam, fit_hbam_mini), "alpha")
 
 ## ----echo = FALSE, fig.align = "center", fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
 knitr::include_graphics("p_alpha.svg")
 
 ## ----plot_beta, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
-#  plot_over_self(list(fit_hbam, fit_hbam_mini), dat, "abs_beta")
+#  plot_over_self(list(fit_hbam, fit_hbam_mini), "abs_beta")
 
 ## ----echo = FALSE, fig.align = "center", fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
 knitr::include_graphics("p_abs_beta.svg")
 
 ## ----plot_lambda, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
-#  plot_over_self(list(fit_hbam, fit_hbam_mini), dat, "lambda")
+#  plot_over_self(list(fit_hbam, fit_hbam_mini), "lambda")
 
 ## ----echo = FALSE, fig.align = "center", fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
 knitr::include_graphics("p_lambda.svg")
 
 ## ----plot_chi, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
-#  plot_over_self(list(fit_hbam, fit_hbam_mini), dat, "chi")
+#  plot_over_self(list(fit_hbam, fit_hbam_mini), "chi")
 
 ## ----echo = FALSE, fig.align = "center", fig.asp = .37, fig.width = 8.5, fig.align = "center", out.width = "100%"----
 knitr::include_graphics("p_chi.svg")
 
 ## ----plot_eta, include = TRUE, eval = FALSE, echo = TRUE, fig.asp = .67, fig.width = 4.25, fig.align = "center", out.width = "50%"----
 #  fit_hbam <- hbam(data = dat, extra_pars = "eta")
-#  plot_over_self(fit_hbam, dat, "eta")
+#  plot_over_self(fit_hbam, "eta")
 
 ## ----echo = FALSE, fig.align = "center", fig.asp = .67, fig.width = 4.25, fig.align = "center", out.width = "50%"----
 knitr::include_graphics("p_eta.svg")
@@ -97,10 +97,10 @@ knitr::include_graphics("p_eta.svg")
 est_theta
 
 ## ----get_est_v, include = TRUE, eval = FALSE----------------------------------
-#  get_est(fit_hbam, "chi")
+#  get_est(fit_hbam, "chi", format_orig = TRUE)
 
 ## ----echo = FALSE-------------------------------------------------------------
-est_chi
+est_chi_orig
 
 ## ----eval = FALSE-------------------------------------------------------------
 #  fit_hbam <- hbam(data = dat, extra_pars = "log_lik")

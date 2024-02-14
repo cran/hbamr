@@ -146,8 +146,8 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'HBAM_MULTI', line 9, column 2 to column 19)",
                                                       " (in 'HBAM_MULTI', line 10, column 2 to column 30)",
                                                       " (in 'HBAM_MULTI', line 11, column 2 to column 30)",
-                                                      " (in 'HBAM_MULTI', line 12, column 8 to column 13)",
-                                                      " (in 'HBAM_MULTI', line 12, column 2 to column 44)",
+                                                      " (in 'HBAM_MULTI', line 12, column 32 to column 37)",
+                                                      " (in 'HBAM_MULTI', line 12, column 2 to column 41)",
                                                       " (in 'HBAM_MULTI', line 13, column 32 to column 33)",
                                                       " (in 'HBAM_MULTI', line 13, column 2 to column 37)",
                                                       " (in 'HBAM_MULTI', line 14, column 2 to column 31)",
@@ -193,7 +193,7 @@ private:
   int B;
   int L;
   int R;
-  std::vector<int> Y;
+  Eigen::Matrix<double, -1, 1> Y;
   Eigen::Matrix<double, -1, 1> V;
   int CV;
   Eigen::Matrix<double, -1, 1> holdout;
@@ -358,13 +358,26 @@ public:
       current_statement__ = 72;
       validate_non_negative_index("Y", "N_obs", N_obs);
       current_statement__ = 73;
-      context__.validate_dims("data initialization","Y","int",
+      context__.validate_dims("data initialization","Y","double",
           context__.to_vec(N_obs));
-      Y = std::vector<int>(N_obs, std::numeric_limits<int>::min());
+      Y = Eigen::Matrix<double, -1, 1>(N_obs);
+      stan::math::fill(Y, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 73;
-      assign(Y, nil_index_list(), context__.vals_i("Y"),
-        "assigning variable Y");
+      {
+        std::vector<local_scalar_t__> Y_flat__;
+        current_statement__ = 73;
+        assign(Y_flat__, nil_index_list(), context__.vals_r("Y"),
+          "assigning variable Y_flat__");
+        current_statement__ = 73;
+        pos__ = 1;
+        current_statement__ = 73;
+        for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
+          current_statement__ = 73;
+          assign(Y, cons_list(index_uni(sym1__), nil_index_list()),
+            Y_flat__[(pos__ - 1)], "assigning variable Y");
+          current_statement__ = 73;
+          pos__ = (pos__ + 1);}
+      }
       current_statement__ = 73;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
         current_statement__ = 73;

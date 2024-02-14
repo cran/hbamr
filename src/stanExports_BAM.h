@@ -75,38 +75,38 @@ using stan::math::pow;
 stan::math::profile_map profiles__;
 static int current_statement__= 0;
 static const std::vector<string> locations_array__ = {" (found before start of program)",
-                                                      " (in 'BAM', line 20, column 2 to column 18)",
-                                                      " (in 'BAM', line 21, column 2 to column 17)",
-                                                      " (in 'BAM', line 22, column 2 to column 41)",
-                                                      " (in 'BAM', line 23, column 2 to column 39)",
-                                                      " (in 'BAM', line 24, column 2 to column 26)",
-                                                      " (in 'BAM', line 25, column 2 to column 33)",
-                                                      " (in 'BAM', line 26, column 2 to column 22)",
-                                                      " (in 'BAM', line 27, column 2 to column 27)",
-                                                      " (in 'BAM', line 28, column 2 to column 17)",
-                                                      " (in 'BAM', line 31, column 2 to column 22)",
-                                                      " (in 'BAM', line 32, column 2 to column 24)",
-                                                      " (in 'BAM', line 33, column 2 to column 38)",
-                                                      " (in 'BAM', line 34, column 2 to column 20)",
+                                                      " (in 'BAM', line 21, column 2 to column 18)",
+                                                      " (in 'BAM', line 22, column 2 to column 17)",
+                                                      " (in 'BAM', line 23, column 2 to column 69)",
+                                                      " (in 'BAM', line 24, column 2 to column 69)",
+                                                      " (in 'BAM', line 25, column 2 to column 26)",
+                                                      " (in 'BAM', line 26, column 2 to column 33)",
+                                                      " (in 'BAM', line 27, column 2 to column 22)",
+                                                      " (in 'BAM', line 28, column 2 to column 27)",
+                                                      " (in 'BAM', line 29, column 2 to column 17)",
+                                                      " (in 'BAM', line 32, column 2 to column 22)",
+                                                      " (in 'BAM', line 33, column 2 to column 24)",
+                                                      " (in 'BAM', line 34, column 2 to column 38)",
                                                       " (in 'BAM', line 35, column 2 to column 20)",
                                                       " (in 'BAM', line 36, column 2 to column 20)",
-                                                      " (in 'BAM', line 38, column 4 to line 39, column 37)",
-                                                      " (in 'BAM', line 37, column 21 to line 40, column 3)",
-                                                      " (in 'BAM', line 37, column 2 to line 40, column 3)",
-                                                      " (in 'BAM', line 58, column 2 to column 37)",
-                                                      " (in 'BAM', line 59, column 2 to column 88)",
-                                                      " (in 'BAM', line 43, column 2 to column 29)",
-                                                      " (in 'BAM', line 44, column 2 to column 28)",
-                                                      " (in 'BAM', line 45, column 2 to column 27)",
-                                                      " (in 'BAM', line 46, column 2 to column 24)",
+                                                      " (in 'BAM', line 37, column 2 to column 20)",
+                                                      " (in 'BAM', line 39, column 4 to line 40, column 37)",
+                                                      " (in 'BAM', line 38, column 21 to line 41, column 3)",
+                                                      " (in 'BAM', line 38, column 2 to line 41, column 3)",
+                                                      " (in 'BAM', line 59, column 2 to column 37)",
+                                                      " (in 'BAM', line 60, column 2 to column 88)",
+                                                      " (in 'BAM', line 44, column 2 to column 29)",
+                                                      " (in 'BAM', line 45, column 2 to column 28)",
+                                                      " (in 'BAM', line 46, column 2 to column 27)",
                                                       " (in 'BAM', line 47, column 2 to column 24)",
-                                                      " (in 'BAM', line 48, column 2 to column 45)",
-                                                      " (in 'BAM', line 49, column 2 to column 22)",
-                                                      " (in 'BAM', line 50, column 2 to column 32)",
-                                                      " (in 'BAM', line 51, column 2 to column 36)",
-                                                      " (in 'BAM', line 55, column 4 to column 42)",
-                                                      " (in 'BAM', line 53, column 4 to column 27)",
-                                                      " (in 'BAM', line 52, column 2 to line 55, column 42)",
+                                                      " (in 'BAM', line 48, column 2 to column 24)",
+                                                      " (in 'BAM', line 49, column 2 to column 45)",
+                                                      " (in 'BAM', line 50, column 2 to column 22)",
+                                                      " (in 'BAM', line 51, column 2 to column 32)",
+                                                      " (in 'BAM', line 52, column 2 to column 36)",
+                                                      " (in 'BAM', line 56, column 4 to column 42)",
+                                                      " (in 'BAM', line 54, column 4 to column 27)",
+                                                      " (in 'BAM', line 53, column 2 to line 56, column 42)",
                                                       " (in 'BAM', line 2, column 2 to column 19)",
                                                       " (in 'BAM', line 3, column 2 to column 19)",
                                                       " (in 'BAM', line 4, column 2 to column 23)",
@@ -117,24 +117,26 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'BAM', line 7, column 2 to column 19)",
                                                       " (in 'BAM', line 8, column 2 to column 30)",
                                                       " (in 'BAM', line 9, column 2 to column 30)",
-                                                      " (in 'BAM', line 10, column 8 to column 13)",
-                                                      " (in 'BAM', line 10, column 2 to column 44)",
+                                                      " (in 'BAM', line 10, column 32 to column 37)",
+                                                      " (in 'BAM', line 10, column 2 to column 41)",
                                                       " (in 'BAM', line 11, column 32 to column 33)",
                                                       " (in 'BAM', line 11, column 2 to column 37)",
-                                                      " (in 'BAM', line 12, column 2 to column 31)",
-                                                      " (in 'BAM', line 13, column 31 to column 36)",
-                                                      " (in 'BAM', line 13, column 2 to column 46)",
-                                                      " (in 'BAM', line 16, column 2 to column 55)",
-                                                      " (in 'BAM', line 17, column 31 to column 36)",
-                                                      " (in 'BAM', line 17, column 2 to column 64)",
-                                                      " (in 'BAM', line 20, column 9 to column 10)",
+                                                      " (in 'BAM', line 12, column 9 to column 10)",
+                                                      " (in 'BAM', line 12, column 2 to column 22)",
+                                                      " (in 'BAM', line 13, column 2 to column 31)",
+                                                      " (in 'BAM', line 14, column 31 to column 36)",
+                                                      " (in 'BAM', line 14, column 2 to column 46)",
+                                                      " (in 'BAM', line 17, column 2 to column 55)",
+                                                      " (in 'BAM', line 18, column 31 to column 36)",
+                                                      " (in 'BAM', line 18, column 2 to column 64)",
                                                       " (in 'BAM', line 21, column 9 to column 10)",
-                                                      " (in 'BAM', line 24, column 8 to column 9)",
-                                                      " (in 'BAM', line 27, column 20 to column 21)",
-                                                      " (in 'BAM', line 28, column 10 to column 11)",
-                                                      " (in 'BAM', line 31, column 8 to column 9)",
-                                                      " (in 'BAM', line 32, column 9 to column 14)",
-                                                      " (in 'BAM', line 59, column 9 to column 10)"};
+                                                      " (in 'BAM', line 22, column 9 to column 10)",
+                                                      " (in 'BAM', line 25, column 8 to column 9)",
+                                                      " (in 'BAM', line 28, column 20 to column 21)",
+                                                      " (in 'BAM', line 29, column 10 to column 11)",
+                                                      " (in 'BAM', line 32, column 8 to column 9)",
+                                                      " (in 'BAM', line 33, column 9 to column 14)",
+                                                      " (in 'BAM', line 60, column 9 to column 10)"};
 #include <stan_meta_header.hpp>
 class model_BAM final : public model_base_crtp<model_BAM> {
 private:
@@ -146,8 +148,9 @@ private:
   int B;
   int L;
   int R;
-  std::vector<int> Y;
+  Eigen::Matrix<double, -1, 1> Y;
   Eigen::Matrix<double, -1, 1> V;
+  Eigen::Matrix<double, -1, 1> mean_spos;
   int CV;
   Eigen::Matrix<double, -1, 1> holdout;
   double tau_prior_rate;
@@ -279,13 +282,26 @@ public:
       current_statement__ = 43;
       validate_non_negative_index("Y", "N_obs", N_obs);
       current_statement__ = 44;
-      context__.validate_dims("data initialization","Y","int",
+      context__.validate_dims("data initialization","Y","double",
           context__.to_vec(N_obs));
-      Y = std::vector<int>(N_obs, std::numeric_limits<int>::min());
+      Y = Eigen::Matrix<double, -1, 1>(N_obs);
+      stan::math::fill(Y, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 44;
-      assign(Y, nil_index_list(), context__.vals_i("Y"),
-        "assigning variable Y");
+      {
+        std::vector<local_scalar_t__> Y_flat__;
+        current_statement__ = 44;
+        assign(Y_flat__, nil_index_list(), context__.vals_r("Y"),
+          "assigning variable Y_flat__");
+        current_statement__ = 44;
+        pos__ = 1;
+        current_statement__ = 44;
+        for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
+          current_statement__ = 44;
+          assign(Y, cons_list(index_uni(sym1__), nil_index_list()),
+            Y_flat__[(pos__ - 1)], "assigning variable Y");
+          current_statement__ = 44;
+          pos__ = (pos__ + 1);}
+      }
       current_statement__ = 44;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
         current_statement__ = 44;
@@ -332,21 +348,45 @@ public:
         current_statement__ = 46;
         check_less_or_equal(function__, "V[sym1__]", V[(sym1__ - 1)], B);}
       current_statement__ = 47;
+      validate_non_negative_index("mean_spos", "J", J);
+      current_statement__ = 48;
+      context__.validate_dims("data initialization","mean_spos","double",
+          context__.to_vec(J));
+      mean_spos = Eigen::Matrix<double, -1, 1>(J);
+      stan::math::fill(mean_spos, std::numeric_limits<double>::quiet_NaN());
+      
+      {
+        std::vector<local_scalar_t__> mean_spos_flat__;
+        current_statement__ = 48;
+        assign(mean_spos_flat__, nil_index_list(),
+          context__.vals_r("mean_spos"),
+          "assigning variable mean_spos_flat__");
+        current_statement__ = 48;
+        pos__ = 1;
+        current_statement__ = 48;
+        for (int sym1__ = 1; sym1__ <= J; ++sym1__) {
+          current_statement__ = 48;
+          assign(mean_spos, cons_list(index_uni(sym1__), nil_index_list()),
+            mean_spos_flat__[(pos__ - 1)], "assigning variable mean_spos");
+          current_statement__ = 48;
+          pos__ = (pos__ + 1);}
+      }
+      current_statement__ = 49;
       context__.validate_dims("data initialization","CV","int",
           context__.to_vec());
       CV = std::numeric_limits<int>::min();
       
-      current_statement__ = 47;
-      CV = context__.vals_i("CV")[(1 - 1)];
-      current_statement__ = 47;
-      current_statement__ = 47;
-      check_greater_or_equal(function__, "CV", CV, 0);
-      current_statement__ = 47;
-      current_statement__ = 47;
-      check_less_or_equal(function__, "CV", CV, 1);
-      current_statement__ = 48;
-      validate_non_negative_index("holdout", "N_obs", N_obs);
       current_statement__ = 49;
+      CV = context__.vals_i("CV")[(1 - 1)];
+      current_statement__ = 49;
+      current_statement__ = 49;
+      check_greater_or_equal(function__, "CV", CV, 0);
+      current_statement__ = 49;
+      current_statement__ = 49;
+      check_less_or_equal(function__, "CV", CV, 1);
+      current_statement__ = 50;
+      validate_non_negative_index("holdout", "N_obs", N_obs);
+      current_statement__ = 51;
       context__.validate_dims("data initialization","holdout","double",
           context__.to_vec(N_obs));
       holdout = Eigen::Matrix<double, -1, 1>(N_obs);
@@ -354,75 +394,75 @@ public:
       
       {
         std::vector<local_scalar_t__> holdout_flat__;
-        current_statement__ = 49;
+        current_statement__ = 51;
         assign(holdout_flat__, nil_index_list(), context__.vals_r("holdout"),
           "assigning variable holdout_flat__");
-        current_statement__ = 49;
+        current_statement__ = 51;
         pos__ = 1;
-        current_statement__ = 49;
+        current_statement__ = 51;
         for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-          current_statement__ = 49;
+          current_statement__ = 51;
           assign(holdout, cons_list(index_uni(sym1__), nil_index_list()),
             holdout_flat__[(pos__ - 1)], "assigning variable holdout");
-          current_statement__ = 49;
+          current_statement__ = 51;
           pos__ = (pos__ + 1);}
       }
-      current_statement__ = 49;
+      current_statement__ = 51;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 49;
-        current_statement__ = 49;
+        current_statement__ = 51;
+        current_statement__ = 51;
         check_greater_or_equal(function__, "holdout[sym1__]",
                                holdout[(sym1__ - 1)], 0);}
-      current_statement__ = 49;
+      current_statement__ = 51;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 49;
-        current_statement__ = 49;
+        current_statement__ = 51;
+        current_statement__ = 51;
         check_less_or_equal(function__, "holdout[sym1__]",
                             holdout[(sym1__ - 1)], 1);}
-      current_statement__ = 50;
+      current_statement__ = 52;
       tau_prior_rate = std::numeric_limits<double>::quiet_NaN();
       
-      current_statement__ = 50;
-      tau_prior_rate = ((2 - 1) / (B / 5.0));
-      current_statement__ = 51;
-      validate_non_negative_index("not_holdout", "N_obs", N_obs);
       current_statement__ = 52;
+      tau_prior_rate = ((2 - 1) / (B / 5.0));
+      current_statement__ = 53;
+      validate_non_negative_index("not_holdout", "N_obs", N_obs);
+      current_statement__ = 54;
       not_holdout = Eigen::Matrix<double, -1, 1>(N_obs);
       stan::math::fill(not_holdout, std::numeric_limits<double>::quiet_NaN());
       
-      current_statement__ = 52;
+      current_statement__ = 54;
       assign(not_holdout, nil_index_list(), subtract(1, holdout),
         "assigning variable not_holdout");
-      current_statement__ = 50;
-      current_statement__ = 50;
-      check_greater_or_equal(function__, "tau_prior_rate", tau_prior_rate, 0);
       current_statement__ = 52;
+      current_statement__ = 52;
+      check_greater_or_equal(function__, "tau_prior_rate", tau_prior_rate, 0);
+      current_statement__ = 54;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 52;
-        current_statement__ = 52;
+        current_statement__ = 54;
+        current_statement__ = 54;
         check_greater_or_equal(function__, "not_holdout[sym1__]",
                                not_holdout[(sym1__ - 1)], 0);}
-      current_statement__ = 52;
+      current_statement__ = 54;
       for (int sym1__ = 1; sym1__ <= N_obs; ++sym1__) {
-        current_statement__ = 52;
-        current_statement__ = 52;
+        current_statement__ = 54;
+        current_statement__ = 54;
         check_less_or_equal(function__, "not_holdout[sym1__]",
                             not_holdout[(sym1__ - 1)], 1);}
-      current_statement__ = 53;
-      validate_non_negative_index("alpha", "N", N);
-      current_statement__ = 54;
-      validate_non_negative_index("beta", "N", N);
       current_statement__ = 55;
-      validate_non_negative_index("theta_raw", "J", J);
+      validate_non_negative_index("alpha", "N", N);
       current_statement__ = 56;
-      validate_non_negative_index("eta", "N", N);
+      validate_non_negative_index("beta", "N", N);
       current_statement__ = 57;
-      validate_positive_index("rho", "J", J);
+      validate_non_negative_index("theta_raw", "J", J);
       current_statement__ = 58;
-      validate_non_negative_index("theta", "J", J);
+      validate_non_negative_index("eta", "N", N);
       current_statement__ = 59;
-      validate_non_negative_index("log_lik", "N_obs", N_obs);
+      validate_positive_index("rho", "J", J);
       current_statement__ = 60;
+      validate_non_negative_index("theta", "J", J);
+      current_statement__ = 61;
+      validate_non_negative_index("log_lik", "N_obs", N_obs);
+      current_statement__ = 62;
       validate_non_negative_index("chi", "N", N);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -482,10 +522,13 @@ public:
       current_statement__ = 3;
       if (jacobian__) {
         current_statement__ = 3;
-        thetal = stan::math::lub_constrain(thetal, -1.1, -.9, lp__);
+        thetal = stan::math::lub_constrain(thetal,
+                   (mean_spos[(L - 1)] - (B / 50.0)), mean_spos[(L - 1)],
+                   lp__);
       } else {
         current_statement__ = 3;
-        thetal = stan::math::lub_constrain(thetal, -1.1, -.9);
+        thetal = stan::math::lub_constrain(thetal,
+                   (mean_spos[(L - 1)] - (B / 50.0)), mean_spos[(L - 1)]);
       }
       local_scalar_t__ thetar;
       thetar = DUMMY_VAR__;
@@ -495,10 +538,12 @@ public:
       current_statement__ = 4;
       if (jacobian__) {
         current_statement__ = 4;
-        thetar = stan::math::lub_constrain(thetar, .9, 1.1, lp__);
+        thetar = stan::math::lub_constrain(thetar, mean_spos[(R - 1)],
+                   (mean_spos[(R - 1)] + (B / 50.0)), lp__);
       } else {
         current_statement__ = 4;
-        thetar = stan::math::lub_constrain(thetar, .9, 1.1);
+        thetar = stan::math::lub_constrain(thetar, mean_spos[(R - 1)],
+                   (mean_spos[(R - 1)] + (B / 50.0)));
       }
       std::vector<local_scalar_t__> theta_raw;
       theta_raw = std::vector<local_scalar_t__>(J, DUMMY_VAR__);
@@ -613,11 +658,11 @@ public:
         current_statement__ = 22;
         lp_accum__.add(uniform_lpdf<propto__>(beta, -100, 100));
         current_statement__ = 23;
-        lp_accum__.add(normal_lpdf<propto__>(theta_raw, 0, 1));
+        lp_accum__.add(normal_lpdf<propto__>(theta_raw, 0, B));
         current_statement__ = 24;
-        lp_accum__.add(normal_lpdf<propto__>(thetal, 0, 1));
+        lp_accum__.add(normal_lpdf<propto__>(thetal, 0, B));
         current_statement__ = 25;
-        lp_accum__.add(normal_lpdf<propto__>(thetar, 0, 1));
+        lp_accum__.add(normal_lpdf<propto__>(thetar, 0, B));
         current_statement__ = 26;
         lp_accum__.add(
           scaled_inv_chi_square_lpdf<propto__>(eta, nu, eta_scale));
@@ -682,14 +727,16 @@ public:
       current_statement__ = 3;
       thetal = in__.scalar();
       current_statement__ = 3;
-      thetal = stan::math::lub_constrain(thetal, -1.1, -.9);
+      thetal = stan::math::lub_constrain(thetal,
+                 (mean_spos[(L - 1)] - (B / 50.0)), mean_spos[(L - 1)]);
       double thetar;
       thetar = std::numeric_limits<double>::quiet_NaN();
       
       current_statement__ = 4;
       thetar = in__.scalar();
       current_statement__ = 4;
-      thetar = stan::math::lub_constrain(thetar, .9, 1.1);
+      thetar = stan::math::lub_constrain(thetar, mean_spos[(R - 1)],
+                 (mean_spos[(R - 1)] + (B / 50.0)));
       std::vector<double> theta_raw;
       theta_raw = std::vector<double>(J, std::numeric_limits<double>::quiet_NaN());
       
@@ -887,7 +934,9 @@ public:
       thetal_free__ = std::numeric_limits<double>::quiet_NaN();
       
       current_statement__ = 3;
-      thetal_free__ = stan::math::lub_free(thetal, -1.1, -.9);
+      thetal_free__ = stan::math::lub_free(thetal,
+                        (mean_spos[(L - 1)] - (B / 50.0)), mean_spos[
+                        (L - 1)]);
       double thetar;
       thetar = std::numeric_limits<double>::quiet_NaN();
       
@@ -897,7 +946,8 @@ public:
       thetar_free__ = std::numeric_limits<double>::quiet_NaN();
       
       current_statement__ = 4;
-      thetar_free__ = stan::math::lub_free(thetar, .9, 1.1);
+      thetar_free__ = stan::math::lub_free(thetar, mean_spos[(R - 1)],
+                        (mean_spos[(R - 1)] + (B / 50.0)));
       std::vector<double> theta_raw;
       theta_raw = std::vector<double>(J, std::numeric_limits<double>::quiet_NaN());
       

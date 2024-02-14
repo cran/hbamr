@@ -1,3 +1,14 @@
+# hbamr 2.2.0
+
+### Improvements of existing functions
+
+-   The `get_est()` function now takes the logical argument `format_orig`, which if `TRUE` makes the function return posterior summaries for individual-level parameters in a format that matches the rows in the original dataset.
+-   The `hbam()` and `fbam()` functions now store the input data within the returned objects, which allows simplifying the interfaces for other functions like `get_est()` and `plot_over_self()`. As a result, the `plot_over_self()` function no longer requires a data argument.
+-   The `prep_data()`, `hbam()`, and `fbam()` functions now allow users to not supply self-placements. In this case, no meaningful respondent positions will be estimated, but all other parameters are unaffected.
+-   The `prep_data()` function now allows the `group_id` argument to take various forms, such as factor or character. It also allows missing values in the `group_id` vector and will drop respondents who do not have a valid `group_id`. Missing values would previously generate an uninformative error message.
+-   The models now accept even numbers of answering categories, but `prep_data()` will throw a warning.
+-   The `prep_data()` function now identifies the left and right poles for the BAM model as the stimuli with the most non-NA observations on each side of the center. This can be advantageous when analyzing datasets where some stimuli have a much higher number of valid observations than others. 
+
 # hbamr 2.1.2
 
 ### Revisions to existing models
@@ -29,7 +40,7 @@
 
 ### New models
 
--   **HBAM_MULTI** is a version that models differences between groups defined by the user. It requires an integer vector identifying the groups to be supplied as the argument `group_id`. The model gives each group separate hyperparameters for the locations of the prior distributions for the shift and stretch parameters. Rather than shrinking the estimates toward the mode for the whole dataset, this model shrinks the estimates toward the mode for the group. The vectors of hyperparameters are called `mu_alpha` and `mu_beta` and are constructed to have means of 0. The scales of the priors on these hyperparameters can be set by the user via the arguments `sigma_mu_alpha` and `sigma_mu_beta`. One potential use for this model is to supply self-placements (appropriately transformed) as `group_id`, and thus give each self-placement group its own prior distribution for the shift and stretch parameters.
+-   **HBAM_MULTI** is a version that models differences between groups defined by the user. It requires a vector identifying the groups to be supplied as the argument `group_id`. The model gives each group separate hyperparameters for the locations of the prior distributions for the shift and stretch parameters. Rather than shrinking the estimates toward the mode for the whole dataset, this model shrinks the estimates toward the mode for the group. The vectors of hyperparameters are called `mu_alpha` and `mu_beta` and are constructed to have means of 0. The scales of the priors on these hyperparameters can be set by the user via the arguments `sigma_mu_alpha` and `sigma_mu_beta`. One potential use for this model is to supply self-placements as `group_id`, and thus give each self-placement group its own prior distribution for the shift and stretch parameters.
 -   **HBAM_MULTI_NF** is a version of the HBAM_MULTI model that does not allow for scale flipping.
 -   **FBAM_MULTI** is a version of the FBAM_MINI model that shares the group-modeling features of the HBAM_MULTI model. It allows the user to set the scales of the priors for the shift and stretch parameters via the arguments `sigma_alpha` and `sigma_beta`, and set the scales of the priors on `mu_alpha` and `mu_beta` via the arguments `sigma_mu_alpha` and `sigma_mu_beta`.
 -   **FBAM_MULTI_NF** is a version of the FBAM_MULTI model that does not allow for scale flipping.
