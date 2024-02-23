@@ -103,7 +103,7 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'BAM', line 49, column 2 to column 45)",
                                                       " (in 'BAM', line 50, column 2 to column 22)",
                                                       " (in 'BAM', line 51, column 2 to column 32)",
-                                                      " (in 'BAM', line 52, column 2 to column 36)",
+                                                      " (in 'BAM', line 52, column 2 to column 37)",
                                                       " (in 'BAM', line 56, column 4 to column 42)",
                                                       " (in 'BAM', line 54, column 4 to column 27)",
                                                       " (in 'BAM', line 53, column 2 to line 56, column 42)",
@@ -671,7 +671,7 @@ public:
         current_statement__ = 28;
         lp_accum__.add(gamma_lpdf<propto__>(tau, 2, (5 / (B * 1.0))));
         current_statement__ = 29;
-        lp_accum__.add(dirichlet_lpdf<propto__>(rho, rep_vector(5, J)));
+        lp_accum__.add(dirichlet_lpdf<propto__>(rho, rep_vector(20, J)));
         current_statement__ = 32;
         if (logical_eq(CV, 0)) {
           current_statement__ = 31;

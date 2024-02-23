@@ -134,7 +134,7 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'HBAM_MINI', line 12, column 2 to column 31)",
                                                       " (in 'HBAM_MINI', line 13, column 31 to column 36)",
                                                       " (in 'HBAM_MINI', line 13, column 2 to column 46)",
-                                                      " (in 'HBAM_MINI', line 16, column 2 to column 63)",
+                                                      " (in 'HBAM_MINI', line 16, column 2 to column 64)",
                                                       " (in 'HBAM_MINI', line 17, column 2 to column 55)",
                                                       " (in 'HBAM_MINI', line 18, column 31 to column 36)",
                                                       " (in 'HBAM_MINI', line 18, column 2 to column 64)",
@@ -414,7 +414,7 @@ public:
       sigma_alpha_prior_rate = std::numeric_limits<double>::quiet_NaN();
       
       current_statement__ = 60;
-      sigma_alpha_prior_rate = ((2 - 1) / (B / 5.0));
+      sigma_alpha_prior_rate = ((3 - 1) / (B / 10.0));
       current_statement__ = 61;
       tau_prior_rate = std::numeric_limits<double>::quiet_NaN();
       
@@ -729,7 +729,7 @@ public:
             1));
         current_statement__ = 33;
         lp_accum__.add(
-          gamma_lpdf<propto__>(sigma_alpha, 2, sigma_alpha_prior_rate));
+          gamma_lpdf<propto__>(sigma_alpha, 3, sigma_alpha_prior_rate));
         current_statement__ = 34;
         lp_accum__.add(
           normal_lpdf<propto__>(
@@ -745,7 +745,7 @@ public:
                 cons_list(index_uni(2), nil_index_list())), "beta_raw"), 0,
             1));
         current_statement__ = 36;
-        lp_accum__.add(gamma_lpdf<propto__>(sigma_beta, 3, 10));
+        lp_accum__.add(gamma_lpdf<propto__>(sigma_beta, 9, 40));
         current_statement__ = 37;
         lp_accum__.add(gamma_lpdf<propto__>(tau, 2, tau_prior_rate));
         current_statement__ = 38;

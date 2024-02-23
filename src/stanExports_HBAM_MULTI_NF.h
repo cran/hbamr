@@ -117,7 +117,7 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'HBAM_MULTI_NF', line 69, column 2 to column 45)",
                                                       " (in 'HBAM_MULTI_NF', line 70, column 2 to column 22)",
                                                       " (in 'HBAM_MULTI_NF', line 71, column 2 to column 33)",
-                                                      " (in 'HBAM_MULTI_NF', line 72, column 2 to column 36)",
+                                                      " (in 'HBAM_MULTI_NF', line 72, column 2 to column 37)",
                                                       " (in 'HBAM_MULTI_NF', line 76, column 4 to column 42)",
                                                       " (in 'HBAM_MULTI_NF', line 74, column 4 to column 27)",
                                                       " (in 'HBAM_MULTI_NF', line 73, column 2 to line 76, column 42)",
@@ -143,7 +143,7 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'HBAM_MULTI_NF', line 15, column 2 to column 46)",
                                                       " (in 'HBAM_MULTI_NF', line 16, column 2 to column 33)",
                                                       " (in 'HBAM_MULTI_NF', line 17, column 2 to column 32)",
-                                                      " (in 'HBAM_MULTI_NF', line 20, column 2 to column 63)",
+                                                      " (in 'HBAM_MULTI_NF', line 20, column 2 to column 64)",
                                                       " (in 'HBAM_MULTI_NF', line 21, column 2 to column 55)",
                                                       " (in 'HBAM_MULTI_NF', line 22, column 31 to column 36)",
                                                       " (in 'HBAM_MULTI_NF', line 22, column 2 to column 64)",
@@ -478,7 +478,7 @@ public:
       sigma_alpha_prior_rate = std::numeric_limits<double>::quiet_NaN();
       
       current_statement__ = 69;
-      sigma_alpha_prior_rate = ((2 - 1) / (B / 5.0));
+      sigma_alpha_prior_rate = ((3 - 1) / (B / 10.0));
       current_statement__ = 70;
       tau_prior_rate = std::numeric_limits<double>::quiet_NaN();
       
@@ -846,11 +846,11 @@ public:
         lp_accum__.add(normal_lpdf<propto__>(alpha_raw, 0, 1));
         current_statement__ = 35;
         lp_accum__.add(
-          gamma_lpdf<propto__>(sigma_alpha, 2, sigma_alpha_prior_rate));
+          gamma_lpdf<propto__>(sigma_alpha, 3, sigma_alpha_prior_rate));
         current_statement__ = 36;
         lp_accum__.add(normal_lpdf<propto__>(beta_raw, 0, 1));
         current_statement__ = 37;
-        lp_accum__.add(gamma_lpdf<propto__>(sigma_beta, 3, 10));
+        lp_accum__.add(gamma_lpdf<propto__>(sigma_beta, 9, 40));
         current_statement__ = 38;
         lp_accum__.add(
           dirichlet_lpdf<propto__>(mu_alpha_raw, rep_vector(50, G)));
@@ -865,7 +865,7 @@ public:
         current_statement__ = 42;
         lp_accum__.add(gamma_lpdf<propto__>(tau, 2, tau_prior_rate));
         current_statement__ = 43;
-        lp_accum__.add(dirichlet_lpdf<propto__>(rho, rep_vector(5, J)));
+        lp_accum__.add(dirichlet_lpdf<propto__>(rho, rep_vector(20, J)));
         current_statement__ = 46;
         if (logical_eq(CV, 0)) {
           current_statement__ = 45;

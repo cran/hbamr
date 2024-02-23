@@ -491,9 +491,9 @@ of hyperparameters are called <code>mu_alpha</code> and
 <code>mu_beta</code> and are constructed to have means of 0. The scales
 of the priors on these hyperparameters can be set by the user via the
 arguments <code>sigma_mu_alpha</code> and <code>sigma_mu_beta</code>.
-The default values are B / 5 and .3, respectively. (Here, B measures the
-length of the survey scale as the number of possible placements on one
-side of the center.) One potential use for this model is to supply
+The default values are B / 10 and .2, respectively. (Here, B measures
+the length of the survey scale as the number of possible placements on
+one side of the center.) One potential use for this model is to supply
 self-placements as <code>group_id</code>, and thus give each
 self-placement group its own prior distribution for the shift and
 stretch parameters.</p>
@@ -506,7 +506,7 @@ scale flipping. For data that contain zero cases of flipping, models
 that allow for flipping contain superfluous parameters that lead to
 inefficient sampling. Models that do not allow for flipping will sample
 faster and typically yield slightly more accurate estimates. Such models
-are therefore preferable when no flipping is present.</p>
+are therefore usually preferable when no flipping is present.</p>
 <p><strong>HBAM_MULTI_NF</strong> is a version of the HBAM_MULTI model
 that does not allow for scale flipping.</p>
 <p><strong>HBAM_MINI</strong> is a version of the HBAM model that
@@ -732,7 +732,7 @@ self-placement group their own prior distributions for the shift and
 stretch parameters. If we decided to fit the FBAM_MULTI model, we could
 also specify our own scales for the priors on key parameters:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>fit_fbam_multi <span class="ot">&lt;-</span> <span class="fu">hbam</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;FBAM_MULTI&quot;</span>, <span class="at">group_id =</span> self, </span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>                       <span class="at">sigma_alpha =</span> .<span class="dv">8</span>, <span class="at">sigma_mu_alpha =</span> .<span class="dv">5</span>, </span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>                       <span class="at">sigma_alpha =</span> .<span class="dv">8</span>, <span class="at">sigma_mu_alpha =</span> .<span class="dv">7</span>, </span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>                       <span class="at">sigma_beta =</span> .<span class="dv">4</span>, <span class="at">sigma_mu_beta =</span> .<span class="dv">25</span>)</span></code></pre></div>
 <p><code>hbam()</code> uses <code>rstan::sampling()</code>, and any
 additional arguments to <code>hbam()</code> will be passed on to the

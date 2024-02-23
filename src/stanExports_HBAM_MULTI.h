@@ -127,7 +127,7 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'HBAM_MULTI', line 79, column 2 to column 45)",
                                                       " (in 'HBAM_MULTI', line 80, column 2 to column 22)",
                                                       " (in 'HBAM_MULTI', line 81, column 2 to column 33)",
-                                                      " (in 'HBAM_MULTI', line 82, column 2 to column 36)",
+                                                      " (in 'HBAM_MULTI', line 82, column 2 to column 37)",
                                                       " (in 'HBAM_MULTI', line 83, column 2 to column 30)",
                                                       " (in 'HBAM_MULTI', line 84, column 2 to column 27)",
                                                       " (in 'HBAM_MULTI', line 88, column 4 to column 42)",
@@ -155,7 +155,7 @@ static const std::vector<string> locations_array__ = {" (found before start of p
                                                       " (in 'HBAM_MULTI', line 15, column 2 to column 46)",
                                                       " (in 'HBAM_MULTI', line 16, column 2 to column 33)",
                                                       " (in 'HBAM_MULTI', line 17, column 2 to column 32)",
-                                                      " (in 'HBAM_MULTI', line 20, column 2 to column 63)",
+                                                      " (in 'HBAM_MULTI', line 20, column 2 to column 64)",
                                                       " (in 'HBAM_MULTI', line 21, column 2 to column 55)",
                                                       " (in 'HBAM_MULTI', line 22, column 31 to column 36)",
                                                       " (in 'HBAM_MULTI', line 22, column 2 to column 64)",
@@ -495,7 +495,7 @@ public:
       sigma_alpha_prior_rate = std::numeric_limits<double>::quiet_NaN();
       
       current_statement__ = 81;
-      sigma_alpha_prior_rate = ((2 - 1) / (B / 5.0));
+      sigma_alpha_prior_rate = ((3 - 1) / (B / 10.0));
       current_statement__ = 82;
       tau_prior_rate = std::numeric_limits<double>::quiet_NaN();
       
@@ -966,7 +966,7 @@ public:
             1));
         current_statement__ = 44;
         lp_accum__.add(
-          gamma_lpdf<propto__>(sigma_alpha, 2, sigma_alpha_prior_rate));
+          gamma_lpdf<propto__>(sigma_alpha, 3, sigma_alpha_prior_rate));
         current_statement__ = 45;
         lp_accum__.add(
           normal_lpdf<propto__>(
@@ -982,7 +982,7 @@ public:
                 cons_list(index_uni(2), nil_index_list())), "beta_raw"), 0,
             1));
         current_statement__ = 47;
-        lp_accum__.add(gamma_lpdf<propto__>(sigma_beta, 3, 10));
+        lp_accum__.add(gamma_lpdf<propto__>(sigma_beta, 9, 40));
         current_statement__ = 48;
         lp_accum__.add(
           dirichlet_lpdf<propto__>(mu_alpha_raw, rep_vector(50, G)));
@@ -997,7 +997,7 @@ public:
         current_statement__ = 52;
         lp_accum__.add(gamma_lpdf<propto__>(tau, 2, tau_prior_rate));
         current_statement__ = 53;
-        lp_accum__.add(dirichlet_lpdf<propto__>(rho, rep_vector(5, J)));
+        lp_accum__.add(dirichlet_lpdf<propto__>(rho, rep_vector(20, J)));
         current_statement__ = 54;
         lp_accum__.add(normal_lpdf<propto__>(logit_lambda, 0, 1));
         current_statement__ = 55;

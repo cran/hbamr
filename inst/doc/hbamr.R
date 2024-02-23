@@ -38,7 +38,7 @@ head_stimuli
 
 ## ----eval = FALSE-------------------------------------------------------------
 #  fit_fbam_multi <- hbam(self, stimuli, model = "FBAM_MULTI", group_id = self,
-#                         sigma_alpha = .8, sigma_mu_alpha = .5,
+#                         sigma_alpha = .8, sigma_mu_alpha = .7,
 #                         sigma_beta = .4, sigma_mu_beta = .25)
 
 ## ----fitfbam, eval = FALSE----------------------------------------------------
