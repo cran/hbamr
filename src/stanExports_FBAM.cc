@@ -2,12 +2,12 @@
 
 #include <Rcpp.h>
 using namespace Rcpp ;
-#include "stanExports_FBAM_MINI.h"
+#include "stanExports_FBAM.h"
 
-RCPP_MODULE(stan_fit4FBAM_MINI_mod) {
+RCPP_MODULE(stan_fit4FBAM_mod) {
 
 
-    class_<rstan::stan_fit<stan_model, boost::random::ecuyer1988> >("rstantools_model_FBAM_MINI")
+    class_<rstan::stan_fit<stan_model, boost::random::ecuyer1988> >("rstantools_model_FBAM")
 
     .constructor<SEXP,SEXP,SEXP>()
 

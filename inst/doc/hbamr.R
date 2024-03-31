@@ -132,14 +132,12 @@ print(loo1, simplify = FALSE)
 
 ## ----eval = FALSE-------------------------------------------------------------
 #  kfold_hbam_mini <- hbam_cv(self, stimuli, model = "HBAM_MINI")
-#  kfold_fbam_mini <- hbam_cv(self, stimuli, model = "FBAM_MINI")
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  print(loo::loo_compare(list(HBAM_MINI = kfold_hbam_mini,
-#                              FBAM_MINI = kfold_fbam_mini)), simplify = FALSE)
+#  kfold_hbam_mini
 
 ## ----echo = FALSE-------------------------------------------------------------
-print(loo2, simplify = FALSE)
+kfold_hbam_mini
 
 ## ----traceplot_code, eval = FALSE, include = TRUE-----------------------------
 #  rstan::traceplot(fit_hbam, pars = "theta")

@@ -515,17 +515,17 @@ homoskedastic. This model tends to sample faster faster than the
 standard HBAM model while yielding very similar point estimates. For
 large datasets, this model may provide a reasonable compromise between
 model complexity and estimation speed.</p>
-<p><strong>FBAM_MINI</strong> is a version of the HBAM_MINI model with
-fixed hyperparameters to allow fitting via optimization rather than MCMC
-– which can be useful for large data sets. This model allows the user to
+<p><strong>FBAM</strong> is a version of the HBAM model with fixed
+hyperparameters to allow fitting via optimization rather than MCMC –
+which can be useful for large data sets. This model allows the user to
 specify the scales of the priors for the shift and (logged) stretch
 parameters via the arguments <code>sigma_alpha</code> and
-<code>sigma_beta</code>. The default values are B / 4 and .35,
-respectively. These defaults are intended to be realistic and weakly
+<code>sigma_beta</code>. The default values are B / 5 and .3,
+respectively. These defaults are intended to be realistic and moderately
 informative. Users who want to control the degree of shrinkage of the
 individual-level parameters may find it useful to fit this model – or
 other FBAM models – via either MCMC or optimization.</p>
-<p><strong>FBAM_MULTI</strong> is a version of the FBAM_MINI model that
+<p><strong>FBAM_MULTI</strong> is a version of the FBAM model that
 shares the group-modeling features of the HBAM_MULTI model. It allows
 the user to set the scales of the priors for the shift and stretch
 parameters via the arguments <code>sigma_alpha</code> and
@@ -635,7 +635,7 @@ features)</caption>
 <thead>
 <tr class="header">
 <th></th>
-<th align="center">FBAM<br>MINI</th>
+<th align="center">FBAM</th>
 <th align="center">FBAM<br>MULTI</th>
 <th align="center">FBAM<br>MULTI_NF</th>
 <th align="center">HBAM<br>R_MINI</th>
@@ -677,9 +677,9 @@ features)</caption>
 </tr>
 <tr class="odd">
 <td>Heteroskedastic errors</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X</td>
+<td align="center">X</td>
 <td align="center"></td>
 <td align="center">X</td>
 </tr>
@@ -751,8 +751,8 @@ estimates.</p>
 <p>The <code>fbam()</code> function fits FBAM models using
 <code>rstan::optimizing()</code>. The <code>fbam()</code> function works
 just like the <code>hbam()</code> function, except the arguments for
-<code>rstan::sampling()</code> do not apply. To fit the FBAM_MINI model
-using default settings, we would run:</p>
+<code>rstan::sampling()</code> do not apply. To fit the FBAM model using
+default settings, we would run:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>fit_fbam <span class="ot">&lt;-</span> <span class="fu">fbam</span>(self, stimuli)</span></code></pre></div>
 </div>
 <div id="execution-times" class="section level3">
@@ -760,11 +760,10 @@ using default settings, we would run:</p>
 <p>Models of the kind included in the <strong>hbamr</strong> package
 face an inevitable trade-off between nuance (i.e. model complexity) and
 execution times. For small data sets (like ANES 1980), all models
-provide reasonable running times, but for large data sets (like ANES
-2012), more complex models tend to get slow. In these cases, the
-HBAM_MINI model may be a useful alternative. For very large data sets,
-fitting the FBAM_MINI model via optimization may be the best
-alternative.</p>
+provide reasonable running times, but for large data sets, more complex
+models tend to get slow. In these cases, the HBAM_MINI model may be a
+useful alternative. For very large data sets, fitting the FBAM model via
+optimization may be the best alternative.</p>
 <table>
 <caption>Execution times on an Intel Core i5 2.0-3.8 GHz CPU</caption>
 <colgroup>
@@ -781,8 +780,8 @@ alternative.</p>
 <th align="center">HBAM <br>iter=2000</th>
 <th align="center">HBAM_NF <br>iter=2000</th>
 <th align="center">HBAM_MINI <br>iter=2000</th>
-<th align="center">FBAM_MINI<br>iter=2000</th>
-<th align="center">FBAM_MINI <br>optimization</th>
+<th align="center">FBAM<br>iter=2000</th>
+<th align="center">FBAM <br>optimization</th>
 </tr>
 </thead>
 <tbody>
@@ -791,12 +790,12 @@ alternative.</p>
 <td align="center">5m</td>
 <td align="center">1m 20s</td>
 <td align="center">3m 30s</td>
-<td align="center">3m 45s</td>
+<td align="center">5m</td>
 <td align="center">3s</td>
 </tr>
 <tr class="even">
 <td><strong>ANES 2012</strong> <br>  (N=4949, J=4)</td>
-<td align="center">1h</td>
+<td align="center">40m</td>
 <td align="center">15m</td>
 <td align="center">35m</td>
 <td align="center">40m</td>
@@ -2556,33 +2555,28 @@ and HBAM_MULTI models outperform the other two models in this case. The
 HBAM_MULTI model – with self-placements as <code>group_id</code> – may
 have a slight edge, but the default HBAM model performs about equally
 well.</p>
-<p>We could also perform cross-validation for a couple of models that do
-not account for heteroskedastic errors:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>kfold_hbam_mini <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_MINI&quot;</span>)</span>
-<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>kfold_fbam_mini <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;FBAM_MINI&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="fu">print</span>(loo<span class="sc">::</span><span class="fu">loo_compare</span>(<span class="fu">list</span>(<span class="at">HBAM_MINI =</span> kfold_hbam_mini, </span>
-<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>                            <span class="at">FBAM_MINI =</span> kfold_fbam_mini)), <span class="at">simplify =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>##           elpd_diff se_diff elpd_kfold se_elpd_kfold
-## HBAM_MINI     0.0       0.0 -5882.0       48.6      
-## FBAM_MINI  -158.7      22.9 -6040.7       46.0</code></pre>
-<p>The ELPD for the FBAM_MINI model is lower than that of the HBAM_MINI
-model, which suggests that the default priors of the FBAM model are too
-wide to yield optimal results for these data. While the ELPD for the
-HBAM_MINI model is higher than that of the FBAM model, it is still
-notably lower than that of its heteroskedastic counterpart (HBAM). This
-suggest there is a considerable degree of heteroskedasticity in the data
-– which is not surprising.</p>
-<p>Modeling the heteroskedasticity increases prediction accuracy, but it
-should be noted that this does not necessarily translate into much more
-accurate estimates of key model outputs. As shown in section on
-plotting, the results for the HBAM and HBAM_MINI models are very
-similar. In fact, their estimated respondent positions correlate at .97
-and .99, depending on whether we use the posterior means or medians.
-Their estimated stimulus positions also correlate at .99, but this masks
-the fact that the HBAM_MINI model places the less well known candidate
-John B. Anderson further to the left than the HBAM model does. There are
-some subtle differences that users should be aware of, even if these
-models tend to produce very similar results.</p>
+<p>We could also perform cross-validation for a model that does not
+account for heteroskedastic errors:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>kfold_hbam_mini <span class="ot">&lt;-</span> <span class="fu">hbam_cv</span>(self, stimuli, <span class="at">model =</span> <span class="st">&quot;HBAM_MINI&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a>kfold_hbam_mini</span></code></pre></div>
+<pre><code>## 
+## 
+##            Estimate   SE
+## elpd_kfold  -5882.0 48.6</code></pre>
+<p>The ELPD for the HBAM_MINI model is notably lower than that of the
+HBAM model, which suggest there is a considerable degree of
+heteroskedasticity in the data. While modeling the heteroskedasticity
+increases prediction accuracy, it should be noted that this does not
+necessarily translate into much more accurate estimates of key model
+outputs. As shown in section on plotting, the results for the HBAM and
+HBAM_MINI models are very similar. In fact, their estimated respondent
+positions correlate at .97 and .99, depending on whether we use the
+posterior means or medians. Their estimated stimulus positions also
+correlate at .99, but this masks the fact that the HBAM_MINI model
+places the less well known candidate John B. Anderson further to the
+left than the HBAM model does. There are some subtle differences that
+users should be aware of, even if these models tend to produce very
+similar results.</p>
 </div>
 <div id="diagnostics" class="section level2">
 <h2>Diagnostics</h2>
