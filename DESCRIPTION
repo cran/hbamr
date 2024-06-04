@@ -1,6 +1,6 @@
 Package: hbamr
 Title: Hierarchical Bayesian Aldrich-McKelvey Scaling via 'Stan'
-Version: 2.3.0
+Version: 2.3.1
 Authors@R: 
     person("Jørgen", "Bølstad", , "jorgen.bolstad@stv.uio.no", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7623-5741"))
@@ -32,8 +32,8 @@ RoxygenNote: 7.3.1
 SystemRequirements: GNU make
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2024-03-31 17:33:25 UTC; boelstad
+Packaged: 2024-06-04 13:10:36 UTC; boelstad
 Author: Jørgen Bølstad [aut, cre] (<https://orcid.org/0000-0002-7623-5741>)
 Maintainer: Jørgen Bølstad <jorgen.bolstad@stv.uio.no>
 Repository: CRAN
-Date/Publication: 2024-03-31 19:20:02 UTC
+Date/Publication: 2024-06-04 15:50:06 UTC

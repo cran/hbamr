@@ -58,8 +58,8 @@ static constexpr std::array<const char*, 87> locations_array__ =
   " (in 'FBAM_MULTI_NF', line 79, column 4 to column 30)",
   " (in 'FBAM_MULTI_NF', line 77, column 4 to column 78)",
   " (in 'FBAM_MULTI_NF', line 76, column 2 to line 79, column 30)",
-  " (in 'FBAM_MULTI_NF', line 60, column 2 to column 27)",
-  " (in 'FBAM_MULTI_NF', line 61, column 2 to column 26)",
+  " (in 'FBAM_MULTI_NF', line 60, column 2 to column 33)",
+  " (in 'FBAM_MULTI_NF', line 61, column 2 to column 32)",
   " (in 'FBAM_MULTI_NF', line 62, column 2 to column 27)",
   " (in 'FBAM_MULTI_NF', line 63, column 2 to column 26)",
   " (in 'FBAM_MULTI_NF', line 64, column 2 to column 46)",
@@ -614,9 +614,11 @@ public:
       }
       {
         current_statement__ = 30;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, (B /
+                         2.0)));
         current_statement__ = 31;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_lr, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_lr, 0, (B /
+                         2.0)));
         current_statement__ = 32;
         lp_accum__.add(stan::math::normal_lpdf<propto__>(alpha_raw, 0, 1));
         current_statement__ = 33;
@@ -632,7 +634,7 @@ public:
                          nu, eta_scale));
         current_statement__ = 37;
         lp_accum__.add(stan::math::dirichlet_lpdf<propto__>(rho,
-                         stan::math::rep_vector(20, J)));
+                         stan::math::rep_vector(50, J)));
         current_statement__ = 40;
         if (stan::math::logical_eq(CV, 0)) {
           current_statement__ = 39;

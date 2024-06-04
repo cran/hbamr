@@ -51,9 +51,9 @@ static constexpr std::array<const char*, 63> locations_array__ =
   " (in 'BAM', line 38, column 2 to line 41, column 3)",
   " (in 'BAM', line 44, column 2 to column 29)",
   " (in 'BAM', line 45, column 2 to column 28)",
-  " (in 'BAM', line 46, column 2 to column 27)",
-  " (in 'BAM', line 47, column 2 to column 24)",
-  " (in 'BAM', line 48, column 2 to column 24)",
+  " (in 'BAM', line 46, column 2 to column 33)",
+  " (in 'BAM', line 47, column 2 to column 30)",
+  " (in 'BAM', line 48, column 2 to column 30)",
   " (in 'BAM', line 49, column 2 to column 45)",
   " (in 'BAM', line 50, column 2 to column 22)",
   " (in 'BAM', line 51, column 2 to column 32)",
@@ -486,11 +486,12 @@ public:
         current_statement__ = 22;
         lp_accum__.add(stan::math::uniform_lpdf<propto__>(beta, -100, 100));
         current_statement__ = 23;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, (B /
+                         2.0)));
         current_statement__ = 24;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(thetal, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(thetal, 0, (B / 2.0)));
         current_statement__ = 25;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(thetar, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(thetar, 0, (B / 2.0)));
         current_statement__ = 26;
         lp_accum__.add(stan::math::scaled_inv_chi_square_lpdf<propto__>(eta,
                          nu, eta_scale));
@@ -501,7 +502,7 @@ public:
                          1.0))));
         current_statement__ = 29;
         lp_accum__.add(stan::math::dirichlet_lpdf<propto__>(rho,
-                         stan::math::rep_vector(20, J)));
+                         stan::math::rep_vector(50, J)));
         current_statement__ = 32;
         if (stan::math::logical_eq(CV, 0)) {
           current_statement__ = 31;

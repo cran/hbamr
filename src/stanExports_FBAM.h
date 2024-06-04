@@ -62,8 +62,8 @@ static constexpr std::array<const char*, 87> locations_array__ =
   " (in 'FBAM', line 83, column 4 to column 30)",
   " (in 'FBAM', line 81, column 4 to column 78)",
   " (in 'FBAM', line 80, column 2 to line 83, column 30)",
-  " (in 'FBAM', line 56, column 2 to column 27)",
-  " (in 'FBAM', line 57, column 2 to column 26)",
+  " (in 'FBAM', line 56, column 2 to column 33)",
+  " (in 'FBAM', line 57, column 2 to column 32)",
   " (in 'FBAM', line 58, column 2 to column 32)",
   " (in 'FBAM', line 59, column 2 to column 32)",
   " (in 'FBAM', line 60, column 2 to column 31)",
@@ -598,9 +598,11 @@ public:
       stan::math::check_less_or_equal(function__, "lambda", lambda, 1);
       {
         current_statement__ = 34;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, (B /
+                         2.0)));
         current_statement__ = 35;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_lr, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_lr, 0, (B /
+                         2.0)));
         current_statement__ = 36;
         lp_accum__.add(stan::math::normal_lpdf<propto__>(
                          stan::model::rvalue(alpha_raw, "alpha_raw",
@@ -626,7 +628,7 @@ public:
                          nu, eta_scale));
         current_statement__ = 41;
         lp_accum__.add(stan::math::dirichlet_lpdf<propto__>(rho,
-                         stan::math::rep_vector(20, J)));
+                         stan::math::rep_vector(50, J)));
         current_statement__ = 42;
         lp_accum__.add(stan::math::normal_lpdf<propto__>(lambda_raw, 0, 1));
         current_statement__ = 45;

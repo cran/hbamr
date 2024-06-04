@@ -62,8 +62,8 @@ static constexpr std::array<const char*, 87> locations_array__ =
   " (in 'HBAM', line 49, column 4 to line 53, column 41)",
   " (in 'HBAM', line 48, column 21 to line 54, column 3)",
   " (in 'HBAM', line 48, column 2 to line 54, column 3)",
-  " (in 'HBAM', line 57, column 2 to column 27)",
-  " (in 'HBAM', line 58, column 2 to column 26)",
+  " (in 'HBAM', line 57, column 2 to column 33)",
+  " (in 'HBAM', line 58, column 2 to column 32)",
   " (in 'HBAM', line 59, column 2 to column 32)",
   " (in 'HBAM', line 60, column 2 to column 32)",
   " (in 'HBAM', line 61, column 2 to column 49)",
@@ -96,7 +96,7 @@ static constexpr std::array<const char*, 87> locations_array__ =
   " (in 'HBAM', line 12, column 2 to column 31)",
   " (in 'HBAM', line 13, column 31 to column 36)",
   " (in 'HBAM', line 13, column 2 to column 46)",
-  " (in 'HBAM', line 16, column 2 to column 64)",
+  " (in 'HBAM', line 16, column 2 to column 63)",
   " (in 'HBAM', line 17, column 2 to column 55)",
   " (in 'HBAM', line 18, column 31 to column 36)",
   " (in 'HBAM', line 18, column 2 to column 64)",
@@ -325,7 +325,7 @@ public:
       current_statement__ = 68;
       sigma_alpha_prior_rate = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 68;
-      sigma_alpha_prior_rate = ((3 - 1) / (B / 10.0));
+      sigma_alpha_prior_rate = ((5 - 1) / (B / 8.0));
       current_statement__ = 69;
       tau_prior_rate = std::numeric_limits<double>::quiet_NaN();
       current_statement__ = 69;
@@ -590,9 +590,11 @@ public:
         0);
       {
         current_statement__ = 34;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, (B /
+                         2.0)));
         current_statement__ = 35;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_lr, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_lr, 0, (B /
+                         2.0)));
         current_statement__ = 36;
         lp_accum__.add(stan::math::normal_lpdf<propto__>(
                          stan::model::rvalue(alpha_raw, "alpha_raw",
@@ -604,7 +606,7 @@ public:
                            stan::model::index_omni(),
                            stan::model::index_uni(2)), 0, 1));
         current_statement__ = 38;
-        lp_accum__.add(stan::math::gamma_lpdf<propto__>(sigma_alpha, 3,
+        lp_accum__.add(stan::math::gamma_lpdf<propto__>(sigma_alpha, 5,
                          sigma_alpha_prior_rate));
         current_statement__ = 39;
         lp_accum__.add(stan::math::normal_lpdf<propto__>(
@@ -628,7 +630,7 @@ public:
                          tau_prior_rate));
         current_statement__ = 45;
         lp_accum__.add(stan::math::dirichlet_lpdf<propto__>(rho,
-                         stan::math::rep_vector(20, J)));
+                         stan::math::rep_vector(50, J)));
         current_statement__ = 46;
         lp_accum__.add(stan::math::normal_lpdf<propto__>(lambda_raw, 0, 1));
         current_statement__ = 47;

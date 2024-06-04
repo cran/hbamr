@@ -57,8 +57,8 @@ static constexpr std::array<const char*, 77> locations_array__ =
   " (in 'HBAM_MINI', line 45, column 4 to line 47, column 83)",
   " (in 'HBAM_MINI', line 44, column 21 to line 48, column 3)",
   " (in 'HBAM_MINI', line 44, column 2 to line 48, column 3)",
-  " (in 'HBAM_MINI', line 51, column 2 to column 27)",
-  " (in 'HBAM_MINI', line 52, column 2 to column 26)",
+  " (in 'HBAM_MINI', line 51, column 2 to column 33)",
+  " (in 'HBAM_MINI', line 52, column 2 to column 32)",
   " (in 'HBAM_MINI', line 53, column 2 to column 32)",
   " (in 'HBAM_MINI', line 54, column 2 to column 32)",
   " (in 'HBAM_MINI', line 55, column 2 to column 49)",
@@ -66,7 +66,7 @@ static constexpr std::array<const char*, 77> locations_array__ =
   " (in 'HBAM_MINI', line 57, column 2 to column 31)",
   " (in 'HBAM_MINI', line 58, column 2 to column 28)",
   " (in 'HBAM_MINI', line 59, column 2 to column 33)",
-  " (in 'HBAM_MINI', line 60, column 1 to column 27)",
+  " (in 'HBAM_MINI', line 60, column 2 to column 28)",
   " (in 'HBAM_MINI', line 61, column 2 to column 27)",
   " (in 'HBAM_MINI', line 65, column 4 to column 42)",
   " (in 'HBAM_MINI', line 63, column 4 to column 27)",
@@ -540,9 +540,11 @@ public:
       stan::math::check_less_or_equal(function__, "lambda", lambda, 1);
       {
         current_statement__ = 29;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, (B /
+                         2.0)));
         current_statement__ = 30;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_lr, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_lr, 0, (B /
+                         2.0)));
         current_statement__ = 31;
         lp_accum__.add(stan::math::normal_lpdf<propto__>(
                          stan::model::rvalue(alpha_raw, "alpha_raw",

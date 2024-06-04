@@ -69,8 +69,8 @@ static constexpr std::array<const char*, 105> locations_array__ =
   " (in 'HBAM_R_MINI', line 68, column 4 to column 40)",
   " (in 'HBAM_R_MINI', line 57, column 21 to line 69, column 3)",
   " (in 'HBAM_R_MINI', line 57, column 2 to line 69, column 3)",
-  " (in 'HBAM_R_MINI', line 72, column 2 to column 27)",
-  " (in 'HBAM_R_MINI', line 73, column 2 to column 26)",
+  " (in 'HBAM_R_MINI', line 72, column 2 to column 33)",
+  " (in 'HBAM_R_MINI', line 73, column 2 to column 32)",
   " (in 'HBAM_R_MINI', line 74, column 2 to column 32)",
   " (in 'HBAM_R_MINI', line 75, column 2 to column 32)",
   " (in 'HBAM_R_MINI', line 76, column 2 to column 49)",
@@ -734,9 +734,11 @@ public:
       stan::math::check_less_or_equal(function__, "lambda", lambda, 1);
       {
         current_statement__ = 41;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_raw, 0, (B /
+                         2.0)));
         current_statement__ = 42;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_lr, 0, B));
+        lp_accum__.add(stan::math::normal_lpdf<propto__>(theta_lr, 0, (B /
+                         2.0)));
         current_statement__ = 43;
         lp_accum__.add(stan::math::normal_lpdf<propto__>(
                          stan::model::rvalue(alpha_raw, "alpha_raw",
