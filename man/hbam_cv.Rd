@@ -92,18 +92,18 @@ stimuli <- LC1980[1:50, -1]
   # Note: You would normally want to use all physical cores for this.
 future::plan(future::multisession, workers = 2)
 
-# Performing 10-fold cross-validation for the HBAM_MINI model:
+# Performing 4-fold cross-validation for the HBAM_MINI model:
   # Note: You would typically want to run the chains for more iterations.
-cv_hbam_mini <- hbam_cv(self, stimuli, model = "HBAM_MINI",
+cv_hbam_mini <- hbam_cv(self, stimuli, model = "HBAM_MINI", K = 4,
                         chains = 1, warmup = 500, iter = 1000)
 
-# Performing 10-fold cross-validation for the FBAM model:
-cv_FBAM <- hbam_cv(self, stimuli, model = "FBAM",
+# Performing 4-fold cross-validation for the FBAM model:
+cv_fbam <- hbam_cv(self, stimuli, model = "FBAM", K = 4,
                         chains = 1, warmup = 500, iter = 1000)
 
 # Comparing the results using the loo package:
 loo::loo_compare(list(HBAM_MINI = cv_hbam_mini,
-                 FBAM = cv_FBAM))
+                 FBAM = cv_fbam))
 
 # Stop the cluster of parallel sessions:
 future::plan(future::sequential)
