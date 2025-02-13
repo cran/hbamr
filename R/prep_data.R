@@ -9,7 +9,7 @@
 #' @param allow_miss Integer specifying how many missing stimulus positions to be accepted for an individual still to be included in the analysis. Defaults to 2.
 #' @param req_valid Integer specifying how many valid observations to require for a respondent to be included in the analysis. The default is `req_valid = J - allow_miss`, but if specified, `req_valid` takes precedence.
 #' @param req_unique Integer specifying how may unique positions on the ideological scale each respondent is required to have used when placing the stimuli in order to be included in the analysis. The default is `req_unique = 2`.
-#' @param B Integer specifying the upper bound of the survey scale after centering. If not supplied, this information will be inferred from the data.
+#' @param B Scalar specifying the upper bound of the survey scale after centering. If not supplied, this information will be inferred from the data.
 #' @param group_id Vector of length N identifying which group each respondent belongs to. The format can be factor, character, integer, or numeric. Respondents with NAs on `group_id` will be dropped when `group_id` is supplied. These data are only required by models with `"MULTI"` in their name and will be ignored when fitting other models.
 #' @param quiet Logical: Should information about the data be printed to the console? Defaults to `TRUE`.
 #' @return A list of data to be used by `hbam()` or `fbam()`. The returned list includes the logical vector `keep`, which identifies the rows in the original data that have been kept for further analysis. The stimuli data are stored in a vector as a long-form sparse matrix. If the stimuli data include column-names, these will be preserved for later use.
@@ -167,8 +167,8 @@ prep_data <- function(self = NULL, stimuli,
     warning("The supplied data appear to have an even number of possible placements, which means there is no center-category. All models except HBAM_R_MINI will still work, but you may want to check your data for errors.")
   }
 
-  datlist <- list(J = ncol(stimuli), N = nrow(stimuli), B = B, N_obs = length(stimuli_vec),
-       V = self, Y = stimuli_vec, U = prefs_vec, L = L, R = R,
+  datlist <- list(J = ncol(stimuli), N = nrow(stimuli), B = B, B2 = ceiling(B), N_obs = length(stimuli_vec),
+       V = self, V_int = round(self), Y = stimuli_vec, U = prefs_vec, L = L, R = R,
        ii = ii, jj = jj, gg = group_id, G = length(unique(group_id)), ggfac = group_id_fac, mean_spos = mean_spos, keep = keep, names = colnames(stimuli),
        CV = 0, holdout = rep(0, length(stimuli_vec)), V_supplied = V_supplied, U_supplied = U_supplied, N_orig = N_orig)
   class(datlist) <- c("list", "hbam_data")
