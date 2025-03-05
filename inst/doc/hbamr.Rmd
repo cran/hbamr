@@ -105,12 +105,6 @@ This package provides several alternative models that can be selected using the 
 
 These models can also be used in situations where self-placements are not available and the only goal is to estimate stimulus positions or respondents' shift and stretch parameters. While the latent respondent positions will not be estimated, all other parameters are unaffected if the argument `self` is dropped when calling `prep_data()` or `hbam()`.
 
-To see the Stan code for any of the models, use the `show_code()` function:
-
-```{r, eval = FALSE}
-show_code("HBAM_MULTI")
-```
-
 ### Summary of Model Features
 
 |                        | HBAM<br>  | HBAM<br>MULTI | HBAM<br>NF | HBAM<br>MULTI_NF | HBAM<br>MINI |
@@ -189,10 +183,10 @@ Models of the kind included in the **hbamr** package face an inevitable trade-of
 
 |                                   | HBAM <br>iter=2000 | HBAM_NF <br>iter=2000 | HBAM_MINI <br>iter=2000 | FBAM<br>iter=2000 | FBAM <br>optimization |
 |--------------|:----------:|:----------:|:----------:|:----------:|:----------:|
-| **ANES 1980** <br>  (N=643, J=6)  |          5m          |         1m 20s          |          3m 30s           |          5m          |             3s             |
-| **ANES 2012** <br>  (N=4949, J=4) |          40m         |           15m           |            35m            |           40m            |            21s             |
+| **ANES 1980** <br>  (N=643, J=6)  |          1m          |          25s          |          50s           |          1m          |             3s             |
+| **ANES 2012** <br>  (N=4949, J=4) |          10m         |           3m 40s        |            8m            |           10m            |            12s             |
 
-: Execution times on an Intel Core i5 2.0-3.8 GHz CPU
+: Execution times on an Apple M4 Pro CPU
 
 ## Plotting
 

@@ -20,9 +20,6 @@ head_stimuli
 ## ----prep_data, echo = TRUE, eval = FALSE-------------------------------------
 # dat <- prep_data(self, stimuli)
 
-## ----eval = FALSE-------------------------------------------------------------
-# show_code("HBAM_MULTI")
-
 ## ----fithbam1, eval = FALSE---------------------------------------------------
 # fit_hbam <- hbam(self, stimuli)
 

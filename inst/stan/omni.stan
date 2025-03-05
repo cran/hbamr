@@ -7,13 +7,13 @@ data {
   array[N_obs] int<lower = 1> jj;         // index j in matrix
   array[N] int<lower = 1> gg;             // group-index of i
   real<lower = 0> B;                      // length of scale -1 / 2
-  int<lower = 1> B2;                      // ceiling of scale-length -1 / 2
   int<lower = 1, upper = J> L;            // left pole
   int<lower = 1, upper = J> R;            // right pole
+  int<lower = 1> K;                       // number of possible placements
   array[N_obs] real<lower = -B, upper = B> Y; // reported stimuli positions
   array[N_obs] real<lower = 0, upper = 1> U; // reported voter preferences
   array[N] real<lower = -B, upper = B> V;  // reported voter positions
-  array[N] int V_int;                     // reported voter positions, as int
+  array[N] int Vi;                        // reported voter positions, as int
   vector[J] mean_spos;                    // average stimuli placements
   real<lower = 0> sigma_mu_alpha;         // sd of prior on mu_alpha, MULTI
   real<lower = 0> sigma_mu_beta;          // sd of prior on mu_beta, MULTI
@@ -40,6 +40,7 @@ transformed data {
   vector<lower = 0, upper = 1>[N_obs] not_holdout = 1 - holdout;
   real mean_mu_simplexes = 1.0 / G;       // for later scaling of simplexes
   real sd_mu_simplexes = sqrt(mean_mu_simplexes * (1 - mean_mu_simplexes) / (50 * G + 1));
+  real tau_multip = 1 / sqrt(N_obs);
   array[2, N_obs] real<lower = -B, upper = B> p;
   for (n in 1:N_obs) {
     p[1, n] = U[n] * V[ii[n]] + B * U[n] - B;
@@ -57,7 +58,7 @@ parameters {
   array[bam == 0 && fixed == 0 ? 1 : 0] real<lower = 0> sigma_alpha_par; // sd of alpha
   array[bam == 0 && fixed == 0 ? 1 : 0] real<lower = 0, upper = 2> sigma_beta_par; // sd of log(beta)
   array[het == 1 && fixed == 0 ? 1 : 0] real<lower = 3, upper = 30> nu_par; // concentration of etas
-  array[1 - fixed] real<lower = 0> tau_par; // scale of errors
+  array[1 - fixed] real<multiplier = tau_multip> tau_par; // scale of errors
   vector<lower = 0>[het == 1 ? N : 0] eta; // mean ind. error variance x J^2
   simplex[het == 1 ? J : 1] rho;          // stimuli-shares of variance
   vector[flip == 1 ? N : 0] lambda_raw;   // raw mixing proportion, flipping
@@ -65,7 +66,7 @@ parameters {
   array[rat == 1 ? N : 0] real<lower = 0, upper = 1> gamma; // rationalization per respondent
   array[rat] real<lower = 1> gam_a;       // hyperparameter for gamma
   array[rat] real<lower = 1> gam_b;       // hyperparameter for gamma
-  vector<lower = 0, upper = 1>[rat == 1 ? 2 * B2 + 1 : 0] zeta; // direction of rationalization
+  vector<lower = 0, upper = 1>[rat == 1 ? K : 0] zeta; // direction of rationalization
 }
 
 transformed parameters {
@@ -150,13 +151,13 @@ transformed parameters {
         vector[2] mu0;                    // dif-adjusted mean
         mu0[1] = alpha0[ii[n], 1] + beta0[ii[n], 1] * theta[jj[n]];
         mu0[2] = alpha0[ii[n], 2] + beta0[ii[n], 2] * theta[jj[n]];
-        log_probs[1] = log(lambda[ii[n]]) + log(zeta[V_int[ii[n]] + B2 + 1]) +
+        log_probs[1] = log(lambda[ii[n]]) + log(zeta[Vi[ii[n]]]) +
           normal_lpdf(Y[n] | (1 - gamma[ii[n]]) * mu0[1] + gamma[ii[n]] * p[1, n], tau);
-        log_probs[2] = log(lambda[ii[n]]) + log((1 - zeta[V_int[ii[n]] + B2 + 1])) +
+        log_probs[2] = log(lambda[ii[n]]) + log((1 - zeta[Vi[ii[n]]])) +
           normal_lpdf(Y[n] | (1 - gamma[ii[n]]) * mu0[1] + gamma[ii[n]] * p[2, n], tau);
-        log_probs[3] = log((1 - lambda[ii[n]])) + log(zeta[V_int[ii[n]] + B2 + 1]) +
+        log_probs[3] = log((1 - lambda[ii[n]])) + log(zeta[Vi[ii[n]]]) +
           normal_lpdf(Y[n] | (1 - gamma[ii[n]]) * mu0[2] + gamma[ii[n]] * p[1, n], tau);
-        log_probs[4] = log((1 - lambda[ii[n]])) + log((1 - zeta[V_int[ii[n]] + B2 + 1])) +
+        log_probs[4] = log((1 - lambda[ii[n]])) + log((1 - zeta[Vi[ii[n]]])) +
           normal_lpdf(Y[n] | (1 - gamma[ii[n]]) * mu0[2] + gamma[ii[n]] * p[2, n], tau);
         log_lik[n] = log_sum_exp(log_probs);
       }
@@ -193,9 +194,9 @@ model {
   } else {
     theta_lr ~ normal(0, B / 2.0);
     alpha_raw[, 1] ~ normal(0, 1);
-    sigma_alpha ~ gamma(5, sigma_alpha_prior_rate);
+    sigma_alpha_par ~ gamma(5, sigma_alpha_prior_rate);
     beta_raw[, 1] ~ normal(0, 1);
-    sigma_beta ~ gamma(9, 40);
+    sigma_beta_par ~ gamma(9, 40);
   }
   if (group == 1) {
     mu_alpha_raw ~ dirichlet(rep_vector(50, G));
@@ -208,7 +209,7 @@ model {
     alpha_raw[, 2] ~ normal(0, 1);
     beta_raw[, 2] ~ normal(0, 1);
     lambda_raw ~ normal(0, 1);
-    psi ~ lognormal(1.4, .5);
+    psi_par ~ lognormal(1.4, .5);
   }
   if (rat == 1) {
     gamma ~ beta(gam_a[1], gam_b[1]);
@@ -218,12 +219,12 @@ model {
   }
   if (het == 1) {
     eta ~ scaled_inv_chi_square(nu[1], eta_scale[1]);
-    nu ~ gamma(25, 2.5);
+    nu_par ~ gamma(25, 2.5);
     rho ~ dirichlet(rep_vector(50, J));
   } else {
     rho ~ dirichlet(rep_vector(50, 1));
   }
-  tau ~ gamma(2, tau_prior_rate);
+  tau_par ~ gamma(2, tau_prior_rate);
 
   if (CV == 0)
     target += sum(log_lik);

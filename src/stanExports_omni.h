@@ -27,203 +27,203 @@ namespace model_omni_namespace {
 using stan::model::model_base_crtp;
 using namespace stan::math;
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 290> locations_array__ =
+static constexpr std::array<const char*, 291> locations_array__ =
   {" (found before start of program)",
-  " (in 'omni', line 49, column 2 to column 32)",
-  " (in 'omni', line 50, column 2 to column 31)",
-  " (in 'omni', line 51, column 2 to column 37)",
-  " (in 'omni', line 52, column 2 to column 26)",
-  " (in 'omni', line 53, column 2 to column 43)",
-  " (in 'omni', line 54, column 2 to column 42)",
-  " (in 'omni', line 55, column 2 to column 72)",
-  " (in 'omni', line 56, column 2 to column 82)",
-  " (in 'omni', line 57, column 2 to column 75)",
-  " (in 'omni', line 58, column 2 to column 43)",
-  " (in 'omni', line 59, column 2 to column 42)",
-  " (in 'omni', line 60, column 2 to column 32)",
-  " (in 'omni', line 61, column 2 to column 39)",
-  " (in 'omni', line 62, column 2 to column 65)",
-  " (in 'omni', line 63, column 2 to column 59)",
-  " (in 'omni', line 64, column 2 to column 35)",
+  " (in 'omni', line 50, column 2 to column 32)",
+  " (in 'omni', line 51, column 2 to column 31)",
+  " (in 'omni', line 52, column 2 to column 37)",
+  " (in 'omni', line 53, column 2 to column 26)",
+  " (in 'omni', line 54, column 2 to column 43)",
+  " (in 'omni', line 55, column 2 to column 42)",
+  " (in 'omni', line 56, column 2 to column 72)",
+  " (in 'omni', line 57, column 2 to column 82)",
+  " (in 'omni', line 58, column 2 to column 75)",
+  " (in 'omni', line 59, column 2 to column 57)",
+  " (in 'omni', line 60, column 2 to column 42)",
+  " (in 'omni', line 61, column 2 to column 32)",
+  " (in 'omni', line 62, column 2 to column 39)",
+  " (in 'omni', line 63, column 2 to column 65)",
+  " (in 'omni', line 64, column 2 to column 59)",
   " (in 'omni', line 65, column 2 to column 35)",
-  " (in 'omni', line 66, column 2 to column 63)",
-  " (in 'omni', line 69, column 2 to column 37)",
-  " (in 'omni', line 70, column 2 to column 22)",
-  " (in 'omni', line 71, column 2 to column 29)",
-  " (in 'omni', line 72, column 2 to column 28)",
-  " (in 'omni', line 73, column 2 to column 24)",
-  " (in 'omni', line 74, column 2 to column 57)",
-  " (in 'omni', line 75, column 2 to column 38)",
-  " (in 'omni', line 76, column 2 to column 37)",
-  " (in 'omni', line 77, column 2 to column 39)",
-  " (in 'omni', line 78, column 2 to column 45)",
-  " (in 'omni', line 79, column 2 to column 55)",
-  " (in 'omni', line 80, column 2 to column 44)",
-  " (in 'omni', line 81, column 2 to column 22)",
-  " (in 'omni', line 82, column 2 to column 34)",
-  " (in 'omni', line 227, column 2 to column 37)",
-  " (in 'omni', line 228, column 2 to column 34)",
-  " (in 'omni', line 229, column 2 to column 18)",
-  " (in 'omni', line 230, column 2 to column 17)",
-  " (in 'omni', line 231, column 2 to column 16)",
-  " (in 'omni', line 232, column 2 to column 51)",
-  " (in 'omni', line 97, column 4 to column 20)",
-  " (in 'omni', line 99, column 6 to column 41)",
-  " (in 'omni', line 100, column 6 to column 39)",
-  " (in 'omni', line 98, column 18 to line 101, column 5)",
-  " (in 'omni', line 98, column 4 to line 101, column 5)",
-  " (in 'omni', line 103, column 6 to column 23)",
-  " (in 'omni', line 104, column 6 to column 29)",
-  " (in 'omni', line 102, column 18 to line 105, column 5)",
-  " (in 'omni', line 102, column 4 to line 105, column 5)",
-  " (in 'omni', line 107, column 6 to column 25)",
-  " (in 'omni', line 106, column 19 to line 108, column 5)",
-  " (in 'omni', line 106, column 4 to line 108, column 5)",
-  " (in 'omni', line 96, column 9 to line 109, column 3)",
-  " (in 'omni', line 84, column 4 to column 21)",
-  " (in 'omni', line 86, column 6 to column 36)",
-  " (in 'omni', line 87, column 6 to column 34)",
-  " (in 'omni', line 85, column 18 to line 88, column 5)",
-  " (in 'omni', line 85, column 4 to line 88, column 5)",
-  " (in 'omni', line 90, column 6 to column 18)",
-  " (in 'omni', line 91, column 6 to column 29)",
-  " (in 'omni', line 89, column 18 to line 92, column 5)",
-  " (in 'omni', line 89, column 4 to line 92, column 5)",
-  " (in 'omni', line 94, column 6 to column 20)",
-  " (in 'omni', line 93, column 19 to line 95, column 5)",
-  " (in 'omni', line 93, column 4 to line 95, column 5)",
-  " (in 'omni', line 83, column 18 to line 96, column 3)",
-  " (in 'omni', line 83, column 2 to line 109, column 3)",
-  " (in 'omni', line 111, column 4 to column 87)",
-  " (in 'omni', line 112, column 4 to column 84)",
-  " (in 'omni', line 110, column 18 to line 113, column 3)",
-  " (in 'omni', line 110, column 2 to line 113, column 3)",
-  " (in 'omni', line 114, column 2 to column 20)",
-  " (in 'omni', line 125, column 4 to column 27)",
+  " (in 'omni', line 66, column 2 to column 35)",
+  " (in 'omni', line 67, column 2 to column 54)",
+  " (in 'omni', line 70, column 2 to column 37)",
+  " (in 'omni', line 71, column 2 to column 22)",
+  " (in 'omni', line 72, column 2 to column 29)",
+  " (in 'omni', line 73, column 2 to column 28)",
+  " (in 'omni', line 74, column 2 to column 24)",
+  " (in 'omni', line 75, column 2 to column 57)",
+  " (in 'omni', line 76, column 2 to column 38)",
+  " (in 'omni', line 77, column 2 to column 37)",
+  " (in 'omni', line 78, column 2 to column 39)",
+  " (in 'omni', line 79, column 2 to column 45)",
+  " (in 'omni', line 80, column 2 to column 55)",
+  " (in 'omni', line 81, column 2 to column 44)",
+  " (in 'omni', line 82, column 2 to column 22)",
+  " (in 'omni', line 83, column 2 to column 34)",
+  " (in 'omni', line 228, column 2 to column 37)",
+  " (in 'omni', line 229, column 2 to column 34)",
+  " (in 'omni', line 230, column 2 to column 18)",
+  " (in 'omni', line 231, column 2 to column 17)",
+  " (in 'omni', line 232, column 2 to column 16)",
+  " (in 'omni', line 233, column 2 to column 51)",
+  " (in 'omni', line 98, column 4 to column 20)",
+  " (in 'omni', line 100, column 6 to column 41)",
+  " (in 'omni', line 101, column 6 to column 39)",
+  " (in 'omni', line 99, column 18 to line 102, column 5)",
+  " (in 'omni', line 99, column 4 to line 102, column 5)",
+  " (in 'omni', line 104, column 6 to column 23)",
+  " (in 'omni', line 105, column 6 to column 29)",
+  " (in 'omni', line 103, column 18 to line 106, column 5)",
+  " (in 'omni', line 103, column 4 to line 106, column 5)",
+  " (in 'omni', line 108, column 6 to column 25)",
+  " (in 'omni', line 107, column 19 to line 109, column 5)",
+  " (in 'omni', line 107, column 4 to line 109, column 5)",
+  " (in 'omni', line 97, column 9 to line 110, column 3)",
+  " (in 'omni', line 85, column 4 to column 21)",
+  " (in 'omni', line 87, column 6 to column 36)",
+  " (in 'omni', line 88, column 6 to column 34)",
+  " (in 'omni', line 86, column 18 to line 89, column 5)",
+  " (in 'omni', line 86, column 4 to line 89, column 5)",
+  " (in 'omni', line 91, column 6 to column 18)",
+  " (in 'omni', line 92, column 6 to column 29)",
+  " (in 'omni', line 90, column 18 to line 93, column 5)",
+  " (in 'omni', line 90, column 4 to line 93, column 5)",
+  " (in 'omni', line 95, column 6 to column 20)",
+  " (in 'omni', line 94, column 19 to line 96, column 5)",
+  " (in 'omni', line 94, column 4 to line 96, column 5)",
+  " (in 'omni', line 84, column 18 to line 97, column 3)",
+  " (in 'omni', line 84, column 2 to line 110, column 3)",
+  " (in 'omni', line 112, column 4 to column 87)",
+  " (in 'omni', line 113, column 4 to column 84)",
+  " (in 'omni', line 111, column 18 to line 114, column 3)",
+  " (in 'omni', line 111, column 2 to line 114, column 3)",
+  " (in 'omni', line 115, column 2 to column 20)",
   " (in 'omni', line 126, column 4 to column 27)",
-  " (in 'omni', line 131, column 6 to column 67)",
-  " (in 'omni', line 132, column 6 to column 68)",
-  " (in 'omni', line 130, column 11 to line 133, column 5)",
-  " (in 'omni', line 128, column 6 to column 52)",
-  " (in 'omni', line 129, column 6 to column 54)",
-  " (in 'omni', line 127, column 20 to line 130, column 5)",
-  " (in 'omni', line 127, column 4 to line 133, column 5)",
-  " (in 'omni', line 135, column 6 to column 50)",
-  " (in 'omni', line 136, column 6 to column 55)",
-  " (in 'omni', line 140, column 8 to column 69)",
-  " (in 'omni', line 139, column 13 to line 141, column 7)",
-  " (in 'omni', line 138, column 8 to column 54)",
-  " (in 'omni', line 137, column 22 to line 139, column 7)",
-  " (in 'omni', line 137, column 6 to line 141, column 7)",
-  " (in 'omni', line 134, column 19 to line 142, column 5)",
-  " (in 'omni', line 134, column 4 to line 142, column 5)",
-  " (in 'omni', line 175, column 10 to line 176, column 43)",
-  " (in 'omni', line 174, column 27 to line 177, column 9)",
-  " (in 'omni', line 174, column 8 to line 177, column 9)",
-  " (in 'omni', line 173, column 13 to line 178, column 7)",
-  " (in 'omni', line 167, column 10 to line 171, column 47)",
-  " (in 'omni', line 166, column 27 to line 172, column 9)",
-  " (in 'omni', line 166, column 8 to line 172, column 9)",
-  " (in 'omni', line 165, column 21 to line 173, column 7)",
-  " (in 'omni', line 165, column 6 to line 178, column 7)",
-  " (in 'omni', line 164, column 11 to line 179, column 5)",
-  " (in 'omni', line 160, column 8 to line 162, column 87)",
-  " (in 'omni', line 159, column 25 to line 163, column 7)",
-  " (in 'omni', line 159, column 6 to line 163, column 7)",
-  " (in 'omni', line 158, column 25 to line 164, column 5)",
-  " (in 'omni', line 158, column 11 to line 179, column 5)",
-  " (in 'omni', line 145, column 8 to column 22)",
-  " (in 'omni', line 146, column 8 to column 67)",
+  " (in 'omni', line 127, column 4 to column 27)",
+  " (in 'omni', line 132, column 6 to column 67)",
+  " (in 'omni', line 133, column 6 to column 68)",
+  " (in 'omni', line 131, column 11 to line 134, column 5)",
+  " (in 'omni', line 129, column 6 to column 52)",
+  " (in 'omni', line 130, column 6 to column 54)",
+  " (in 'omni', line 128, column 20 to line 131, column 5)",
+  " (in 'omni', line 128, column 4 to line 134, column 5)",
+  " (in 'omni', line 136, column 6 to column 50)",
+  " (in 'omni', line 137, column 6 to column 55)",
+  " (in 'omni', line 141, column 8 to column 69)",
+  " (in 'omni', line 140, column 13 to line 142, column 7)",
+  " (in 'omni', line 139, column 8 to column 54)",
+  " (in 'omni', line 138, column 22 to line 140, column 7)",
+  " (in 'omni', line 138, column 6 to line 142, column 7)",
+  " (in 'omni', line 135, column 19 to line 143, column 5)",
+  " (in 'omni', line 135, column 4 to line 143, column 5)",
+  " (in 'omni', line 176, column 10 to line 177, column 43)",
+  " (in 'omni', line 175, column 27 to line 178, column 9)",
+  " (in 'omni', line 175, column 8 to line 178, column 9)",
+  " (in 'omni', line 174, column 13 to line 179, column 7)",
+  " (in 'omni', line 168, column 10 to line 172, column 47)",
+  " (in 'omni', line 167, column 27 to line 173, column 9)",
+  " (in 'omni', line 167, column 8 to line 173, column 9)",
+  " (in 'omni', line 166, column 21 to line 174, column 7)",
+  " (in 'omni', line 166, column 6 to line 179, column 7)",
+  " (in 'omni', line 165, column 11 to line 180, column 5)",
+  " (in 'omni', line 161, column 8 to line 163, column 87)",
+  " (in 'omni', line 160, column 25 to line 164, column 7)",
+  " (in 'omni', line 160, column 6 to line 164, column 7)",
+  " (in 'omni', line 159, column 25 to line 165, column 5)",
+  " (in 'omni', line 159, column 11 to line 180, column 5)",
+  " (in 'omni', line 146, column 8 to column 22)",
   " (in 'omni', line 147, column 8 to column 67)",
-  " (in 'omni', line 148, column 8 to line 149, column 88)",
-  " (in 'omni', line 150, column 8 to line 151, column 88)",
-  " (in 'omni', line 152, column 8 to line 153, column 88)",
-  " (in 'omni', line 154, column 8 to line 155, column 88)",
-  " (in 'omni', line 156, column 8 to column 44)",
-  " (in 'omni', line 144, column 25 to line 157, column 7)",
-  " (in 'omni', line 144, column 6 to line 157, column 7)",
-  " (in 'omni', line 143, column 18 to line 158, column 5)",
-  " (in 'omni', line 143, column 4 to line 179, column 5)",
-  " (in 'omni', line 124, column 9 to line 180, column 3)",
-  " (in 'omni', line 116, column 4 to column 28)",
+  " (in 'omni', line 148, column 8 to column 67)",
+  " (in 'omni', line 149, column 8 to line 150, column 88)",
+  " (in 'omni', line 151, column 8 to line 152, column 88)",
+  " (in 'omni', line 153, column 8 to line 154, column 88)",
+  " (in 'omni', line 155, column 8 to line 156, column 88)",
+  " (in 'omni', line 157, column 8 to column 44)",
+  " (in 'omni', line 145, column 25 to line 158, column 7)",
+  " (in 'omni', line 145, column 6 to line 158, column 7)",
+  " (in 'omni', line 144, column 18 to line 159, column 5)",
+  " (in 'omni', line 144, column 4 to line 180, column 5)",
+  " (in 'omni', line 125, column 9 to line 181, column 3)",
   " (in 'omni', line 117, column 4 to column 28)",
-  " (in 'omni', line 118, column 4 to column 33)",
-  " (in 'omni', line 119, column 4 to column 31)",
-  " (in 'omni', line 121, column 6 to line 122, column 39)",
-  " (in 'omni', line 120, column 23 to line 123, column 5)",
-  " (in 'omni', line 120, column 4 to line 123, column 5)",
-  " (in 'omni', line 115, column 16 to line 124, column 3)",
-  " (in 'omni', line 115, column 2 to line 180, column 3)",
-  " (in 'omni', line 241, column 4 to column 24)",
-  " (in 'omni', line 242, column 4 to column 22)",
-  " (in 'omni', line 240, column 9 to line 243, column 3)",
-  " (in 'omni', line 237, column 6 to column 39)",
-  " (in 'omni', line 235, column 6 to column 47)",
-  " (in 'omni', line 234, column 4 to line 237, column 39)",
-  " (in 'omni', line 238, column 4 to column 66)",
-  " (in 'omni', line 239, column 4 to column 63)",
-  " (in 'omni', line 233, column 17 to line 240, column 3)",
-  " (in 'omni', line 233, column 2 to line 243, column 3)",
-  " (in 'omni', line 261, column 6 to column 43)",
-  " (in 'omni', line 260, column 11 to line 262, column 5)",
-  " (in 'omni', line 255, column 6 to column 90)",
-  " (in 'omni', line 258, column 10 to column 81)",
-  " (in 'omni', line 257, column 8 to line 258, column 81)",
-  " (in 'omni', line 256, column 20 to line 259, column 7)",
-  " (in 'omni', line 256, column 6 to line 259, column 7)",
-  " (in 'omni', line 254, column 19 to line 260, column 5)",
-  " (in 'omni', line 254, column 4 to line 262, column 5)",
-  " (in 'omni', line 253, column 9 to line 263, column 3)",
-  " (in 'omni', line 251, column 6 to column 43)",
-  " (in 'omni', line 250, column 9 to line 252, column 5)",
-  " (in 'omni', line 246, column 6 to column 91)",
-  " (in 'omni', line 248, column 8 to column 105)",
-  " (in 'omni', line 247, column 6 to line 248, column 105)",
-  " (in 'omni', line 245, column 19 to line 249, column 5)",
-  " (in 'omni', line 245, column 4 to line 252, column 5)",
-  " (in 'omni', line 244, column 16 to line 253, column 3)",
-  " (in 'omni', line 244, column 2 to line 263, column 3)",
-  " (in 'omni', line 183, column 2 to column 33)",
-  " (in 'omni', line 188, column 4 to column 34)",
+  " (in 'omni', line 118, column 4 to column 28)",
+  " (in 'omni', line 119, column 4 to column 33)",
+  " (in 'omni', line 120, column 4 to column 31)",
+  " (in 'omni', line 122, column 6 to line 123, column 39)",
+  " (in 'omni', line 121, column 23 to line 124, column 5)",
+  " (in 'omni', line 121, column 4 to line 124, column 5)",
+  " (in 'omni', line 116, column 16 to line 125, column 3)",
+  " (in 'omni', line 116, column 2 to line 181, column 3)",
+  " (in 'omni', line 242, column 4 to column 24)",
+  " (in 'omni', line 243, column 4 to column 22)",
+  " (in 'omni', line 241, column 9 to line 244, column 3)",
+  " (in 'omni', line 238, column 6 to column 39)",
+  " (in 'omni', line 236, column 6 to column 47)",
+  " (in 'omni', line 235, column 4 to line 238, column 39)",
+  " (in 'omni', line 239, column 4 to column 66)",
+  " (in 'omni', line 240, column 4 to column 63)",
+  " (in 'omni', line 234, column 17 to line 241, column 3)",
+  " (in 'omni', line 234, column 2 to line 244, column 3)",
+  " (in 'omni', line 262, column 6 to column 43)",
+  " (in 'omni', line 261, column 11 to line 263, column 5)",
+  " (in 'omni', line 256, column 6 to column 90)",
+  " (in 'omni', line 259, column 10 to column 81)",
+  " (in 'omni', line 258, column 8 to line 259, column 81)",
+  " (in 'omni', line 257, column 20 to line 260, column 7)",
+  " (in 'omni', line 257, column 6 to line 260, column 7)",
+  " (in 'omni', line 255, column 19 to line 261, column 5)",
+  " (in 'omni', line 255, column 4 to line 263, column 5)",
+  " (in 'omni', line 254, column 9 to line 264, column 3)",
+  " (in 'omni', line 252, column 6 to column 43)",
+  " (in 'omni', line 251, column 9 to line 253, column 5)",
+  " (in 'omni', line 247, column 6 to column 91)",
+  " (in 'omni', line 249, column 8 to column 105)",
+  " (in 'omni', line 248, column 6 to line 249, column 105)",
+  " (in 'omni', line 246, column 19 to line 250, column 5)",
+  " (in 'omni', line 246, column 4 to line 253, column 5)",
+  " (in 'omni', line 245, column 16 to line 254, column 3)",
+  " (in 'omni', line 245, column 2 to line 264, column 3)",
+  " (in 'omni', line 184, column 2 to column 33)",
   " (in 'omni', line 189, column 4 to column 34)",
-  " (in 'omni', line 190, column 4 to column 51)",
-  " (in 'omni', line 191, column 4 to column 33)",
-  " (in 'omni', line 192, column 4 to column 30)",
-  " (in 'omni', line 187, column 9 to line 193, column 3)",
-  " (in 'omni', line 185, column 4 to column 40)",
-  " (in 'omni', line 186, column 4 to column 39)",
-  " (in 'omni', line 184, column 16 to line 187, column 3)",
-  " (in 'omni', line 184, column 2 to line 193, column 3)",
-  " (in 'omni', line 198, column 4 to column 48)",
-  " (in 'omni', line 199, column 4 to column 47)",
-  " (in 'omni', line 197, column 9 to line 200, column 3)",
-  " (in 'omni', line 195, column 4 to column 48)",
-  " (in 'omni', line 196, column 4 to column 47)",
-  " (in 'omni', line 194, column 18 to line 197, column 3)",
-  " (in 'omni', line 194, column 2 to line 200, column 3)",
-  " (in 'omni', line 202, column 4 to column 34)",
-  " (in 'omni', line 203, column 4 to column 33)",
-  " (in 'omni', line 204, column 4 to column 30)",
-  " (in 'omni', line 205, column 4 to column 29)",
-  " (in 'omni', line 201, column 17 to line 206, column 3)",
-  " (in 'omni', line 201, column 2 to line 206, column 3)",
-  " (in 'omni', line 208, column 4 to column 37)",
-  " (in 'omni', line 209, column 4 to column 27)",
+  " (in 'omni', line 190, column 4 to column 34)",
+  " (in 'omni', line 191, column 4 to column 55)",
+  " (in 'omni', line 192, column 4 to column 33)",
+  " (in 'omni', line 193, column 4 to column 34)",
+  " (in 'omni', line 188, column 9 to line 194, column 3)",
+  " (in 'omni', line 186, column 4 to column 40)",
+  " (in 'omni', line 187, column 4 to column 39)",
+  " (in 'omni', line 185, column 16 to line 188, column 3)",
+  " (in 'omni', line 185, column 2 to line 194, column 3)",
+  " (in 'omni', line 199, column 4 to column 48)",
+  " (in 'omni', line 200, column 4 to column 47)",
+  " (in 'omni', line 198, column 9 to line 201, column 3)",
+  " (in 'omni', line 196, column 4 to column 48)",
+  " (in 'omni', line 197, column 4 to column 47)",
+  " (in 'omni', line 195, column 18 to line 198, column 3)",
+  " (in 'omni', line 195, column 2 to line 201, column 3)",
+  " (in 'omni', line 203, column 4 to column 34)",
+  " (in 'omni', line 204, column 4 to column 33)",
+  " (in 'omni', line 205, column 4 to column 30)",
+  " (in 'omni', line 206, column 4 to column 33)",
+  " (in 'omni', line 202, column 17 to line 207, column 3)",
+  " (in 'omni', line 202, column 2 to line 207, column 3)",
+  " (in 'omni', line 209, column 4 to column 37)",
   " (in 'omni', line 210, column 4 to column 27)",
-  " (in 'omni', line 211, column 4 to column 26)",
-  " (in 'omni', line 207, column 16 to line 212, column 3)",
-  " (in 'omni', line 207, column 2 to line 212, column 3)",
-  " (in 'omni', line 218, column 4 to column 39)",
-  " (in 'omni', line 217, column 9 to line 219, column 3)",
-  " (in 'omni', line 214, column 4 to column 53)",
-  " (in 'omni', line 215, column 4 to column 24)",
-  " (in 'omni', line 216, column 4 to column 39)",
-  " (in 'omni', line 213, column 16 to line 217, column 3)",
-  " (in 'omni', line 213, column 2 to line 219, column 3)",
-  " (in 'omni', line 220, column 2 to column 33)",
-  " (in 'omni', line 224, column 4 to column 42)",
-  " (in 'omni', line 222, column 4 to column 27)",
-  " (in 'omni', line 221, column 2 to line 224, column 42)",
+  " (in 'omni', line 211, column 4 to column 27)",
+  " (in 'omni', line 212, column 4 to column 26)",
+  " (in 'omni', line 208, column 16 to line 213, column 3)",
+  " (in 'omni', line 208, column 2 to line 213, column 3)",
+  " (in 'omni', line 219, column 4 to column 39)",
+  " (in 'omni', line 218, column 9 to line 220, column 3)",
+  " (in 'omni', line 215, column 4 to column 53)",
+  " (in 'omni', line 216, column 4 to column 28)",
+  " (in 'omni', line 217, column 4 to column 39)",
+  " (in 'omni', line 214, column 16 to line 218, column 3)",
+  " (in 'omni', line 214, column 2 to line 220, column 3)",
+  " (in 'omni', line 221, column 2 to column 37)",
+  " (in 'omni', line 225, column 4 to column 42)",
+  " (in 'omni', line 223, column 4 to column 27)",
+  " (in 'omni', line 222, column 2 to line 225, column 42)",
   " (in 'omni', line 2, column 2 to column 19)",
   " (in 'omni', line 3, column 2 to column 19)",
   " (in 'omni', line 4, column 2 to column 19)",
@@ -235,9 +235,9 @@ static constexpr std::array<const char*, 290> locations_array__ =
   " (in 'omni', line 8, column 8 to column 9)",
   " (in 'omni', line 8, column 2 to column 29)",
   " (in 'omni', line 9, column 2 to column 20)",
-  " (in 'omni', line 10, column 2 to column 20)",
+  " (in 'omni', line 10, column 2 to column 30)",
   " (in 'omni', line 11, column 2 to column 30)",
-  " (in 'omni', line 12, column 2 to column 30)",
+  " (in 'omni', line 12, column 2 to column 19)",
   " (in 'omni', line 13, column 8 to column 13)",
   " (in 'omni', line 13, column 2 to column 45)",
   " (in 'omni', line 14, column 8 to column 13)",
@@ -245,7 +245,7 @@ static constexpr std::array<const char*, 290> locations_array__ =
   " (in 'omni', line 15, column 8 to column 9)",
   " (in 'omni', line 15, column 2 to column 41)",
   " (in 'omni', line 16, column 8 to column 9)",
-  " (in 'omni', line 16, column 2 to column 21)",
+  " (in 'omni', line 16, column 2 to column 18)",
   " (in 'omni', line 17, column 9 to column 10)",
   " (in 'omni', line 17, column 2 to column 22)",
   " (in 'omni', line 18, column 2 to column 33)",
@@ -272,52 +272,53 @@ static constexpr std::array<const char*, 290> locations_array__ =
   " (in 'omni', line 39, column 2 to column 64)",
   " (in 'omni', line 40, column 2 to column 35)",
   " (in 'omni', line 41, column 2 to column 90)",
-  " (in 'omni', line 42, column 11 to column 16)",
-  " (in 'omni', line 42, column 2 to column 48)",
-  " (in 'omni', line 44, column 4 to column 45)",
+  " (in 'omni', line 42, column 2 to column 36)",
+  " (in 'omni', line 43, column 11 to column 16)",
+  " (in 'omni', line 43, column 2 to column 48)",
   " (in 'omni', line 45, column 4 to column 45)",
-  " (in 'omni', line 43, column 21 to line 46, column 3)",
-  " (in 'omni', line 43, column 2 to line 46, column 3)",
-  " (in 'omni', line 49, column 9 to column 10)",
-  " (in 'omni', line 49, column 12 to column 20)",
+  " (in 'omni', line 46, column 4 to column 45)",
+  " (in 'omni', line 44, column 21 to line 47, column 3)",
+  " (in 'omni', line 44, column 2 to line 47, column 3)",
   " (in 'omni', line 50, column 9 to column 10)",
   " (in 'omni', line 50, column 12 to column 20)",
-  " (in 'omni', line 51, column 10 to column 26)",
-  " (in 'omni', line 52, column 8 to column 9)",
-  " (in 'omni', line 53, column 10 to column 28)",
+  " (in 'omni', line 51, column 9 to column 10)",
+  " (in 'omni', line 51, column 12 to column 20)",
+  " (in 'omni', line 52, column 10 to column 26)",
+  " (in 'omni', line 53, column 8 to column 9)",
   " (in 'omni', line 54, column 10 to column 28)",
-  " (in 'omni', line 55, column 8 to column 38)",
+  " (in 'omni', line 55, column 10 to column 28)",
   " (in 'omni', line 56, column 8 to column 38)",
   " (in 'omni', line 57, column 8 to column 38)",
-  " (in 'omni', line 58, column 8 to column 17)",
-  " (in 'omni', line 59, column 20 to column 36)",
-  " (in 'omni', line 60, column 10 to column 26)",
-  " (in 'omni', line 61, column 9 to column 26)",
-  " (in 'omni', line 62, column 8 to column 39)",
-  " (in 'omni', line 63, column 8 to column 24)",
-  " (in 'omni', line 64, column 8 to column 11)",
+  " (in 'omni', line 58, column 8 to column 38)",
+  " (in 'omni', line 59, column 8 to column 17)",
+  " (in 'omni', line 60, column 20 to column 36)",
+  " (in 'omni', line 61, column 10 to column 26)",
+  " (in 'omni', line 62, column 9 to column 26)",
+  " (in 'omni', line 63, column 8 to column 39)",
+  " (in 'omni', line 64, column 8 to column 24)",
   " (in 'omni', line 65, column 8 to column 11)",
-  " (in 'omni', line 66, column 31 to column 56)",
-  " (in 'omni', line 69, column 9 to column 25)",
-  " (in 'omni', line 70, column 8 to column 9)",
-  " (in 'omni', line 71, column 9 to column 10)",
-  " (in 'omni', line 71, column 12 to column 20)",
+  " (in 'omni', line 66, column 8 to column 11)",
+  " (in 'omni', line 67, column 31 to column 47)",
+  " (in 'omni', line 70, column 9 to column 25)",
+  " (in 'omni', line 71, column 8 to column 9)",
   " (in 'omni', line 72, column 9 to column 10)",
   " (in 'omni', line 72, column 12 to column 20)",
-  " (in 'omni', line 73, column 9 to column 14)",
-  " (in 'omni', line 74, column 31 to column 48)",
-  " (in 'omni', line 75, column 9 to column 27)",
+  " (in 'omni', line 73, column 9 to column 10)",
+  " (in 'omni', line 73, column 12 to column 20)",
+  " (in 'omni', line 74, column 9 to column 14)",
+  " (in 'omni', line 75, column 31 to column 48)",
   " (in 'omni', line 76, column 9 to column 27)",
-  " (in 'omni', line 77, column 8 to column 11)",
-  " (in 'omni', line 78, column 8 to column 15)",
+  " (in 'omni', line 77, column 9 to column 27)",
+  " (in 'omni', line 78, column 8 to column 11)",
   " (in 'omni', line 79, column 8 to column 15)",
-  " (in 'omni', line 80, column 8 to column 11)",
-  " (in 'omni', line 82, column 8 to column 12)",
-  " (in 'omni', line 228, column 9 to column 26)",
-  " (in 'omni', line 229, column 9 to column 10)",
+  " (in 'omni', line 80, column 8 to column 15)",
+  " (in 'omni', line 81, column 8 to column 11)",
+  " (in 'omni', line 83, column 8 to column 12)",
+  " (in 'omni', line 229, column 9 to column 26)",
   " (in 'omni', line 230, column 9 to column 10)",
   " (in 'omni', line 231, column 9 to column 10)",
-  " (in 'omni', line 232, column 9 to column 42)"};
+  " (in 'omni', line 232, column 9 to column 10)",
+  " (in 'omni', line 233, column 9 to column 42)"};
 #include <stan_meta_header.hpp>
 class model_omni final : public model_base_crtp<model_omni> {
 private:
@@ -329,13 +330,13 @@ private:
   std::vector<int> jj;
   std::vector<int> gg;
   double B;
-  int B2;
   int L;
   int R;
+  int K;
   std::vector<double> Y;
   std::vector<double> U;
   std::vector<double> V;
-  std::vector<int> V_int;
+  std::vector<int> Vi;
   Eigen::Matrix<double,-1,1> mean_spos_data__;
   double sigma_mu_alpha;
   double sigma_mu_beta;
@@ -359,6 +360,7 @@ private:
   Eigen::Matrix<double,-1,1> not_holdout_data__;
   double mean_mu_simplexes;
   double sd_mu_simplexes;
+  double tau_multip;
   std::vector<std::vector<double>> p;
   int alpha_raw_2dim__;
   int beta_raw_2dim__;
@@ -481,33 +483,33 @@ public:
       current_statement__ = 206;
       stan::math::check_greater_or_equal(function__, "B", B, 0);
       current_statement__ = 207;
-      context__.validate_dims("data initialization", "B2", "int",
-        std::vector<size_t>{});
-      B2 = std::numeric_limits<int>::min();
-      current_statement__ = 207;
-      B2 = context__.vals_i("B2")[(1 - 1)];
-      current_statement__ = 207;
-      stan::math::check_greater_or_equal(function__, "B2", B2, 1);
-      current_statement__ = 208;
       context__.validate_dims("data initialization", "L", "int",
         std::vector<size_t>{});
       L = std::numeric_limits<int>::min();
-      current_statement__ = 208;
+      current_statement__ = 207;
       L = context__.vals_i("L")[(1 - 1)];
-      current_statement__ = 208;
+      current_statement__ = 207;
       stan::math::check_greater_or_equal(function__, "L", L, 1);
-      current_statement__ = 208;
+      current_statement__ = 207;
       stan::math::check_less_or_equal(function__, "L", L, J);
-      current_statement__ = 209;
+      current_statement__ = 208;
       context__.validate_dims("data initialization", "R", "int",
         std::vector<size_t>{});
       R = std::numeric_limits<int>::min();
-      current_statement__ = 209;
+      current_statement__ = 208;
       R = context__.vals_i("R")[(1 - 1)];
-      current_statement__ = 209;
+      current_statement__ = 208;
       stan::math::check_greater_or_equal(function__, "R", R, 1);
-      current_statement__ = 209;
+      current_statement__ = 208;
       stan::math::check_less_or_equal(function__, "R", R, J);
+      current_statement__ = 209;
+      context__.validate_dims("data initialization", "K", "int",
+        std::vector<size_t>{});
+      K = std::numeric_limits<int>::min();
+      current_statement__ = 209;
+      K = context__.vals_i("K")[(1 - 1)];
+      current_statement__ = 209;
+      stan::math::check_greater_or_equal(function__, "K", K, 1);
       current_statement__ = 210;
       stan::math::validate_non_negative_index("Y", "N_obs", N_obs);
       current_statement__ = 211;
@@ -547,13 +549,13 @@ public:
       current_statement__ = 215;
       stan::math::check_less_or_equal(function__, "V", V, B);
       current_statement__ = 216;
-      stan::math::validate_non_negative_index("V_int", "N", N);
+      stan::math::validate_non_negative_index("Vi", "N", N);
       current_statement__ = 217;
-      context__.validate_dims("data initialization", "V_int", "int",
+      context__.validate_dims("data initialization", "Vi", "int",
         std::vector<size_t>{static_cast<size_t>(N)});
-      V_int = std::vector<int>(N, std::numeric_limits<int>::min());
+      Vi = std::vector<int>(N, std::numeric_limits<int>::min());
       current_statement__ = 217;
-      V_int = context__.vals_i("V_int");
+      Vi = context__.vals_i("Vi");
       current_statement__ = 218;
       stan::math::validate_non_negative_index("mean_spos", "J", J);
       current_statement__ = 219;
@@ -759,14 +761,18 @@ public:
       sd_mu_simplexes = stan::math::sqrt(((mean_mu_simplexes * (1 -
                           mean_mu_simplexes)) / ((50 * G) + 1)));
       current_statement__ = 244;
-      stan::math::validate_non_negative_index("p", "N_obs", N_obs);
+      tau_multip = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 244;
+      tau_multip = (1 / stan::math::sqrt(N_obs));
       current_statement__ = 245;
+      stan::math::validate_non_negative_index("p", "N_obs", N_obs);
+      current_statement__ = 246;
       p = std::vector<std::vector<double>>(2,
             std::vector<double>(N_obs,
               std::numeric_limits<double>::quiet_NaN()));
-      current_statement__ = 249;
+      current_statement__ = 250;
       for (int n = 1; n <= N_obs; ++n) {
-        current_statement__ = 246;
+        current_statement__ = 247;
         stan::model::assign(p,
           (((stan::model::rvalue(U, "U", stan::model::index_uni(n)) *
           stan::model::rvalue(V, "V",
@@ -775,7 +781,7 @@ public:
           (B * stan::model::rvalue(U, "U", stan::model::index_uni(n)))) - B),
           "assigning variable p", stan::model::index_uni(1),
           stan::model::index_uni(n));
-        current_statement__ = 247;
+        current_statement__ = 248;
         stan::model::assign(p,
           (((stan::model::rvalue(U, "U", stan::model::index_uni(n)) *
           stan::model::rvalue(V, "V",
@@ -797,228 +803,228 @@ public:
       current_statement__ = 241;
       stan::math::check_less_or_equal(function__, "not_holdout", not_holdout,
         1);
-      current_statement__ = 245;
+      current_statement__ = 246;
       stan::math::check_greater_or_equal(function__, "p", p, -(B));
-      current_statement__ = 245;
+      current_statement__ = 246;
       stan::math::check_less_or_equal(function__, "p", p, B);
-      current_statement__ = 250;
+      current_statement__ = 251;
       stan::math::validate_non_negative_index("alpha_raw", "N", N);
-      current_statement__ = 251;
+      current_statement__ = 252;
       alpha_raw_2dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 251;
+      current_statement__ = 252;
       alpha_raw_2dim__ = (1 + flip);
-      current_statement__ = 251;
+      current_statement__ = 252;
       stan::math::validate_non_negative_index("alpha_raw", "1 + flip",
         alpha_raw_2dim__);
-      current_statement__ = 252;
+      current_statement__ = 253;
       stan::math::validate_non_negative_index("beta_raw", "N", N);
-      current_statement__ = 253;
+      current_statement__ = 254;
       beta_raw_2dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 253;
+      current_statement__ = 254;
       beta_raw_2dim__ = (1 + flip);
-      current_statement__ = 253;
+      current_statement__ = 254;
       stan::math::validate_non_negative_index("beta_raw", "1 + flip",
         beta_raw_2dim__);
-      current_statement__ = 254;
+      current_statement__ = 255;
       theta_lr_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 254;
+      current_statement__ = 255;
       theta_lr_1dim__ = (stan::math::logical_eq(bam, 0) ? 2 : 0);
-      current_statement__ = 254;
+      current_statement__ = 255;
       stan::math::validate_non_negative_index("theta_lr", "bam == 0 ? 2 : 0",
         theta_lr_1dim__);
-      current_statement__ = 255;
+      current_statement__ = 256;
       stan::math::validate_non_negative_index("theta_raw", "J", J);
-      current_statement__ = 256;
+      current_statement__ = 257;
       mu_alpha_raw_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 256;
+      current_statement__ = 257;
       mu_alpha_raw_1dim__ = (stan::math::logical_eq(group, 1) ? G : 1);
-      current_statement__ = 256;
+      current_statement__ = 257;
       stan::math::validate_positive_index("mu_alpha_raw",
         "group == 1 ? G : 1", mu_alpha_raw_1dim__);
-      current_statement__ = 257;
+      current_statement__ = 258;
       mu_beta_raw_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 257;
+      current_statement__ = 258;
       mu_beta_raw_1dim__ = (stan::math::logical_eq(group, 1) ? G : 1);
-      current_statement__ = 257;
+      current_statement__ = 258;
       stan::math::validate_positive_index("mu_beta_raw",
         "group == 1 ? G : 1", mu_beta_raw_1dim__);
-      current_statement__ = 258;
+      current_statement__ = 259;
       sigma_alpha_par_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 258;
+      current_statement__ = 259;
       sigma_alpha_par_1dim__ = ((stan::math::primitive_value(
                                    stan::math::logical_eq(bam, 0))
         &&
         stan::math::primitive_value(stan::math::logical_eq(fixed, 0))) ? 1 : 0);
-      current_statement__ = 258;
+      current_statement__ = 259;
       stan::math::validate_non_negative_index("sigma_alpha_par",
         "bam == 0 && fixed == 0 ? 1 : 0", sigma_alpha_par_1dim__);
-      current_statement__ = 259;
+      current_statement__ = 260;
       sigma_beta_par_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 259;
+      current_statement__ = 260;
       sigma_beta_par_1dim__ = ((stan::math::primitive_value(
                                   stan::math::logical_eq(bam, 0))
         &&
         stan::math::primitive_value(stan::math::logical_eq(fixed, 0))) ? 1 : 0);
-      current_statement__ = 259;
+      current_statement__ = 260;
       stan::math::validate_non_negative_index("sigma_beta_par",
         "bam == 0 && fixed == 0 ? 1 : 0", sigma_beta_par_1dim__);
-      current_statement__ = 260;
+      current_statement__ = 261;
       nu_par_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 260;
+      current_statement__ = 261;
       nu_par_1dim__ = ((stan::math::primitive_value(
                           stan::math::logical_eq(het, 1))
         &&
         stan::math::primitive_value(stan::math::logical_eq(fixed, 0))) ? 1 : 0);
-      current_statement__ = 260;
+      current_statement__ = 261;
       stan::math::validate_non_negative_index("nu_par",
         "het == 1 && fixed == 0 ? 1 : 0", nu_par_1dim__);
-      current_statement__ = 261;
+      current_statement__ = 262;
       tau_par_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 261;
+      current_statement__ = 262;
       tau_par_1dim__ = (1 - fixed);
-      current_statement__ = 261;
+      current_statement__ = 262;
       stan::math::validate_non_negative_index("tau_par", "1 - fixed",
         tau_par_1dim__);
-      current_statement__ = 262;
+      current_statement__ = 263;
       eta_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 262;
+      current_statement__ = 263;
       eta_1dim__ = (stan::math::logical_eq(het, 1) ? N : 0);
-      current_statement__ = 262;
+      current_statement__ = 263;
       stan::math::validate_non_negative_index("eta", "het == 1 ? N : 0",
         eta_1dim__);
-      current_statement__ = 263;
+      current_statement__ = 264;
       rho_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 263;
+      current_statement__ = 264;
       rho_1dim__ = (stan::math::logical_eq(het, 1) ? J : 1);
-      current_statement__ = 263;
+      current_statement__ = 264;
       stan::math::validate_positive_index("rho", "het == 1 ? J : 1",
         rho_1dim__);
-      current_statement__ = 264;
+      current_statement__ = 265;
       lambda_raw_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 264;
+      current_statement__ = 265;
       lambda_raw_1dim__ = (stan::math::logical_eq(flip, 1) ? N : 0);
-      current_statement__ = 264;
+      current_statement__ = 265;
       stan::math::validate_non_negative_index("lambda_raw",
         "flip == 1 ? N : 0", lambda_raw_1dim__);
-      current_statement__ = 265;
+      current_statement__ = 266;
       psi_par_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 265;
+      current_statement__ = 266;
       psi_par_1dim__ = ((stan::math::primitive_value(
                            stan::math::logical_eq(flip, 1))
         &&
         stan::math::primitive_value(stan::math::logical_eq(fixed, 0))) ? 1 : 0);
-      current_statement__ = 265;
+      current_statement__ = 266;
       stan::math::validate_non_negative_index("psi_par",
         "flip == 1 && fixed == 0 ? 1 : 0", psi_par_1dim__);
-      current_statement__ = 266;
+      current_statement__ = 267;
       gamma_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 266;
+      current_statement__ = 267;
       gamma_1dim__ = (stan::math::logical_eq(rat, 1) ? N : 0);
-      current_statement__ = 266;
+      current_statement__ = 267;
       stan::math::validate_non_negative_index("gamma", "rat == 1 ? N : 0",
         gamma_1dim__);
-      current_statement__ = 267;
-      stan::math::validate_non_negative_index("gam_a", "rat", rat);
       current_statement__ = 268;
+      stan::math::validate_non_negative_index("gam_a", "rat", rat);
+      current_statement__ = 269;
       stan::math::validate_non_negative_index("gam_b", "rat", rat);
-      current_statement__ = 269;
+      current_statement__ = 270;
       zeta_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 269;
-      zeta_1dim__ = (stan::math::logical_eq(rat, 1) ? ((2 * B2) + 1) : 0);
-      current_statement__ = 269;
-      stan::math::validate_non_negative_index("zeta",
-        "rat == 1 ? 2 * B2 + 1 : 0", zeta_1dim__);
       current_statement__ = 270;
+      zeta_1dim__ = (stan::math::logical_eq(rat, 1) ? K : 0);
+      current_statement__ = 270;
+      stan::math::validate_non_negative_index("zeta", "rat == 1 ? K : 0",
+        zeta_1dim__);
+      current_statement__ = 271;
       log_probs_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 270;
+      current_statement__ = 271;
       log_probs_1dim__ = (stan::math::logical_eq(rat, 1) ? 4 : 0);
-      current_statement__ = 270;
+      current_statement__ = 271;
       stan::math::validate_non_negative_index("log_probs",
         "rat == 1 ? 4 : 0", log_probs_1dim__);
-      current_statement__ = 271;
-      stan::math::validate_non_negative_index("theta", "J", J);
       current_statement__ = 272;
+      stan::math::validate_non_negative_index("theta", "J", J);
+      current_statement__ = 273;
       stan::math::validate_non_negative_index("alpha0", "N", N);
-      current_statement__ = 273;
+      current_statement__ = 274;
       alpha0_2dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 273;
+      current_statement__ = 274;
       alpha0_2dim__ = (1 + flip);
-      current_statement__ = 273;
+      current_statement__ = 274;
       stan::math::validate_non_negative_index("alpha0", "1 + flip",
         alpha0_2dim__);
-      current_statement__ = 274;
+      current_statement__ = 275;
       stan::math::validate_non_negative_index("beta0", "N", N);
-      current_statement__ = 275;
+      current_statement__ = 276;
       beta0_2dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 275;
+      current_statement__ = 276;
       beta0_2dim__ = (1 + flip);
-      current_statement__ = 275;
+      current_statement__ = 276;
       stan::math::validate_non_negative_index("beta0", "1 + flip",
         beta0_2dim__);
-      current_statement__ = 276;
+      current_statement__ = 277;
       stan::math::validate_non_negative_index("log_lik", "N_obs", N_obs);
-      current_statement__ = 277;
+      current_statement__ = 278;
       lambda_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 277;
+      current_statement__ = 278;
       lambda_1dim__ = (stan::math::logical_eq(flip, 1) ? N : 0);
-      current_statement__ = 277;
+      current_statement__ = 278;
       stan::math::validate_non_negative_index("lambda", "flip == 1 ? N : 0",
         lambda_1dim__);
-      current_statement__ = 278;
+      current_statement__ = 279;
       mu_alpha_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 278;
+      current_statement__ = 279;
       mu_alpha_1dim__ = (stan::math::logical_eq(group, 1) ? G : 0);
-      current_statement__ = 278;
+      current_statement__ = 279;
       stan::math::validate_non_negative_index("mu_alpha",
         "group == 1 ? G : 0", mu_alpha_1dim__);
-      current_statement__ = 279;
+      current_statement__ = 280;
       mu_beta_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 279;
+      current_statement__ = 280;
       mu_beta_1dim__ = (stan::math::logical_eq(group, 1) ? G : 0);
-      current_statement__ = 279;
+      current_statement__ = 280;
       stan::math::validate_non_negative_index("mu_beta",
         "group == 1 ? G : 0", mu_beta_1dim__);
-      current_statement__ = 280;
+      current_statement__ = 281;
       stan::math::validate_non_negative_index("eta_scale", "het", het);
-      current_statement__ = 281;
+      current_statement__ = 282;
       sigma_alpha_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 281;
+      current_statement__ = 282;
       sigma_alpha_1dim__ = (1 - bam);
-      current_statement__ = 281;
+      current_statement__ = 282;
       stan::math::validate_non_negative_index("sigma_alpha", "1 - bam",
         sigma_alpha_1dim__);
-      current_statement__ = 282;
+      current_statement__ = 283;
       sigma_beta_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 282;
+      current_statement__ = 283;
       sigma_beta_1dim__ = (1 - bam);
-      current_statement__ = 282;
+      current_statement__ = 283;
       stan::math::validate_non_negative_index("sigma_beta", "1 - bam",
         sigma_beta_1dim__);
-      current_statement__ = 283;
-      stan::math::validate_non_negative_index("nu", "het", het);
       current_statement__ = 284;
+      stan::math::validate_non_negative_index("nu", "het", het);
+      current_statement__ = 285;
       stan::math::validate_non_negative_index("psi", "flip", flip);
-      current_statement__ = 285;
+      current_statement__ = 286;
       kappa_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 285;
+      current_statement__ = 286;
       kappa_1dim__ = (stan::math::logical_eq(flip, 1) ? N : 0);
-      current_statement__ = 285;
+      current_statement__ = 286;
       stan::math::validate_non_negative_index("kappa", "flip == 1 ? N : 0",
         kappa_1dim__);
-      current_statement__ = 286;
-      stan::math::validate_non_negative_index("alpha", "N", N);
       current_statement__ = 287;
-      stan::math::validate_non_negative_index("beta", "N", N);
+      stan::math::validate_non_negative_index("alpha", "N", N);
       current_statement__ = 288;
+      stan::math::validate_non_negative_index("beta", "N", N);
+      current_statement__ = 289;
       stan::math::validate_non_negative_index("chi", "N", N);
-      current_statement__ = 289;
+      current_statement__ = 290;
       Y_pred_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 289;
+      current_statement__ = 290;
       Y_pred_1dim__ = ((stan::math::primitive_value(
                           stan::math::logical_eq(rat, 0))
         &&
         stan::math::primitive_value(stan::math::logical_eq(MCMC, 1))) ? N_obs : 0);
-      current_statement__ = 289;
+      current_statement__ = 290;
       stan::math::validate_non_negative_index("Y_pred",
         "rat == 0 && MCMC == 1 ? N_obs : 0", Y_pred_1dim__);
     } catch (const std::exception& e) {
@@ -1100,8 +1106,9 @@ public:
           jacobian__>(3, 30, lp__, nu_par_1dim__);
       current_statement__ = 10;
       auto tau_par =
-        in__.template read_constrain_lb<std::vector<local_scalar_t__>,
-          jacobian__>(0, lp__, tau_par_1dim__);
+        in__.template read_constrain_offset_multiplier<
+          std::vector<local_scalar_t__>, jacobian__>(0, tau_multip, lp__,
+          tau_par_1dim__);
       current_statement__ = 11;
       auto eta =
         in__.template read_constrain_lb<Eigen::Matrix<local_scalar_t__,-1,1>,
@@ -1435,10 +1442,10 @@ public:
               stan::math::log(
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n)))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -1464,10 +1471,10 @@ public:
               stan::math::log((1 -
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1)))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n))))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -1493,10 +1500,10 @@ public:
               stan::math::log(
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n)))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -1522,10 +1529,10 @@ public:
               stan::math::log((1 -
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1)))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n))))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -1739,7 +1746,7 @@ public:
                              stan::model::index_omni(),
                              stan::model::index_uni(1)), 0, 1));
           current_statement__ = 158;
-          lp_accum__.add(stan::math::gamma_lpdf<propto__>(sigma_alpha, 5,
+          lp_accum__.add(stan::math::gamma_lpdf<propto__>(sigma_alpha_par, 5,
                            sigma_alpha_prior_rate));
           current_statement__ = 159;
           lp_accum__.add(stan::math::normal_lpdf<propto__>(
@@ -1747,7 +1754,8 @@ public:
                              stan::model::index_omni(),
                              stan::model::index_uni(1)), 0, 1));
           current_statement__ = 160;
-          lp_accum__.add(stan::math::gamma_lpdf<propto__>(sigma_beta, 9, 40));
+          lp_accum__.add(stan::math::gamma_lpdf<propto__>(sigma_beta_par, 9,
+                           40));
         }
         current_statement__ = 172;
         if (stan::math::logical_eq(group, 1)) {
@@ -1780,7 +1788,8 @@ public:
           current_statement__ = 175;
           lp_accum__.add(stan::math::normal_lpdf<propto__>(lambda_raw, 0, 1));
           current_statement__ = 176;
-          lp_accum__.add(stan::math::lognormal_lpdf<propto__>(psi, 1.4, .5));
+          lp_accum__.add(stan::math::lognormal_lpdf<propto__>(psi_par, 1.4,
+                           .5));
         }
         current_statement__ = 184;
         if (stan::math::logical_eq(rat, 1)) {
@@ -1807,7 +1816,7 @@ public:
                            stan::model::rvalue(eta_scale, "eta_scale",
                              stan::model::index_uni(1))));
           current_statement__ = 188;
-          lp_accum__.add(stan::math::gamma_lpdf<propto__>(nu, 25, 2.5));
+          lp_accum__.add(stan::math::gamma_lpdf<propto__>(nu_par, 25, 2.5));
           current_statement__ = 189;
           lp_accum__.add(stan::math::dirichlet_lpdf<propto__>(rho,
                            stan::math::rep_vector(50, J)));
@@ -1817,7 +1826,7 @@ public:
                            stan::math::rep_vector(50, 1)));
         }
         current_statement__ = 192;
-        lp_accum__.add(stan::math::gamma_lpdf<propto__>(tau, 2,
+        lp_accum__.add(stan::math::gamma_lpdf<propto__>(tau_par, 2,
                          tau_prior_rate));
         current_statement__ = 195;
         if (stan::math::logical_eq(CV, 0)) {
@@ -1898,8 +1907,9 @@ public:
           jacobian__>(3, 30, lp__, nu_par_1dim__);
       current_statement__ = 10;
       auto tau_par =
-        in__.template read_constrain_lb<std::vector<local_scalar_t__>,
-          jacobian__>(0, lp__, tau_par_1dim__);
+        in__.template read_constrain_offset_multiplier<
+          std::vector<local_scalar_t__>, jacobian__>(0, tau_multip, lp__,
+          tau_par_1dim__);
       current_statement__ = 11;
       auto eta =
         in__.template read_constrain_lb<Eigen::Matrix<local_scalar_t__,-1,1>,
@@ -2233,10 +2243,10 @@ public:
               stan::math::log(
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n)))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -2262,10 +2272,10 @@ public:
               stan::math::log((1 -
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1)))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n))))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -2291,10 +2301,10 @@ public:
               stan::math::log(
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n)))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -2320,10 +2330,10 @@ public:
               stan::math::log((1 -
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1)))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n))))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -2537,7 +2547,7 @@ public:
                              stan::model::index_omni(),
                              stan::model::index_uni(1)), 0, 1));
           current_statement__ = 158;
-          lp_accum__.add(stan::math::gamma_lpdf<propto__>(sigma_alpha, 5,
+          lp_accum__.add(stan::math::gamma_lpdf<propto__>(sigma_alpha_par, 5,
                            sigma_alpha_prior_rate));
           current_statement__ = 159;
           lp_accum__.add(stan::math::normal_lpdf<propto__>(
@@ -2545,7 +2555,8 @@ public:
                              stan::model::index_omni(),
                              stan::model::index_uni(1)), 0, 1));
           current_statement__ = 160;
-          lp_accum__.add(stan::math::gamma_lpdf<propto__>(sigma_beta, 9, 40));
+          lp_accum__.add(stan::math::gamma_lpdf<propto__>(sigma_beta_par, 9,
+                           40));
         }
         current_statement__ = 172;
         if (stan::math::logical_eq(group, 1)) {
@@ -2578,7 +2589,8 @@ public:
           current_statement__ = 175;
           lp_accum__.add(stan::math::normal_lpdf<propto__>(lambda_raw, 0, 1));
           current_statement__ = 176;
-          lp_accum__.add(stan::math::lognormal_lpdf<propto__>(psi, 1.4, .5));
+          lp_accum__.add(stan::math::lognormal_lpdf<propto__>(psi_par, 1.4,
+                           .5));
         }
         current_statement__ = 184;
         if (stan::math::logical_eq(rat, 1)) {
@@ -2605,7 +2617,7 @@ public:
                            stan::model::rvalue(eta_scale, "eta_scale",
                              stan::model::index_uni(1))));
           current_statement__ = 188;
-          lp_accum__.add(stan::math::gamma_lpdf<propto__>(nu, 25, 2.5));
+          lp_accum__.add(stan::math::gamma_lpdf<propto__>(nu_par, 25, 2.5));
           current_statement__ = 189;
           lp_accum__.add(stan::math::dirichlet_lpdf<propto__>(rho,
                            stan::math::rep_vector(50, J)));
@@ -2615,7 +2627,7 @@ public:
                            stan::math::rep_vector(50, 1)));
         }
         current_statement__ = 192;
-        lp_accum__.add(stan::math::gamma_lpdf<propto__>(tau, 2,
+        lp_accum__.add(stan::math::gamma_lpdf<propto__>(tau_par, 2,
                          tau_prior_rate));
         current_statement__ = 195;
         if (stan::math::logical_eq(CV, 0)) {
@@ -2707,8 +2719,9 @@ public:
           jacobian__>(3, 30, lp__, nu_par_1dim__);
       current_statement__ = 10;
       auto tau_par =
-        in__.template read_constrain_lb<std::vector<local_scalar_t__>,
-          jacobian__>(0, lp__, tau_par_1dim__);
+        in__.template read_constrain_offset_multiplier<
+          std::vector<local_scalar_t__>, jacobian__>(0, tau_multip, lp__,
+          tau_par_1dim__);
       current_statement__ = 11;
       auto eta =
         in__.template read_constrain_lb<Eigen::Matrix<local_scalar_t__,-1,1>,
@@ -3069,10 +3082,10 @@ public:
               stan::math::log(
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n)))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -3098,10 +3111,10 @@ public:
               stan::math::log((1 -
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1)))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n))))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -3127,10 +3140,10 @@ public:
               stan::math::log(
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n)))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -3156,10 +3169,10 @@ public:
               stan::math::log((1 -
                 stan::model::rvalue(zeta, "zeta",
                   stan::model::index_uni(
-                    ((stan::model::rvalue(V_int, "V_int",
-                        stan::model::index_uni(
-                          stan::model::rvalue(ii, "ii",
-                            stan::model::index_uni(n)))) + B2) + 1)))))) +
+                    stan::model::rvalue(Vi, "Vi",
+                      stan::model::index_uni(
+                        stan::model::rvalue(ii, "ii",
+                          stan::model::index_uni(n))))))))) +
               stan::math::normal_lpdf<false>(
                 stan::model::rvalue(Y, "Y", stan::model::index_uni(n)), (((1
                 -
@@ -3618,7 +3631,7 @@ public:
       stan::model::assign(tau_par,
         in__.read<std::vector<local_scalar_t__>>(tau_par_1dim__),
         "assigning variable tau_par");
-      out__.write_free_lb(0, tau_par);
+      out__.write_free_offset_multiplier(0, tau_multip, tau_par);
       Eigen::Matrix<local_scalar_t__,-1,1> eta =
         Eigen::Matrix<local_scalar_t__,-1,1>::Constant(eta_1dim__,
           DUMMY_VAR__);
@@ -3866,7 +3879,7 @@ public:
         std::vector<local_scalar_t__>(tau_par_1dim__, DUMMY_VAR__);
       current_statement__ = 10;
       tau_par = context__.vals_r("tau_par");
-      out__.write_free_lb(0, tau_par);
+      out__.write_free_offset_multiplier(0, tau_multip, tau_par);
       Eigen::Matrix<local_scalar_t__,-1,1> eta =
         Eigen::Matrix<local_scalar_t__,-1,1>::Constant(eta_1dim__,
           DUMMY_VAR__);
